@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimeCycle : MonoBehaviour
 {
-    [SerializeField, Range(0, 24)] private float TimeOfDay;
+    [SerializeField, Range(0, 24)] public float TimeOfDay;
 
     // Update is called once per frame
     void Update()
@@ -13,12 +13,6 @@ public class TimeCycle : MonoBehaviour
         {
             TimeOfDay += Time.deltaTime;
             TimeOfDay %= 24;
-        }
-
-
-        if(TimeOfDay <= 23)
-        {
-
         }
     }
 }
