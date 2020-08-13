@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff58c7e2d47bf044b9bb327b120d62c, type: 3}
-  m_Name: Germany
+  m_Name: "\xC4gypten"
   m_EditorClassIdentifier: 
-  countryName: Germany
-  startResidents: 8300000
-  residents: 0
+  countryName: "\xC4gypten"
+  startResidents: 100000000
+  residents: 100000000
   deathCount: 0
-  gameOver: 4150000
+  recoveryRateG: 0.906
+  influenceE: 0
+  influenceP: 0

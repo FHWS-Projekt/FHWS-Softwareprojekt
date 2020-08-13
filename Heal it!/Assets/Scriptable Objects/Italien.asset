@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff58c7e2d47bf044b9bb327b120d62c, type: 3}
-  m_Name: China
+  m_Name: Italien
   m_EditorClassIdentifier: 
-  countryName: China
-  startResidents: 1300000000
-  residents: 0
+  countryName: Italien
+  startResidents: 60260229
+  residents: 60260229
   deathCount: 0
-  gameOver: 650000000
+  recoveryRateG: 0.896
+  influenceE: 0
+  influenceP: 0
