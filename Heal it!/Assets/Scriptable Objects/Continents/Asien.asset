@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34c0ff0e008bbc459b8d2093cfb6cfb, type: 3}
+  m_Name: Asien
+  m_EditorClassIdentifier: 
+  continentName: Asien
+  countries:
+  - {fileID: 11400000, guid: 7afc158b88acf4b4783316529509c37e, type: 2}
+  - {fileID: 11400000, guid: 509eaa1be0fd6064ba3e4e4c80d31858, type: 2}
+  - {fileID: 11400000, guid: ec5fdbbbafa6f8b4393b119df5568444, type: 2}
+  - {fileID: 11400000, guid: 82c0619d1f6d0c94db3dfd440e8fee9c, type: 2}
+  - {fileID: 11400000, guid: 612321ff808cdac4aa95dbf878782de8, type: 2}
+  - {fileID: 11400000, guid: c5fd6a9ffefce85418587bf811417187, type: 2}
+  - {fileID: 11400000, guid: a05df93a0d050ab4a97be022f0c2f824, type: 2}
+  - {fileID: 11400000, guid: 0cdffeee922736640ad22e41cff1d011, type: 2}

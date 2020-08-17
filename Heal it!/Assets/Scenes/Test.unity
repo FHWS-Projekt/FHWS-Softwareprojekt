@@ -2314,6 +2314,7 @@ GameObject:
   - component: {fileID: 1331103775}
   - component: {fileID: 1331103774}
   - component: {fileID: 1331103773}
+  - component: {fileID: 1331103776}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2369,6 +2370,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1331103776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331103772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefa2a1669eee77488f0aa07be81a45d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countries:
+  - {fileID: 11400000, guid: 9ffb7658bb5400f4eb5a0f9926649937, type: 2}
+  - {fileID: 11400000, guid: 73d35514ef6d94947b01d051cbbe52f7, type: 2}
+  - {fileID: 11400000, guid: 58f0725980652f14982a7c7028bf0540, type: 2}
+  - {fileID: 11400000, guid: f7d26737489465c458e34166d8314f29, type: 2}
+  - {fileID: 11400000, guid: 7afc158b88acf4b4783316529509c37e, type: 2}
+  - {fileID: 11400000, guid: 285cde56c4052b944aab3604a458223c, type: 2}
+  - {fileID: 11400000, guid: 4be2ade0678fc414f9450df6017e60b6, type: 2}
+  - {fileID: 11400000, guid: 509eaa1be0fd6064ba3e4e4c80d31858, type: 2}
+  - {fileID: 11400000, guid: ec5fdbbbafa6f8b4393b119df5568444, type: 2}
+  - {fileID: 11400000, guid: 0cdffeee922736640ad22e41cff1d011, type: 2}
+  - {fileID: 11400000, guid: 87c882de81c3a604f90ca64cd6ddb81e, type: 2}
+  - {fileID: 11400000, guid: 612321ff808cdac4aa95dbf878782de8, type: 2}
+  - {fileID: 11400000, guid: 7c911bb250c578643b059585c1844670, type: 2}
+  - {fileID: 11400000, guid: 290bcfeee520f4f43b41554e617f060a, type: 2}
+  - {fileID: 11400000, guid: 5b78651629f795748bf7aa50df6a87cf, type: 2}
+  - {fileID: 11400000, guid: 4c30ccd3f991a2649b490d26328fd359, type: 2}
+  - {fileID: 11400000, guid: 82c0619d1f6d0c94db3dfd440e8fee9c, type: 2}
+  - {fileID: 11400000, guid: 9f2f68c640110dc4ca84e6dcf7a19692, type: 2}
+  - {fileID: 11400000, guid: c5fd6a9ffefce85418587bf811417187, type: 2}
+  - {fileID: 11400000, guid: 33db95f5ac36a8946a2d4b4ec5092483, type: 2}
+  - {fileID: 11400000, guid: 2de0d8616e0bb5545af2b82bcefe1390, type: 2}
+  - {fileID: 11400000, guid: 1f76c48d23fc6614db71a9b803d215d4, type: 2}
+  - {fileID: 11400000, guid: a05df93a0d050ab4a97be022f0c2f824, type: 2}
+  - {fileID: 11400000, guid: 0bd4561da249e7f47ae3c1a791cbfd27, type: 2}
+  - {fileID: 11400000, guid: aedf65f39c79b8b48a2c74c7e5ce52c0, type: 2}
 --- !u!1 &1362213358
 GameObject:
   m_ObjectHideFlags: 0

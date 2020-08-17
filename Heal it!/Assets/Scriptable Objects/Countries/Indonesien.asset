@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff58c7e2d47bf044b9bb327b120d62c, type: 3}
+  m_Name: Indonesien
+  m_EditorClassIdentifier: 
+  countryName: Indonesien
+  startResidents: 270000000
+  residents: 270000000
+  infected: 0
+  deathCount: 0
+  recoveryRateG: 0.9249
+  influenceE: 0
+  influenceP: 0
+  handWash: 0
+  handWashV: 0
+  mouthguard: 0
+  mouthguardV: 0
+  socialDistancing: 0
+  socialDistancingV: 0
+  quarantine: 0
+  quarantineV: 0
+  closeShops: 0
+  closeShopsV: 0
+  closeRoutes: 0
+  closeRoutesV: 0
+  closeSchools: 0
+  closeSchoolsV: 0
+  closeBorders: 0
+  closeBordersV: 0
+  closeKitas: 0
+  closeKitasV: 0
+  homeOffice: 0
+  homeOfficeV: 0
