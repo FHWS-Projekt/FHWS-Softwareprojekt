@@ -18,14 +18,14 @@ public class TimeCycle : MonoBehaviour
         if (Application.isPlaying)
         {
             TimeOfDay += Time.deltaTime;
-            TimeOfDay %= 24;
+            TimeOfDay %= 5;
 
             timeValue.text = TimeOfDay.ToString();
-            if(TimeOfDay < 23 && TimeOfDay > 24)
+            if(TimeOfDay < 4)
             {
                 oneTimeEvent = true;
             }
-            if(TimeOfDay > 23 && TimeOfDay <24)
+            if(TimeOfDay > 4 && TimeOfDay < 5 && oneTimeEvent)
             {
                 day++;
                 oneTimeEvent = false;
