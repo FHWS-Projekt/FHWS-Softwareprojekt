@@ -9,7 +9,9 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public GameObject Panel;
+    public GameObject UserPanel;
     private Text playerText;
+    public InputField Input;
 
     void Awake()
     {
@@ -20,7 +22,7 @@ public class MainMenu : MonoBehaviour
     {
        if (playerText.text.Equals(""))
         {
-            openPanel();
+            UserPanel.SetActive(true);
         }
     }
 
@@ -48,5 +50,15 @@ public class MainMenu : MonoBehaviour
     public void quitGame()
     {
         Application.Quit();
+    }
+
+    public void userOkayButton()
+    {
+        if (Input.text.Length > 0)
+        {
+            playerText.text = Input.text;
+            UserPanel.SetActive(false);
+            openPanel();
+        }
     }
 }
