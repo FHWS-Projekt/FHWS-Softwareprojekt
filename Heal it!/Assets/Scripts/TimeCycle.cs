@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TimeCycle : MonoBehaviour
 {
-    [SerializeField, Range(0, 24)] public float TimeOfDay;
+    [SerializeField, Range(0, 5)] public float TimeOfDay;
+
+    public TextMeshProUGUI timeValue;
+    public TextMeshProUGUI dateValue;
+    public int day;
+    public bool oneTimeEvent;
 
     // Update is called once per frame
     void Update()
@@ -12,7 +18,19 @@ public class TimeCycle : MonoBehaviour
         if (Application.isPlaying)
         {
             TimeOfDay += Time.deltaTime;
-            TimeOfDay %= 24;
+            TimeOfDay %= 5;
+
+            timeValue.text = TimeOfDay.ToString();
+            if(TimeOfDay < 4)
+            {
+                oneTimeEvent = true;
+            }
+            if(TimeOfDay > 4 && TimeOfDay < 5 && oneTimeEvent)
+            {
+                day++;
+                oneTimeEvent = false;
+            }
+            dateValue.text = day.ToString();
         }
     }
 }

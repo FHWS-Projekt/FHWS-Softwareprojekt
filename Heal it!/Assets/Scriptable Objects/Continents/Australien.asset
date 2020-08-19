@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff58c7e2d47bf044b9bb327b120d62c, type: 3}
-  m_Name: China
+  m_Script: {fileID: 11500000, guid: e34c0ff0e008bbc459b8d2093cfb6cfb, type: 3}
+  m_Name: Australien
   m_EditorClassIdentifier: 
-  countryName: China
-  startResidents: 1300000000
-  residents: 0
-  deathCount: 0
-  gameOver: 650000000
+  continentName: Australien
+  countries:
+  - {fileID: 11400000, guid: 58f0725980652f14982a7c7028bf0540, type: 2}

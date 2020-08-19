@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34c0ff0e008bbc459b8d2093cfb6cfb, type: 3}
+  m_Name: Afrika
+  m_EditorClassIdentifier: 
+  continentName: Afrika
+  countries:
+  - {fileID: 11400000, guid: 4c30ccd3f991a2649b490d26328fd359, type: 2}
+  - {fileID: 11400000, guid: 0bd4561da249e7f47ae3c1a791cbfd27, type: 2}
+  - {fileID: 11400000, guid: aedf65f39c79b8b48a2c74c7e5ce52c0, type: 2}
+  - {fileID: 11400000, guid: 290bcfeee520f4f43b41554e617f060a, type: 2}
+  - {fileID: 11400000, guid: 9ffb7658bb5400f4eb5a0f9926649937, type: 2}

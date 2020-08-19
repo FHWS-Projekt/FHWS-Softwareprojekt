@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34c0ff0e008bbc459b8d2093cfb6cfb, type: 3}
+  m_Name: Europa
+  m_EditorClassIdentifier: 
+  continentName: Europa
+  countries:
+  - {fileID: 11400000, guid: 4be2ade0678fc414f9450df6017e60b6, type: 2}
+  - {fileID: 11400000, guid: 2de0d8616e0bb5545af2b82bcefe1390, type: 2}
+  - {fileID: 11400000, guid: 285cde56c4052b944aab3604a458223c, type: 2}
+  - {fileID: 11400000, guid: 33db95f5ac36a8946a2d4b4ec5092483, type: 2}
+  - {fileID: 11400000, guid: 87c882de81c3a604f90ca64cd6ddb81e, type: 2}
