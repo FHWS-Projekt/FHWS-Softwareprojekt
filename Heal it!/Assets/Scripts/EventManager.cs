@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
@@ -7,59 +8,106 @@ public class EventManager : MonoBehaviour
     public Earth earth;
     public Continent[] continents;
     public Country[] countries;
-    public TimeCycle timeCycle;
+
+    public List<Continent> infectedContinent;
+    public List<Continent> healthyContinent;
+
+    public List<Country> infectedCountries;
+    public List<Country> healtyCountries;
+
+    public Continent transmitterContinent;
+    public Country transmitterCountry;
+
+    public Continent receiverContinent;
+    public Country receiverCountry;
+
+    int counter = 1;
+
     private void Start()
     {
+        for(int i = 0; i < countries.Length; i++)
+        {
+            countries[i].infected = 0;
+            healtyCountries.Add(countries[i]);
+        }
+        for(int i = 0; i < continents.Length; i++)
+        {
+            healthyContinent.Add(continents[i]);
+        }
         RandomStart();
+        Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
+ 
     }
     //Patient zero
     public void RandomStart()
     {
-        int rdm = (int)Random.Range(0.0f, 24.0f);
-        countries[rdm].infected = 1;
-        Debug.Log("Start country: " + countries[rdm].countryName);
+        int rdm = Random.Range(0, continents.Length - 1);
+        int rdm2 = Random.Range(0, continents[rdm].countries.Length - 1);
+
+        Debug.Log("Start continent: " + continents[rdm].name + " Start country: " + continents[rdm].countries[rdm2].countryName);
+
+        continents[rdm].countries[rdm2].infected += 2;
+
+        infectedContinent.Add(continents[rdm]);
+        healthyContinent.Remove(continents[rdm]);
+
+        infectedCountries.Add(continents[rdm].countries[rdm2]);
+        healtyCountries.Remove(continents[rdm].countries[rdm2]);
+
+        transmitterContinent = continents[rdm];
+        transmitterCountry = continents[rdm].countries[rdm2];
+
     }
     public void RandomDistribution()
     {
-        Continent transmitterContinent = null;
-        Country transmitterCountry= null;
-        Continent receiverContinent = null;
-        Country receiverCountry = null;
+ 
+        if(counter < 6)
+        {
+            int rdm = Random.Range(0, healthyContinent.Count);
+            int rdm2 = Random.Range(0, healthyContinent[rdm].countries.Length - 1);
 
-        for (int i = 0; i < continents.Length; i++)
-        {
-            for (int a = 0; a < continents[i].countries.Length; i++)
-            {
-                if(continents[i] != transmitterContinent)
-                {
-                    if (continents[i].countries[a].infected != 0 && continents[i].countries[a] != transmitterCountry)
-                    {
-                        transmitterContinent = continents[i];
-                        transmitterCountry = continents[i].countries[a];
-                    }
-                }
-            }
-        }
-        for (int i = 0; i < continents.Length; i++)
-        {
-            for (int a = 0; a < continents[i].countries.Length; i++)
-            {
-                if (continents[i] != receiverContinent)
-                {
-                    if (continents[i].countries[a].infected == 0 && continents[i].countries[a] != receiverCountry)
-                    {
-                        receiverContinent = continents[i];
-                        receiverCountry = continents[i].countries[a];
-                    }
-                }
-            }
-        }
-        if (transmitterCountry != null && receiverCountry != null)
-        {
+            Debug.Log("Transmitter Continent: " + transmitterContinent.name + " Transmitter Country: " + transmitterCountry.name + " ---> " + "Receiver Continent: " + healthyContinent[rdm] + " Receiver Country: " + healthyContinent[rdm].countries[rdm2]);
+
             transmitterCountry.infected -= 1;
-            receiverCountry.infected += 1;
-            Debug.Log(transmitterCountry.name + " --- > " + receiverCountry.name);
+            healthyContinent[rdm].countries[rdm2].infected += 1;
+
+            infectedContinent.Add(healthyContinent[rdm]);
+            infectedCountries.Add(healthyContinent[rdm].countries[rdm2]);
+
+            transmitterContinent = healthyContinent[rdm];
+            transmitterCountry = healthyContinent[rdm].countries[rdm2];
+
+            healtyCountries.Remove(healthyContinent[rdm].countries[rdm2]);
+            healthyContinent.Remove(healthyContinent[rdm]);
+
+            counter++;
         }
+        else if(counter < 25)
+        {
+            int rdm = Random.Range(0, infectedCountries.Count);
+            int rdm2 = Random.Range(0, healtyCountries.Count);
+
+            Debug.Log("Transmitter Country: " + infectedCountries[rdm].name + " ---> " + "Receiver Country: " + healtyCountries[rdm2]);
+
+            infectedCountries[rdm].infected -= 1;
+            healtyCountries[rdm2].infected += 1;
+
+            infectedCountries.Add(healtyCountries[rdm2]);
+            healtyCountries.Remove(healtyCountries[rdm2]);
+
+            counter++;
+        }
+        else
+        {
+            int rdm = Random.Range(0, infectedCountries.Count);
+            int rdm2 = Random.Range(0, infectedContinent.Count);
+
+            Debug.Log("Transmitter Country: " + infectedCountries[rdm].name + " ---> " + "Receiver Country: " + infectedCountries[rdm].name);
+
+            infectedCountries[rdm].infected -= 1;
+            infectedCountries[rdm2].infected += 1;
+        }
+   
     }
 }
 

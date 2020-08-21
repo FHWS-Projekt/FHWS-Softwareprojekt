@@ -8,6 +8,6 @@ public class ContinentDisplay : MonoBehaviour
 {
     public Continent continent;
     public Material Material; 
-    public TimeCycle timeCycle;
+
     public bool help;
 }

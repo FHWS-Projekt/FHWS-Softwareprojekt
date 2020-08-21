@@ -6,45 +6,32 @@ public class CountryDisplay : MonoBehaviour
 {
     public Country country;
     public Material myMaterial;
-    public TimeCycle time;
-    public bool oneTimeEvent;
     public double temp;
 
     // Start is called before the first frame update
     void Start()
     {
         myMaterial.color = Color.green;
-        oneTimeEvent = true;
         country.residents = country.startResidents;
         country.deathCount = 0;
         country.influenceE = 10;
         country.influenceP = 0.2;
-        country.infected = 0;
-
+        Main.Instance.MyDateTime.DayTasks.Add(() => CalculateResidents());
     }
 
     // Update is called once per frame
     void Update()
     {
         CheckMeasures();
-        CalculateResidents();
     }
     //Method to calculate the infected for the next cycle;
     public void CalculateResidents()
     {
-        if (time.TimeOfDay < 4)
-        {
-            oneTimeEvent = true;
-        }
-        if (time.TimeOfDay > 4 && time.TimeOfDay < 5 && oneTimeEvent)
-        {
-            temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
-            country.deathCount = country.deathCount + temp;
-            country.residents = country.residents - temp;
-            country.infected = temp;
+        temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
+        country.deathCount = country.deathCount + temp;
+        country.residents = country.residents - temp;
+        country.infected = temp;
 
-            oneTimeEvent = false;
-        }
         if (country.residents <= (country.startResidents / 2))
         {
             myMaterial.color = Color.red;
