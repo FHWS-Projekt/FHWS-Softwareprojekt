@@ -1,12 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 public class MyDateTime {
+
     #region Attributes
     private double hour;
     private double day;
     private double month;
     private double year;
+
+    public List<Action> dayTasks = new List<Action>();
     #endregion Attributes
 
     #region Getter and Setter
@@ -26,12 +30,18 @@ public class MyDateTime {
         get { return year; }
         set { year = value; }
     }
+    public List<Action> DayTasks {
+        get { return dayTasks; }
+        set { dayTasks = value; }
+    }
     #endregion Getter and Setter
 
+    #region DateTime
     public void CalculateDateTime() {
         if (Hour >= 24) {
             Hour = Hour % 24;
             Day += (int)(Day / 24 + 1);
+            DayTasksManager();
         } else if (Day >= CalculateMonthDays(Month)) {
             int monthDays = CalculateMonthDays(Month);
             Day = Day % monthDays;
@@ -70,6 +80,14 @@ public class MyDateTime {
             }
         }
     }
+    #endregion DateTime
+
+    public void DayTasksManager() {
+        foreach (Action a in dayTasks) {
+            a.Invoke();
+        }
+    }
+
     public string toString() {
         CalculateDateTime();
         string year = Year < 10 ? "0" + Year : "" + Year;
