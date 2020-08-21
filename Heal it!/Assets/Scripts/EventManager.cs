@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+    public Earth earth;
+    public Continent[] continents;
     public Country[] countries;
-
+    public TimeCycle timeCycle;
+    private void Start()
+    {
+        RandomStart();
+    }
+    //Patient zero
     public void RandomStart()
     {
         int rdm = (int)Random.Range(0.0f, 24.0f);

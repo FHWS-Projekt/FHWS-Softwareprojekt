@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,26 +12,40 @@ public class TimeCycle : MonoBehaviour
     public TextMeshProUGUI dateValue;
     public int day;
     public bool oneTimeEvent;
+    public int cycleTime = 5;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Application.isPlaying)
-        {
-            TimeOfDay += Time.deltaTime;
-            TimeOfDay %= 5;
+        TimeOfDay += Time.deltaTime;
+        TimeOfDay %= 5;
 
-            timeValue.text = TimeOfDay.ToString();
-            if(TimeOfDay < 4)
-            {
-                oneTimeEvent = true;
-            }
-            if(TimeOfDay > 4 && TimeOfDay < 5 && oneTimeEvent)
-            {
-                day++;
-                oneTimeEvent = false;
-            }
-            dateValue.text = day.ToString();
+        timeValue.text = TimeOfDay.ToString();
+        if (TimeOfDay < 4)
+        {
+            oneTimeEvent = true;
+        }
+        if (TimeOfDay > 4 && TimeOfDay < 5 && oneTimeEvent)
+        {
+            day++;
+            oneTimeEvent = false;
+        }
+        dateValue.text = day.ToString();
+
+    }
+    public bool CycleEvent()
+    {
+        if (TimeOfDay < 4)
+        {
+            oneTimeEvent = true;
+        }
+        if (TimeOfDay > 4 && TimeOfDay < 5 && oneTimeEvent)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

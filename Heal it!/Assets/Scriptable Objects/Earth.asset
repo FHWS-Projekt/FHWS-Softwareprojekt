@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Earth
   m_EditorClassIdentifier: 
   continents:
-  - {fileID: 11400000, guid: fe302fe6c19d8d54486c66e2075203de, type: 2}
   - {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
-  - {fileID: 11400000, guid: 32395641800956c409ec43979784b356, type: 2}
-  - {fileID: 11400000, guid: 1d926f57be4089847bb0358900d3b346, type: 2}
+  - {fileID: 11400000, guid: fe302fe6c19d8d54486c66e2075203de, type: 2}
   - {fileID: 11400000, guid: 00c3cbae249cc3e458a8a8cd333d5745, type: 2}
+  - {fileID: 11400000, guid: 1d926f57be4089847bb0358900d3b346, type: 2}
+  - {fileID: 11400000, guid: 32395641800956c409ec43979784b356, type: 2}
   - {fileID: 11400000, guid: f4e58b03e7d29c143a3740eb969313ad, type: 2}

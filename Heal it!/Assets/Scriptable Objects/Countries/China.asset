@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countryName: China
   startResidents: 1300000000
-  residents: 1299999988.6899998
-  infected: 8.41
-  deathCount: 11.31
-  recoveryRateG: 1
+  residents: 1299999968.317944
+  infected: 22.41
+  deathCount: 31.682055977374997
+  recoveryRateG: 0.955
   influenceE: 10
-  influenceP: 0.19
+  influenceP: 0.17
   handWash: 0
   handWashV: 0.01
   mouthguard: 0
-  mouthguardV: 0
+  mouthguardV: 0.02
   socialDistancing: 0
   socialDistancingV: 0
   quarantine: 0
