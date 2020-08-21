@@ -10,6 +10,7 @@ public class MyDateTime {
     private double month;
     private double year;
 
+    // List of all Tasks that should be called every 24 hours
     public List<Action> dayTasks = new List<Action>();
     #endregion Attributes
 
@@ -83,8 +84,8 @@ public class MyDateTime {
     #endregion DateTime
 
     public void DayTasksManager() {
-        foreach (Action a in dayTasks) {
-            a.Invoke();
+        foreach (Action action in dayTasks) {
+            action.Invoke();
         }
     }
 
