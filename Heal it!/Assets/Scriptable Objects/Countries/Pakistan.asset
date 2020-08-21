@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countryName: Pakistan
   startResidents: 210000000
-  residents: 210000000
-  infected: 0
-  deathCount: 0
+  residents: 209955193.02404857
+  infected: 29999.439249721807
+  deathCount: 44806.97595143284
   recoveryRateG: 0.92
-  influenceE: 0
-  influenceP: 0
+  influenceE: 10
+  influenceP: 0.2
   handWash: 0
   handWashV: 0
   mouthguard: 0

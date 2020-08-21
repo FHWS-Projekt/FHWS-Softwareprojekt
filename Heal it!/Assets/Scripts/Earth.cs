@@ -6,6 +6,7 @@ using UnityEngine;
 public class Earth : ScriptableObject
 {
     public Continent[] continents;
+
 }
 
 

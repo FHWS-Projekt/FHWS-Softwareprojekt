@@ -19,12 +19,17 @@ public class CountryDisplay : MonoBehaviour
         country.deathCount = 0;
         country.influenceE = 10;
         country.influenceP = 0.2;
+        country.infected = 0;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (time.CycleEvent())
+        {
+            Debug.Log("lol");
+        }
         CheckMeasures();
         CalculateResidents();
     }
@@ -38,7 +43,6 @@ public class CountryDisplay : MonoBehaviour
         if (time.TimeOfDay > 4 && time.TimeOfDay < 5 && oneTimeEvent)
         {
             temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
-            Debug.Log(temp);
             country.deathCount = country.deathCount + temp;
             country.residents = country.residents - temp;
             country.infected = temp;
@@ -133,11 +137,9 @@ public class CountryDisplay : MonoBehaviour
         {
             country.homeOfficeV = 0;
         }
-
         country.influenceP = 0.2 - country.handWashV - country.mouthguardV - country.socialDistancingV;
         country.influenceE = 10 - country.quarantineV - country.closeShopsV - country.closeRoutesV - country.closeSchoolsV - country.closeBordersV - country.closeKitasV - country.homeOfficeV;
 
     }
-
 
 }

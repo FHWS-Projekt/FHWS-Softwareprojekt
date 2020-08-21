@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continentName: "S\xFCdamerika"
   countries:
-  - {fileID: 11400000, guid: 5b78651629f795748bf7aa50df6a87cf, type: 2}
   - {fileID: 11400000, guid: f7d26737489465c458e34166d8314f29, type: 2}
-  - {fileID: 11400000, guid: 9f2f68c640110dc4ca84e6dcf7a19692, type: 2}
   - {fileID: 11400000, guid: 73d35514ef6d94947b01d051cbbe52f7, type: 2}
+  - {fileID: 11400000, guid: 9f2f68c640110dc4ca84e6dcf7a19692, type: 2}
