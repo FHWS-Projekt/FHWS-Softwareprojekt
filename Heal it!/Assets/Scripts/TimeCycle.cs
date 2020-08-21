@@ -33,19 +33,4 @@ public class TimeCycle : MonoBehaviour
         dateValue.text = day.ToString();
 
     }
-    public bool CycleEvent()
-    {
-        if (TimeOfDay < 4)
-        {
-            oneTimeEvent = true;
-        }
-        if (TimeOfDay > 4 && TimeOfDay < 5 && oneTimeEvent)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
 }

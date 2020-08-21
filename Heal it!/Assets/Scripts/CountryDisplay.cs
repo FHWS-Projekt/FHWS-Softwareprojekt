@@ -26,10 +26,6 @@ public class CountryDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (time.CycleEvent())
-        {
-            Debug.Log("lol");
-        }
         CheckMeasures();
         CalculateResidents();
     }
