@@ -11,6 +11,7 @@ public class Main : MonoBehaviour {
     #endregion
 
     #region Attributes
+    [SerializeField] protected GameObject mainCamera;
     [SerializeField] protected GameObject earth;
 
     // Time
@@ -55,23 +56,22 @@ public class Main : MonoBehaviour {
     #region Unity Methods
     // Awake is called when the script instance is being loaded
     private void Awake() {
-        Instance = this;
+        if (Instance == null) {
+            Instance = this;
+        }
+        // Get Unix Timestamp in Seconds if it is not already set
+        if (MyDateTime == null) {
+            MyDateTime = new MyDateTime();
+            MyDateTime.Day = 0;
+            MyDateTime.Hour = 0;
+            MyDateTime.DayTasks.Add(() => AddMoney());
+        }
     }
 
     // Start is called before the first frame update
     void Start() {
         // Adds OnClick Listener to Buttons
         SetTimeButtonsOnClick();
-
-        // Get Unix Timestamp in Seconds if it is not already set
-        if (MyDateTime == null) {
-            MyDateTime = new MyDateTime();
-            MyDateTime.Year = System.DateTime.Now.Year;
-            MyDateTime.Month = System.DateTime.Now.Month;
-            MyDateTime.Day = System.DateTime.Now.Day;
-            MyDateTime.Hour = System.DateTime.Now.Hour;
-            MyDateTime.DayTasks.Add(() => AddMoney());
-        }
     }
 
     // Update is called once per frame
