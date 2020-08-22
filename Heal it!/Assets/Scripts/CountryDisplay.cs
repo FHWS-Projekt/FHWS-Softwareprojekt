@@ -11,12 +11,12 @@ public class CountryDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Main.Instance.MyDateTime.DayTasks.Add(() => CalculateResidents());
         myMaterial.color = Color.green;
         country.residents = country.startResidents;
         country.deathCount = 0;
         country.influenceE = 10;
         country.influenceP = 0.2;
-        Main.Instance.MyDateTime.DayTasks.Add(() => CalculateResidents());
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class CountryDisplay : MonoBehaviour
         CheckMeasures();
     }
     //Method to calculate the infected for the next cycle;
-    public void CalculateResidents()
+    void CalculateResidents()
     {
         temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
         country.deathCount = country.deathCount + temp;

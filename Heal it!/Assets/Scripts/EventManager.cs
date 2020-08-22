@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+    #region Attributes
+
     public Earth earth;
     public Continent[] continents;
     public Country[] countries;
@@ -22,6 +24,7 @@ public class EventManager : MonoBehaviour
     public Country receiverCountry;
 
     int counter = 1;
+    #endregion Attributes
 
     private void Start()
     {
