@@ -26,6 +26,7 @@ public class EventManager : MonoBehaviour
     int counter = 1;
     #endregion Attributes
 
+    #region Unity Methods
     private void Start()
     {
         for(int i = 0; i < countries.Length; i++)
@@ -41,6 +42,10 @@ public class EventManager : MonoBehaviour
         Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
  
     }
+
+    #endregion Unity Methods
+
+    #region Methods
     //Patient zero
     public void RandomStart()
     {
@@ -112,5 +117,6 @@ public class EventManager : MonoBehaviour
         }
    
     }
+    #endregion Methods
 }
 
