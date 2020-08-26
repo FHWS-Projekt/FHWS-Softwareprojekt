@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
 {
@@ -23,7 +24,13 @@ public class EventManager : MonoBehaviour
     public Continent receiverContinent;
     public Country receiverCountry;
 
+    public GameObject measures;
+    public MeasuresMenu measuresMenu;
+
+
+
     int counter = 1;
+
     #endregion Attributes
 
     #region Unity Methods
@@ -41,6 +48,11 @@ public class EventManager : MonoBehaviour
         RandomStart();
         Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
  
+    }
+
+    private void Update()
+    {
+        ObjectClicker();
     }
 
     #endregion Unity Methods
@@ -117,6 +129,36 @@ public class EventManager : MonoBehaviour
         }
    
     }
+    public void ObjectClicker()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                if (hit.transform)
+                {
+                    GameObject continent = hit.transform.gameObject;
+                    ContinentDisplay continentDisplay = (ContinentDisplay)continent.GetComponent(typeof(ContinentDisplay));
+                    if (continentDisplay != null){
+                        print(hit.transform.name);
+                        if (measures.activeSelf)
+                        {
+
+                        }
+                        else
+                        {
+                            measuresMenu.OnClickMenuActiv();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     #endregion Methods
 }
 
