@@ -37,13 +37,12 @@ public class MyDateTime {
             DayTasksManager();
         }
     }
-    #endregion DateTime
-
     public void DayTasksManager() {
         foreach (Action action in dayTasks) {
             action.Invoke();
         }
     }
+    #endregion DateTime
 
     public string toString() {
         CalculateDateTime();
