@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class CountryDisplay : MonoBehaviour
 {
+    #region Attributes
+
     public Country country;
     public Material myMaterial;
     public double temp;
+
+    #endregion Attributes
+
+    #region Unity Methods
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +30,10 @@ public class CountryDisplay : MonoBehaviour
     {
         CheckMeasures();
     }
+
+    #endregion Unity Methods
+
+    #region Methods
     //Method to calculate the infected for the next cycle;
     void CalculateResidents()
     {
@@ -125,4 +135,5 @@ public class CountryDisplay : MonoBehaviour
 
     }
 
+    #endregion Methods
 }

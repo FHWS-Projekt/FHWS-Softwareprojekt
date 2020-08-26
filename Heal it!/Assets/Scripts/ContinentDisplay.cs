@@ -9,5 +9,4 @@ public class ContinentDisplay : MonoBehaviour
     public Continent continent;
     public Material Material; 
 
-    public bool help;
 }
