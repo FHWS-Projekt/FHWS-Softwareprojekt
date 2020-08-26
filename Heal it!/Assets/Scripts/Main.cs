@@ -6,18 +6,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Main : MonoBehaviour {
+
     #region Singleton
     public static Main Instance { get; private set; }
     #endregion
 
     #region Attributes
-    [SerializeField] protected GameObject mainCamera;
     [SerializeField] protected GameObject earth;
 
-    // Time
+    // DateTime
     protected MyDateTime myDateTime;
     [SerializeField] protected TextMeshProUGUI timeDisplay;
     [SerializeField] protected Button[] timeButtons = new Button[3];
+
     // Money
     protected double money;
     [SerializeField] protected TextMeshProUGUI moneyDisplay;
@@ -58,13 +59,11 @@ public class Main : MonoBehaviour {
     private void Awake() {
         if (Instance == null) {
             Instance = this;
-        }
-        // Get Unix Timestamp in Seconds if it is not already set
-        if (MyDateTime == null) {
+
+            // Initilize MyDateTime
             MyDateTime = new MyDateTime();
             MyDateTime.Day = 0;
             MyDateTime.Hour = 0;
-            MyDateTime.DayTasks.Add(() => AddMoney());
         }
     }
 
@@ -72,13 +71,15 @@ public class Main : MonoBehaviour {
     void Start() {
         // Adds OnClick Listener to Buttons
         SetTimeButtonsOnClick();
+        MyDateTime.DayTasks.Add(() => AddMoney());
     }
 
     // Update is called once per frame
     void Update() {
         UpdateTimestamp();
         RotateEarth();
-        MoneyDisplay.text = money.ToString() + "$";
+        MoneyDisplay.text = money.ToString() + " $";
+        ControlCamera();
     }
     #endregion Unity Methods
 
@@ -99,6 +100,24 @@ public class Main : MonoBehaviour {
     }
     #endregion Time
 
+    public void ControlCamera() {
+        // Camera Rotate around Earth
+        if (Input.GetMouseButton(0)) {
+            Camera.main.transform.RotateAround(Earth.transform.position, transform.up, Input.GetAxis("Mouse X") * 2);
+            Camera.main.transform.RotateAround(Earth.transform.position, transform.right, Input.GetAxis("Mouse Y") * -2);
+        }
+
+        // Camera Zoom into Earth
+        float fov = Camera.main.fieldOfView;
+        fov += Input.GetAxis("Mouse ScrollWheel") * -16;
+        if (fov < 40) {
+            fov = 40;
+        }else if (fov > 80) {
+            fov = 80;
+        } else {
+            Camera.main.fieldOfView = fov;
+        }
+    }
 
     public void RotateEarth() {
         //Earth.transform.Rotate(Vector3.up, 10 * Time.deltaTime, Space.World);
