@@ -27,8 +27,6 @@ public class EventManager : MonoBehaviour
     public GameObject measures;
     public MeasuresMenu measuresMenu;
 
-
-
     int counter = 1;
 
     #endregion Attributes
@@ -58,6 +56,7 @@ public class EventManager : MonoBehaviour
     #endregion Unity Methods
 
     #region Methods
+
     //Patient zero
     public void RandomStart()
     {
@@ -144,14 +143,14 @@ public class EventManager : MonoBehaviour
                     GameObject continent = hit.transform.gameObject;
                     ContinentDisplay continentDisplay = (ContinentDisplay)continent.GetComponent(typeof(ContinentDisplay));
                     if (continentDisplay != null){
-                        print(hit.transform.name);
                         if (measures.activeSelf)
                         {
-
+                            measuresMenu.ShowContinent(continentDisplay);
                         }
                         else
                         {
                             measuresMenu.OnClickMenuActiv();
+                            measuresMenu.ShowContinent(continentDisplay);
                         }
                     }
                 }
