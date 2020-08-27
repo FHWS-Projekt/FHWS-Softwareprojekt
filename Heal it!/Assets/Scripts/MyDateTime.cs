@@ -29,6 +29,17 @@ public class MyDateTime {
     }
     #endregion Getter and Setter
 
+    #region Constructors
+    public MyDateTime() {
+        Hour = 0;
+        Day = 0;
+    }
+    public MyDateTime(double hour, double day) {
+        Hour = hour;
+        Day = day;
+    }
+    #endregion Constructors
+
     #region DateTime
     public void CalculateDateTime() {
         if (Hour >= 24) {
