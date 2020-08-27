@@ -184,15 +184,4 @@ public class Main : MonoBehaviour {
     public void AddMoney() {
         Money += 1000;
     }
-
-
-
-
-
-
-
-
-
-
-
 }
