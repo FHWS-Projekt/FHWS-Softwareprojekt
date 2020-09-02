@@ -1351,7 +1351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &200565418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1375,6 +1375,7 @@ RectTransform:
   - {fileID: 1503707505}
   - {fileID: 1987467377}
   - {fileID: 643616644}
+  - {fileID: 1264934371}
   m_Father: {fileID: 232942521}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1578,11 +1579,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   measuresMenuActiv: {fileID: 232942520}
+  measures2MenuActiv: {fileID: 200565417}
   continentName: {fileID: 757276089}
-  residents: {fileID: 0}
-  infected: {fileID: 0}
-  influenceE: {fileID: 0}
-  influenceP: {fileID: 0}
+  countryName: {fileID: 1853822571}
+  measuresText: {fileID: 643616645}
+  residents: {fileID: 1386099176}
+  infected: {fileID: 1354312902}
+  influenceE: {fileID: 1195628299}
+  influenceP: {fileID: 519322891}
   mainScript: {fileID: 1229859505}
   pauseButton: {fileID: 884453319}
   startButton: {fileID: 1453491585}
@@ -1595,6 +1599,17 @@ MonoBehaviour:
   - {fileID: 628506568}
   - {fileID: 788352141}
   - {fileID: 1239987775}
+  measursButtons:
+  - {fileID: 1425074386}
+  - {fileID: 649032295}
+  - {fileID: 1653253996}
+  - {fileID: 1970017431}
+  - {fileID: 1737695812}
+  - {fileID: 975361526}
+  - {fileID: 1311631646}
+  - {fileID: 807505410}
+  - {fileID: 1503707506}
+  - {fileID: 1987467378}
 --- !u!1 &245593774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,7 +2243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: closeKitas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2496,7 +2511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: homeOffice
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3172,7 +3187,7 @@ GameObject:
   - component: {fileID: 643616646}
   - component: {fileID: 643616645}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MeasuresText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3307,7 +3322,7 @@ GameObject:
   - component: {fileID: 649032296}
   - component: {fileID: 649032295}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: mouthguard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3330,8 +3345,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: 93}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: 93}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649032295
 MonoBehaviour:
@@ -4053,7 +4068,7 @@ GameObject:
   - component: {fileID: 807505411}
   - component: {fileID: 807505410}
   m_Layer: 5
-  m_Name: Button (7)
+  m_Name: closeBorders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4076,8 +4091,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: -284}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: -284}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807505410
 MonoBehaviour:
@@ -4785,7 +4800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: closeSchools
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5009,7 +5024,7 @@ GameObject:
   - component: {fileID: 975361527}
   - component: {fileID: 975361526}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: closeRoutes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5032,8 +5047,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: -180}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: -180}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975361526
 MonoBehaviour:
@@ -6759,12 +6774,12 @@ RectTransform:
   - {fileID: 1354312901}
   - {fileID: 1195628298}
   - {fileID: 519322890}
-  m_Father: {fileID: 1853822570}
-  m_RootOrder: 0
+  m_Father: {fileID: 200565418}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00048828125, y: -488.99976}
+  m_AnchoredPosition: {x: 0.00048828125, y: 0.00024414062}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1311631644
@@ -6780,7 +6795,7 @@ GameObject:
   - component: {fileID: 1311631647}
   - component: {fileID: 1311631646}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: closeSchools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6803,8 +6818,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: -223}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: -223}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311631646
 MonoBehaviour:
@@ -7328,7 +7343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: handWash
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7445,7 +7460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 153, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1380824647
@@ -7706,7 +7721,7 @@ GameObject:
   - component: {fileID: 1425074387}
   - component: {fileID: 1425074386}
   m_Layer: 5
-  m_Name: Button
+  m_Name: handWash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7729,8 +7744,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: 139}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: 139}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425074386
 MonoBehaviour:
@@ -8124,7 +8139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: quarantine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8442,7 +8457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: mouthguard
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8652,7 +8667,7 @@ GameObject:
   - component: {fileID: 1503707507}
   - component: {fileID: 1503707506}
   m_Layer: 5
-  m_Name: Button (8)
+  m_Name: closeKitas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8675,8 +8690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: -346}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: -346}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503707506
 MonoBehaviour:
@@ -9038,7 +9053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: socialDistancing
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9128,7 +9143,7 @@ GameObject:
   - component: {fileID: 1653253997}
   - component: {fileID: 1653253996}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: socialDistancing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9151,8 +9166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: 47}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: 47}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653253996
 MonoBehaviour:
@@ -9403,7 +9418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: closeShops
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9577,7 +9592,7 @@ GameObject:
   - component: {fileID: 1737695813}
   - component: {fileID: 1737695812}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: closeShops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9600,8 +9615,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: -120}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: -120}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737695812
 MonoBehaviour:
@@ -9741,7 +9756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: closeRoutes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10188,8 +10203,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1264934371}
+  m_Children: []
   m_Father: {fileID: 200565418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10442,7 +10456,7 @@ GameObject:
   - component: {fileID: 1970017432}
   - component: {fileID: 1970017431}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: quarantine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10465,8 +10479,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: -74}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: -74}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970017431
 MonoBehaviour:
@@ -10562,7 +10576,7 @@ GameObject:
   - component: {fileID: 1987467379}
   - component: {fileID: 1987467378}
   m_Layer: 5
-  m_Name: Button (9)
+  m_Name: homeOffice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10585,8 +10599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: -404}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -167, y: -404}
+  m_SizeDelta: {x: 189.98297, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987467378
 MonoBehaviour:
@@ -11331,7 +11345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: closeBorders
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
