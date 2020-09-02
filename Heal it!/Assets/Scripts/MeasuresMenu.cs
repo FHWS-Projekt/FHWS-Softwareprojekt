@@ -114,14 +114,269 @@ public class MeasuresMenu : MonoBehaviour
         {
             Buttons buttonsCountry = measursButtons[i].GetComponentInChildren<Buttons>();
             buttonsCountry.country = country;
-        }
+            //wip
+            switch (i)
+            {
+                case 0:
+                    if (!buttonsCountry.country.handWash)
+                    {
+                        measursButtons[0].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[0].image.color = Color.green;
+                        break;
+                    }
+                case 1:
+                    if (!buttonsCountry.country.mouthguard)
+                    {
+                        measursButtons[1].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[1].image.color = Color.green;
+                        break;
+                    }
+                case 2:
+                    if (!buttonsCountry.country.socialDistancing)
+                    {
+                        measursButtons[2].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[2].image.color = Color.green;
+                        break;
+                    }
+                case 3:
+                    if (!buttonsCountry.country.quarantine)
+                    {
+                        measursButtons[3].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[3].image.color = Color.green;
+                        break;
+                    }
+                case 4:
+                    if (!buttonsCountry.country.closeShops)
+                    {
+                        measursButtons[4].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[4].image.color = Color.green;
+                        break;
+                    }
+                case 5:
+                    if (!buttonsCountry.country.closeRoutes)
+                    {
+                        measursButtons[5].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[5].image.color = Color.green;
+                        break;
+                    }
+                case 6:
+                    if (!buttonsCountry.country.closeSchools)
+                    {
+                        measursButtons[6].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[6].image.color = Color.green;
+                        break;
+                    }
+                case 7:
+                    if (!buttonsCountry.country.closeBorders)
+                    {
+                        measursButtons[7].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[7].image.color = Color.green;
+                        break;
+                    }
+                case 8:
+                    if (!buttonsCountry.country.closeKitas)
+                    {
+                        measursButtons[8].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[8].image.color = Color.green;
+                        break;
+                    }
+                case 9:
+                    if (!buttonsCountry.country.closeKitas)
+                    {
+                        measursButtons[9].image.color = Color.red;
+                        break;
+                    }
+                    else
+                    {
+                        measursButtons[9].image.color = Color.green;
+                        break;
+                    }
+            }
 
+        }
     }
-    public void MeasuresClick(Buttons button)
+    public void MeasuresCheck(Buttons button)
     {
         Country country = button.GetComponent<Buttons>().country;
-       
+        int measureID = button.buttonName;
+        
+        //wip
+        switch (measureID)
+        {
+            case 0:
+                if (country.handWash)
+                {
+                    measursButtons[0].image.color = Color.red;
+                    country.handWash = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[0].image.color = Color.green;
+                    country.handWash = true;
+                    break;
+                }
+            case 1:
+                if (country.mouthguard)
+                {
+                    measursButtons[1].image.color = Color.red;
+                    country.mouthguard = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[1].image.color = Color.green;
+                    country.mouthguard = true;
+                    break;
+                }
+            case 2:
+                if (country.socialDistancing)
+                {
+                    measursButtons[2].image.color = Color.green;
+                    country.socialDistancing = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[2].image.color = Color.green;
+                    country.socialDistancing = true;
+                    break;
+                }
+            case 3:
+                if (country.quarantine)
+                {
+                    measursButtons[3].image.color = Color.red;
+                    country.quarantine = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[3].image.color = Color.green;
+                    country.quarantine = true;
+                    break;
+                }
+            case 4:
+                if (country.closeShops)
+                {
+                    measursButtons[4].image.color = Color.red;
+                    country.closeShops = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[4].image.color = Color.green;
+                    country.closeShops = true;
+                    break;
+                }
+            case 5:
+                if (country.closeRoutes)
+                {
+                    measursButtons[5].image.color = Color.red;
+                    country.closeRoutes = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[5].image.color = Color.green;
+                    country.closeRoutes = true;
+                    break;
+                }
+            case 6:
+                if (country.closeSchools)
+                {
+                    measursButtons[6].image.color = Color.red;
+                    country.closeSchools = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[6].image.color = Color.green;
+                    country.closeSchools = true;
+                    break;
+                }
+            case 7:
+                if (country.closeBorders)
+                {
+                    measursButtons[7].image.color = Color.red;
+                    country.closeBorders = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[7].image.color = Color.green;
+                    country.closeBorders = true;
+                    break;
+                }
+            case 8:
+                if (country.closeKitas)
+                {
+                    measursButtons[8].image.color = Color.red;
+                    country.closeKitas = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[8].image.color = Color.green;
+                    country.closeKitas = true;
+                    break;
+                }
+            case 9:
+                if (country.closeKitas)
+                {
+                    measursButtons[9].image.color = Color.red;
+                    country.homeOffice = false;
+                    break;
+                }
+                else
+                {
+                    measursButtons[9].image.color = Color.green;
+                    country.homeOffice = true;
+                    break;
+                }
+        }
+
+        residents.text = "Residents: " + country.residents;
+        infected.text = "Infected: " + country.infected;
+        influenceE.text = "Influence: " + country.influenceE;
+        influenceP.text = "Influence: " + country.influenceP;
     }
+
 
     #endregion Methods
 }

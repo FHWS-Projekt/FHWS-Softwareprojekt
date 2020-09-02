@@ -47,8 +47,8 @@ public class EventManager : MonoBehaviour
             healthyContinent.Add(continents[i]);
         }
         RandomStart();
-        Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
- 
+        Main.Instance.MyDateTime.DayTasks.Add(() => BRandomDistribution());
+        // Main.Instance.MyDateTime.DayTasks.Sort();
     }
 
     private void Update()
@@ -68,7 +68,7 @@ public class EventManager : MonoBehaviour
 
         Debug.Log("Start continent: " + continents[rdm].name + " Start country: " + continents[rdm].countries[rdm2].countryName);
 
-        continents[rdm].countries[rdm2].infected += 2;
+        continents[rdm].countries[rdm2].infected += 1;
 
         infectedContinent.Add(continents[rdm]);
         healthyContinent.Remove(continents[rdm]);
@@ -80,7 +80,7 @@ public class EventManager : MonoBehaviour
         transmitterCountry = continents[rdm].countries[rdm2];
 
     }
-    public void RandomDistribution()
+    public void BRandomDistribution()
     {
  
         if(counter < 6)
