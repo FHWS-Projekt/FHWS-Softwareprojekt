@@ -14,7 +14,6 @@ public class MeasuresMenu : MonoBehaviour
     public TextMeshProUGUI continentName;
 
     public TextMeshProUGUI countryName;
-    public TextMeshProUGUI measuresText;
     public TextMeshProUGUI residents;
     public TextMeshProUGUI infected;
     public TextMeshProUGUI influenceE;
@@ -102,7 +101,6 @@ public class MeasuresMenu : MonoBehaviour
     }
     public void ShowCountry(Buttons button)
     {
-        
         Country country = button.GetComponent<Buttons>().country;
         OnClickMenu2Activ();
 
@@ -112,6 +110,17 @@ public class MeasuresMenu : MonoBehaviour
         influenceE.text = "Influence: " + country.influenceE;
         influenceP.text = "Influence: " + country.influenceP;
 
+        for (int i = 0; i < measursButtons.Length; i++)
+        {
+            Buttons buttonsCountry = measursButtons[i].GetComponentInChildren<Buttons>();
+            buttonsCountry.country = country;
+        }
+
+    }
+    public void MeasuresClick(Buttons button)
+    {
+        Country country = button.GetComponent<Buttons>().country;
+       
     }
 
     #endregion Methods
