@@ -9,8 +9,12 @@ public class MeasuresMenu : MonoBehaviour
     #region Attributes
 
     public GameObject measuresMenuActiv;
+    public GameObject measures2MenuActiv;
 
     public TextMeshProUGUI continentName;
+
+    public TextMeshProUGUI countryName;
+    public TextMeshProUGUI measuresText;
     public TextMeshProUGUI residents;
     public TextMeshProUGUI infected;
     public TextMeshProUGUI influenceE;
@@ -21,6 +25,7 @@ public class MeasuresMenu : MonoBehaviour
     public Button startButton;
 
     public Button[] countryButtons;
+    public Button[] measursButtons;
 
     #endregion Attributes
 
@@ -29,6 +34,8 @@ public class MeasuresMenu : MonoBehaviour
     private void Start()
     {
         measuresMenuActiv.SetActive(false);
+
+        measures2MenuActiv.SetActive(false);
     }
 
     #endregion Unity Methods
@@ -46,8 +53,26 @@ public class MeasuresMenu : MonoBehaviour
         {
             measuresMenuActiv.SetActive(true);
             mainScript.SetTimeButtonsOnClickTask(pauseButton);
+        }  
+    }
+    public void OnClickMenu2Activ()
+    {
+        if (measures2MenuActiv.activeSelf)
+        {
+            measures2MenuActiv.SetActive(false);
         }
-        
+        else
+        {
+            measures2MenuActiv.SetActive(true);
+        }
+    }
+    public CountryDisplay OnClickCountryButton(Button button)
+    {
+
+        CountryDisplay countryDisplay = null;
+
+        return countryDisplay;
+
     }
     public void ShowContinent(ContinentDisplay continentDisplay)
     {
@@ -69,8 +94,11 @@ public class MeasuresMenu : MonoBehaviour
             }
         }
     }
-    public void ShowCountry()
+    public void ShowCountry(CountryDisplay countryDisplay)
     {
+        Country country = countryDisplay.country;
+        countryName.text = country.countryName;
+
 
     }
     #endregion Methods
