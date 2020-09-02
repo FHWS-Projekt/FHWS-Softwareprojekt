@@ -44,7 +44,7 @@ public class MainMenu : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene("Demo_LowPolyEarth");
+        SceneManager.LoadScene("Test Hakan");
     }
 
     public void quitGame()

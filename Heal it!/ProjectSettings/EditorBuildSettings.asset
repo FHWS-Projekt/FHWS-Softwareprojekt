@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo_LowPolyEarth.unity
     guid: e0ecf4acd7a83df42b8568bb8101015c
+  - enabled: 1
+    path: Assets/Scenes/Test Hakan.unity
+    guid: d8757b2b9435b9a4f90209c4d6a9545d
   m_configObjects: {}

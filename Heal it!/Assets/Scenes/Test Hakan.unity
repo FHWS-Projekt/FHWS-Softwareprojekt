@@ -601,7 +601,9 @@ MonoBehaviour:
   receiverContinent: {fileID: 0}
   receiverCountry: {fileID: 0}
   measures: {fileID: 232942520}
+  measures2: {fileID: 200565417}
   measuresMenu: {fileID: 232942524}
+  myCamera: {fileID: 0}
 --- !u!1 &101263182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1044,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Measures
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1212,7 +1214,6 @@ RectTransform:
   - {fileID: 1460656653}
   - {fileID: 1051844323}
   - {fileID: 232942521}
-  - {fileID: 1318110977}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1520,6 +1521,7 @@ RectTransform:
   - {fileID: 757276088}
   - {fileID: 1377493511}
   - {fileID: 200565418}
+  - {fileID: 1318110977}
   m_Father: {fileID: 186354564}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1622,6 +1624,7 @@ GameObject:
   - component: {fileID: 245593778}
   - component: {fileID: 245593777}
   - component: {fileID: 245593776}
+  - component: {fileID: 245593779}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1691,7 +1694,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 245593777}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232942524}
+        m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
+        m_MethodName: ShowCountry
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 245593779}
+          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &245593777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1730,6 +1745,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245593774}
   m_CullTransparentMesh: 0
+--- !u!114 &245593779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245593774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  country: {fileID: 0}
 --- !u!1 &318550850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,8 +2382,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -169, y: 226}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 11.481, y: 226}
+  m_SizeDelta: {x: 560.9602, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519322891
 MonoBehaviour:
@@ -2933,6 +2961,7 @@ GameObject:
   - component: {fileID: 628506570}
   - component: {fileID: 628506569}
   - component: {fileID: 628506568}
+  - component: {fileID: 628506571}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -3002,7 +3031,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 628506569}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232942524}
+        m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
+        m_MethodName: ShowCountry
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 628506571}
+          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &628506569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,6 +3082,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628506566}
   m_CullTransparentMesh: 0
+--- !u!114 &628506571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628506566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  country: {fileID: 0}
 --- !u!1 &642457451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3947,6 +4001,7 @@ GameObject:
   - component: {fileID: 788352143}
   - component: {fileID: 788352142}
   - component: {fileID: 788352141}
+  - component: {fileID: 788352144}
   m_Layer: 5
   m_Name: Button (6)
   m_TagString: Untagged
@@ -4016,7 +4071,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 788352142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232942524}
+        m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
+        m_MethodName: ShowCountry
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 788352144}
+          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &788352142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4055,6 +4122,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788352139}
   m_CullTransparentMesh: 0
+--- !u!114 &788352144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788352139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  country: {fileID: 0}
 --- !u!1 &807505408
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,6 +5223,7 @@ GameObject:
   - component: {fileID: 1004019675}
   - component: {fileID: 1004019674}
   - component: {fileID: 1004019673}
+  - component: {fileID: 1004019676}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -5212,7 +5293,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1004019674}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232942524}
+        m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
+        m_MethodName: ShowCountry
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1004019676}
+          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1004019674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5251,6 +5344,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004019671}
   m_CullTransparentMesh: 0
+--- !u!114 &1004019676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004019671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  country: {fileID: 0}
 --- !u!1 &1005715122
 GameObject:
   m_ObjectHideFlags: 0
@@ -5864,6 +5970,7 @@ GameObject:
   - component: {fileID: 1184335759}
   - component: {fileID: 1184335758}
   - component: {fileID: 1184335757}
+  - component: {fileID: 1184335760}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5933,7 +6040,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1184335758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232942524}
+        m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
+        m_MethodName: ShowCountry
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1184335760}
+          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1184335758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5972,6 +6091,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184335755}
   m_CullTransparentMesh: 0
+--- !u!114 &1184335760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184335755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  country: {fileID: 0}
 --- !u!1 &1195614620
 GameObject:
   m_ObjectHideFlags: 0
@@ -6140,8 +6272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -168, y: 275}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 11.98, y: 275}
+  m_SizeDelta: {x: 559.96045, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195628299
 MonoBehaviour:
@@ -6524,6 +6656,7 @@ GameObject:
   - component: {fileID: 1239987777}
   - component: {fileID: 1239987776}
   - component: {fileID: 1239987775}
+  - component: {fileID: 1239987778}
   m_Layer: 5
   m_Name: Button (7)
   m_TagString: Untagged
@@ -6593,7 +6726,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1239987776}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232942524}
+        m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
+        m_MethodName: ShowCountry
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1239987778}
+          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1239987776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6632,6 +6777,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239987773}
   m_CullTransparentMesh: 0
+--- !u!114 &1239987778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239987773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  country: {fileID: 0}
 --- !u!1 &1262316667
 GameObject:
   m_ObjectHideFlags: 0
@@ -6933,12 +7091,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 168216166}
-  m_Father: {fileID: 186354564}
+  m_Father: {fileID: 232942521}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 92.59961, y: 28}
+  m_AnchoredPosition: {x: 91.9375, y: 27.25554}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318110978
@@ -7186,8 +7344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166, y: 327}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 12.98, y: 327}
+  m_SizeDelta: {x: 557.9609, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1354312902
 MonoBehaviour:
@@ -7608,8 +7766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 381}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 12.5, y: 381}
+  m_SizeDelta: {x: 558.92175, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386099176
 MonoBehaviour:
@@ -7974,6 +8132,7 @@ GameObject:
   - component: {fileID: 1432055154}
   - component: {fileID: 1432055153}
   - component: {fileID: 1432055152}
+  - component: {fileID: 1432055155}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -8043,7 +8202,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1432055153}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232942524}
+        m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
+        m_MethodName: ShowCountry
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1432055155}
+          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1432055153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8082,6 +8253,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432055150}
   m_CullTransparentMesh: 0
+--- !u!114 &1432055155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432055150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  country: {fileID: 0}
 --- !u!1 &1449257109
 GameObject:
   m_ObjectHideFlags: 0
@@ -8546,6 +8730,7 @@ GameObject:
   - component: {fileID: 1499593319}
   - component: {fileID: 1499593318}
   - component: {fileID: 1499593317}
+  - component: {fileID: 1499593320}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -8615,7 +8800,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1499593318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232942524}
+        m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
+        m_MethodName: ShowCountry
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1499593320}
+          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1499593318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8654,6 +8851,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499593315}
   m_CullTransparentMesh: 0
+--- !u!114 &1499593320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499593315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  country: {fileID: 0}
 --- !u!1 &1503707504
 GameObject:
   m_ObjectHideFlags: 0
@@ -9506,6 +9716,7 @@ GameObject:
   - component: {fileID: 1725883314}
   - component: {fileID: 1725883313}
   - component: {fileID: 1725883312}
+  - component: {fileID: 1725883315}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9579,6 +9790,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1725883315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725883311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7829d1f04041f40ba35b430e6200fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 694504695}
 --- !u!1 &1737695810
 GameObject:
   m_ObjectHideFlags: 0

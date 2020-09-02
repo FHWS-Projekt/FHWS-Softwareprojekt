@@ -44,7 +44,11 @@ public class MeasuresMenu : MonoBehaviour
 
     public void OnClickMenuActiv()
     {
-        if(measuresMenuActiv.activeSelf)
+        if (measures2MenuActiv.activeSelf)
+        {
+            measures2MenuActiv.SetActive(false);
+        }
+        else if(measuresMenuActiv.activeSelf)
         {
             measuresMenuActiv.SetActive(false);
             mainScript.SetTimeButtonsOnClickTask(startButton);
@@ -90,16 +94,25 @@ public class MeasuresMenu : MonoBehaviour
             {
                 countryButtons[i].gameObject.SetActive(true);
                 TextMeshProUGUI buttonText = countryButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-                buttonText.text = continent.countries[i].countryName;                
+                buttonText.text = continent.countries[i].countryName;
+                Buttons buttonsCountry = countryButtons[i].GetComponentInChildren<Buttons>();
+                buttonsCountry.country = continent.countries[i];
             }
         }
     }
-    public void ShowCountry(CountryDisplay countryDisplay)
+    public void ShowCountry(Buttons button)
     {
-        Country country = countryDisplay.country;
-        countryName.text = country.countryName;
+        
+        Country country = button.GetComponent<Buttons>().country;
+        OnClickMenu2Activ();
 
+        countryName.text = country.countryName;
+        residents.text = "Residents: " + country.residents;
+        infected.text = "Infected: " + country.infected;
+        influenceE.text = "Influence: " + country.influenceE;
+        influenceP.text = "Influence: " + country.influenceP;
 
     }
+
     #endregion Methods
 }

@@ -25,7 +25,10 @@ public class EventManager : MonoBehaviour
     public Country receiverCountry;
 
     public GameObject measures;
+    public GameObject measures2;
     public MeasuresMenu measuresMenu;
+
+    public MyCamera myCamera;
 
     int counter = 1;
 
@@ -143,7 +146,13 @@ public class EventManager : MonoBehaviour
                     GameObject continent = hit.transform.gameObject;
                     ContinentDisplay continentDisplay = (ContinentDisplay)continent.GetComponent(typeof(ContinentDisplay));
                     if (continentDisplay != null){
-                        if (measures.activeSelf)
+
+                        if (measures2.activeSelf)
+                        {
+                            measures2.SetActive(false);
+                            measuresMenu.ShowContinent(continentDisplay);
+                        }
+                        else if (measures.activeSelf)
                         {
                             measuresMenu.ShowContinent(continentDisplay);
                         }
