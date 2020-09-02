@@ -44,7 +44,7 @@ public class MyDateTime {
     public void CalculateDateTime() {
         if (Hour >= 24) {
             Hour = Hour % 24;
-            Day += (int)(Day / 24 + 1);
+            Day++;
             DayTasksManager();
         }
     }
