@@ -20,6 +20,7 @@ MonoBehaviour:
   recoveryRateG: 0.955
   influenceE: 10
   influenceP: 0.17
+  measures: 00000000000000000000
   handWash: 0
   handWashV: 0.01
   mouthguard: 0

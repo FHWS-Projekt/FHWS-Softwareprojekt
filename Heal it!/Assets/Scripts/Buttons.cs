@@ -4,7 +4,5 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-     public int buttonName;
      public Country country;
-
 }

@@ -1663,6 +1663,7 @@ MonoBehaviour:
   infected: {fileID: 1354312902}
   influenceE: {fileID: 1195628299}
   influenceP: {fileID: 519322891}
+  country: {fileID: 0}
   mainScript: {fileID: 1229859505}
   pauseButton: {fileID: 884453319}
   startButton: {fileID: 1453491585}
@@ -3317,7 +3318,6 @@ GameObject:
   - component: {fileID: 649032297}
   - component: {fileID: 649032296}
   - component: {fileID: 649032295}
-  - component: {fileID: 649032298}
   m_Layer: 5
   m_Name: mouthguard
   m_TagString: Untagged
@@ -3391,10 +3391,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 649032298}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3438,20 +3438,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649032293}
   m_CullTransparentMesh: 0
---- !u!114 &649032298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649032293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 1
-  country: {fileID: 0}
 --- !u!1 &657186105
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,7 +4103,6 @@ GameObject:
   - component: {fileID: 807505412}
   - component: {fileID: 807505411}
   - component: {fileID: 807505410}
-  - component: {fileID: 807505413}
   m_Layer: 5
   m_Name: closeBorders
   m_TagString: Untagged
@@ -4191,10 +4176,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 807505413}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4238,20 +4223,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807505408}
   m_CullTransparentMesh: 0
---- !u!114 &807505413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807505408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 7
-  country: {fileID: 0}
 --- !u!1 &808597835
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,7 +5071,6 @@ GameObject:
   - component: {fileID: 975361528}
   - component: {fileID: 975361527}
   - component: {fileID: 975361526}
-  - component: {fileID: 975361529}
   m_Layer: 5
   m_Name: closeRoutes
   m_TagString: Untagged
@@ -5174,10 +5144,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 975361529}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5221,20 +5191,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975361524}
   m_CullTransparentMesh: 0
---- !u!114 &975361529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975361524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 5
-  country: {fileID: 0}
 --- !u!1 &1004019671
 GameObject:
   m_ObjectHideFlags: 0
@@ -6979,7 +6935,6 @@ GameObject:
   - component: {fileID: 1311631648}
   - component: {fileID: 1311631647}
   - component: {fileID: 1311631646}
-  - component: {fileID: 1311631649}
   m_Layer: 5
   m_Name: closeSchools
   m_TagString: Untagged
@@ -7053,10 +7008,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1311631649}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7100,20 +7055,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311631644}
   m_CullTransparentMesh: 0
---- !u!114 &1311631649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311631644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 6
-  country: {fileID: 0}
 --- !u!1 &1318110976
 GameObject:
   m_ObjectHideFlags: 0
@@ -8008,7 +7949,6 @@ GameObject:
   - component: {fileID: 1425074388}
   - component: {fileID: 1425074387}
   - component: {fileID: 1425074386}
-  - component: {fileID: 1425074389}
   m_Layer: 5
   m_Name: handWash
   m_TagString: Untagged
@@ -8082,10 +8022,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1425074389}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8129,20 +8069,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425074384}
   m_CullTransparentMesh: 0
---- !u!114 &1425074389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425074384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 0
-  country: {fileID: 0}
 --- !u!1 &1431138950
 GameObject:
   m_ObjectHideFlags: 0
@@ -9035,7 +8961,6 @@ GameObject:
   - component: {fileID: 1503707508}
   - component: {fileID: 1503707507}
   - component: {fileID: 1503707506}
-  - component: {fileID: 1503707509}
   m_Layer: 5
   m_Name: closeKitas
   m_TagString: Untagged
@@ -9109,10 +9034,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1503707509}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9156,20 +9081,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503707504}
   m_CullTransparentMesh: 0
---- !u!114 &1503707509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503707504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 8
-  country: {fileID: 0}
 --- !u!1 &1540395024
 GameObject:
   m_ObjectHideFlags: 0
@@ -9538,7 +9449,6 @@ GameObject:
   - component: {fileID: 1653253998}
   - component: {fileID: 1653253997}
   - component: {fileID: 1653253996}
-  - component: {fileID: 1653253999}
   m_Layer: 5
   m_Name: socialDistancing
   m_TagString: Untagged
@@ -9612,10 +9522,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1653253999}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9659,20 +9569,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653253994}
   m_CullTransparentMesh: 0
---- !u!114 &1653253999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653253994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 2
-  country: {fileID: 0}
 --- !u!1 &1682821323
 GameObject:
   m_ObjectHideFlags: 0
@@ -10028,7 +9924,6 @@ GameObject:
   - component: {fileID: 1737695814}
   - component: {fileID: 1737695813}
   - component: {fileID: 1737695812}
-  - component: {fileID: 1737695815}
   m_Layer: 5
   m_Name: closeShops
   m_TagString: Untagged
@@ -10102,10 +9997,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1737695815}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10149,20 +10044,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737695810}
   m_CullTransparentMesh: 0
---- !u!114 &1737695815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737695810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 4
-  country: {fileID: 0}
 --- !u!1 &1754519981
 GameObject:
   m_ObjectHideFlags: 0
@@ -10919,7 +10800,6 @@ GameObject:
   - component: {fileID: 1970017433}
   - component: {fileID: 1970017432}
   - component: {fileID: 1970017431}
-  - component: {fileID: 1970017434}
   m_Layer: 5
   m_Name: quarantine
   m_TagString: Untagged
@@ -10993,10 +10873,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1970017434}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11040,20 +10920,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970017429}
   m_CullTransparentMesh: 0
---- !u!114 &1970017434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970017429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 3
-  country: {fileID: 0}
 --- !u!1 &1987467376
 GameObject:
   m_ObjectHideFlags: 0
@@ -11066,7 +10932,6 @@ GameObject:
   - component: {fileID: 1987467380}
   - component: {fileID: 1987467379}
   - component: {fileID: 1987467378}
-  - component: {fileID: 1987467381}
   m_Layer: 5
   m_Name: homeOffice
   m_TagString: Untagged
@@ -11140,10 +11005,10 @@ MonoBehaviour:
       - m_Target: {fileID: 232942524}
         m_TargetAssemblyTypeName: MeasuresMenu, Assembly-CSharp
         m_MethodName: MeasuresCheck
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1987467381}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11187,20 +11052,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987467376}
   m_CullTransparentMesh: 0
---- !u!114 &1987467381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987467376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4887f045e29b6c545a22ba4e28f30164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonName: 9
-  country: {fileID: 0}
 --- !u!1 &2058724905
 GameObject:
   m_ObjectHideFlags: 0

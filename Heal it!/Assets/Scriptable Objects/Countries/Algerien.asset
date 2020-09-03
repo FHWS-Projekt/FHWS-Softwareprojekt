@@ -14,29 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countryName: Algerien
   startResidents: 42972878
-  residents: 38245861.42
+  residents: 42972878
   infected: 0
-  deathCount: 4727016.579999998
+  deathCount: 0
   recoveryRateG: 0.89
   influenceE: 10
   influenceP: 0.2
-  handWash: 0
-  handWashV: 0
-  mouthguard: 0
-  mouthguardV: 0
-  socialDistancing: 0
-  socialDistancingV: 0
-  quarantine: 0
-  quarantineV: 0
-  closeShops: 0
-  closeShopsV: 0
-  closeRoutes: 0
-  closeRoutesV: 0
-  closeSchools: 0
-  closeSchoolsV: 0
-  closeBorders: 0
-  closeBordersV: 0
-  closeKitas: 0
-  closeKitasV: 0
-  homeOffice: 0
-  homeOfficeV: 0
+  measures: 00000000000000000000
+  measuresV:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  moneyV:
+  - 1
+  - 2
+  - 2
+  - 6
+  - 6
+  - 4
+  - 3
+  - 2
+  - 1
+  - 1

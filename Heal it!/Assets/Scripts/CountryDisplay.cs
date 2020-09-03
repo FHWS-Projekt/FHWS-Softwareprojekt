@@ -24,22 +24,66 @@ public class CountryDisplay : MonoBehaviour
         country.influenceE = 10;
         country.influenceP = 0.2;
 
-        country.handWash = false;
-        country.mouthguard = false;
-        country.socialDistancing = false;
-        country.quarantine = false;
-        country.closeShops = false;
-        country.closeRoutes = false;
-        country.closeSchools = false;
-        country.closeBorders = false;
-        country.closeKitas = false;
-        country.homeOffice = false;
+        country.measures = new bool[10];
+        country.measuresV = new double[10];
+        country.moneyV = new double[10];
+
+        for(int i =  0; i < country.measures.Length; i++)
+        {
+            country.measures[i] = false;
+        }
+        for(int i = 0; i < country.measuresV.Length; i++)
+        {
+            switch (i)
+            {
+                case 0:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 1;
+                    break;
+                case 1:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 2;
+                    break;
+                case 2:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 2;
+                    break;
+                case 3:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 6;
+                    break;
+                case 4:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 6;
+                    break;
+                case 5:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 4;
+                    break;
+                case 6:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 3;
+                    break;
+                case 7:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 2;
+                    break;
+                case 8:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 1;
+                    break;
+                case 9:
+                    country.measuresV[i] = 0;
+                    country.moneyV[i] = 1;
+                    break;
+            }
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
         CheckMeasures();
     }
 
@@ -62,89 +106,126 @@ public class CountryDisplay : MonoBehaviour
     //Method to check the activ measures;
     public void CheckMeasures()
     {
-        if (country.handWash)
+        for (int i = 0; i < country.measures.Length; i++)
         {
-            country.handWashV = 0.01;
-        }
-        else
-        {
-            country.handWashV = 0;
-        }
-        if (country.mouthguard)
-        {
-            country.mouthguardV = 0.02;
-        }
-        else
-        {
-            country.mouthguardV = 0;
-        }
-        if (country.socialDistancing)
-        {
-            country.socialDistancingV = 0.02;
-        }
-        else
-        {
-            country.socialDistancingV = 0;
-        }
-        if (country.quarantine)
-        {
-            country.quarantineV = 2.25;
-        }
-        else
-        {
-            country.quarantineV = 0;
-        }
-        if (country.closeShops)
-        {
-            country.closeShopsV = 2.25;
-        }
-        else
-        {
-            country.closeShopsV = 0;
-        }
-        if (country.closeRoutes)
-        {
-            country.closeRoutesV = 1.5;
-        }
-        else
-        {
-            country.closeRoutesV = 0;
-        }
-        if (country.closeSchools)
-        {
-            country.closeSchoolsV = 1;
-        }
-        else
-        {
-            country.closeSchoolsV = 0;
-        }
-        if (country.closeBorders)
-        {
-            country.closeBordersV = 0.75;
-        }
-        else
-        {
-            country.closeBordersV = 0;
-        }
-        if (country.closeKitas)
-        {
-            country.closeKitasV = 0.5;
-        }
-        else
-        {
-            country.closeKitasV = 0;
-        }
-        if (country.homeOffice)
-        {
-            country.homeOfficeV = 0.5;
-        }
-        else
-        {
-            country.homeOfficeV = 0;
-        }
-        country.influenceP = 0.2 - country.handWashV - country.mouthguardV - country.socialDistancingV;
-        country.influenceE = 10 - country.quarantineV - country.closeShopsV - country.closeRoutesV - country.closeSchoolsV - country.closeBordersV - country.closeKitasV - country.homeOfficeV;
+            switch (i)
+            {
+                case 0:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 0.01;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 1:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 0.02;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 2:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 0.02;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 3:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 2.25;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 4:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 2.25;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 5:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 1.5;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 6:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 1;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 7:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 0.75;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 8:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 0.5;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+                case 9:
+                    if (country.measures[i])
+                    {
+                        country.measuresV[i] = 0.5;
+                        break;
+                    }
+                    else
+                    {
+                        country.measuresV[i] = 0.00;
+                        break;
+                    }
+            }
 
+            country.influenceP = 0.2 - country.measuresV[0] - country.measuresV[1] - country.measuresV[2];
+            country.influenceE = 10 - country.measuresV[3] - country.measuresV[4] - country.measuresV[5] - country.measuresV[6] - country.measuresV[7] - country.measuresV[8] - country.measuresV[9]; 
+
+        }
     }
 
     #endregion Methods

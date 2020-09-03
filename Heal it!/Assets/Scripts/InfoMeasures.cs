@@ -18,7 +18,7 @@ public class InfoMeasures : MonoBehaviour
     infoTexte[7] = "In lokalen Geschäften begegnen sich täglich viele fremde Menschen, die sonst nicht in Kontakt stehen würden und in den geschlossenen Räumen kommt es oft zu engerem Kontakt. Mit der Schließung von Geschäften wird zwar die Wirtschaft belastet, aber ein hohes Risiko vieler weiterer Infektionen beseitigt.";
     infoTexte[8] = "Mit der Schließung der Grenzen kann das Risiko von Einreisenden, die sich mit dem Virus infiziert haben, beseitigt werden. Die Anzahl von Neuinfektionen kann verringert werden und im Kampf gegen die Ausbreitung kann fortan auf das eigene Land fokussiert werden.";
     infoTexte[9] = "Beim Transport von Gütern interagieren viele Menschen miteinander und es ist nicht ausgeschlossen, dass dadurch Viren über weite Strecken verteilt werden. Schließe nicht notwendige Transportwege und Güterannahmestellen wie Flughäfen und Häfen um dieses Risiko zu vermeiden.";
-
+    
     #endregion Attributes
 
     #region UnityMethods
