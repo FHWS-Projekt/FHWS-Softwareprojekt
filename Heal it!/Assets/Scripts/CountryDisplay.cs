@@ -11,6 +11,9 @@ public class CountryDisplay : MonoBehaviour
     public double temp;
     public EventManager eventManager;
 
+    public float fadeColor = 0f;
+    Color color;
+
     #endregion Attributes
 
     #region Unity Methods
@@ -24,6 +27,14 @@ public class CountryDisplay : MonoBehaviour
         country.deathCount = 0;
         country.influenceE = 10;
         country.influenceP = 0.2;
+
+        color = myMaterial.color;
+
+        color.g = 1f;
+        color.b = 0f;
+        color.r = 0f;
+
+        myMaterial.color = color;
 
         country.measures = new bool[10];
         country.measuresV = new double[10];
@@ -99,9 +110,15 @@ public class CountryDisplay : MonoBehaviour
         country.residents = System.Math.Round(country.residents - temp);
         country.infected = System.Math.Round(temp);
 
+        if(country.deathCount > 0)
+        {
+            color.g =  1 - (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
+            color.r = (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
+        }
+        myMaterial.color = color;
+
         if (country.residents <= (country.startResidents / 2))
         {
-            myMaterial.color = Color.red;
             eventManager.lose = true;
         }
     }
