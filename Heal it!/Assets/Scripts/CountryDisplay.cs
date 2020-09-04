@@ -9,6 +9,7 @@ public class CountryDisplay : MonoBehaviour
     public Country country;
     public Material myMaterial;
     public double temp;
+    public EventManager eventManager;
 
     #endregion Attributes
 
@@ -94,13 +95,14 @@ public class CountryDisplay : MonoBehaviour
     void ACalculateResidents()
     {
         temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
-        country.deathCount = country.deathCount + temp;
-        country.residents = country.residents - temp;
-        country.infected = temp;
+        country.deathCount = System.Math.Round(country.deathCount + temp);
+        country.residents = System.Math.Round(country.residents - temp);
+        country.infected = System.Math.Round(temp);
 
         if (country.residents <= (country.startResidents / 2))
         {
             myMaterial.color = Color.red;
+            eventManager.lose = true;
         }
     }
     //Method to check the activ measures;

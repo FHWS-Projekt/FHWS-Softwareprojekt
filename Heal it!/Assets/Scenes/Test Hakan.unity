@@ -172,6 +172,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 82c0619d1f6d0c94db3dfd440e8fee9c, type: 2}
   myMaterial: {fileID: 2100000, guid: f703ac3318cde3b4ea4d0895e0b622f5, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &9531976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -269,8 +270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 293.98, y: 91.515}
-  m_SizeDelta: {x: 1332.0308, y: 83.03058}
+  m_AnchoredPosition: {x: 293.98, y: 82}
+  m_SizeDelta: {x: 1332.0308, y: 63.942078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &19898195
 MonoBehaviour:
@@ -567,6 +568,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: ec5fdbbbafa6f8b4393b119df5568444, type: 2}
   myMaterial: {fileID: 2100000, guid: fcf1b2031a40e4541963605b393b510e, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &85085044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -817,6 +819,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a05df93a0d050ab4a97be022f0c2f824, type: 2}
   - {fileID: 11400000, guid: 0bd4561da249e7f47ae3c1a791cbfd27, type: 2}
   - {fileID: 11400000, guid: aedf65f39c79b8b48a2c74c7e5ce52c0, type: 2}
+  main: {fileID: 1229859505}
   infectedContinent: []
   healthyContinent: []
   infectedCountries: []
@@ -829,6 +832,8 @@ MonoBehaviour:
   measures2: {fileID: 200565417}
   measuresMenu: {fileID: 232942524}
   myCamera: {fileID: 0}
+  win: 0
+  lose: 0
 --- !u!1 &101263182
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +883,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 4be2ade0678fc414f9450df6017e60b6, type: 2}
   myMaterial: {fileID: 2100000, guid: e9045f885fe232a4f95cf18146b859a1, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &101263185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1081,6 +1087,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 5b78651629f795748bf7aa50df6a87cf, type: 2}
   myMaterial: {fileID: 2100000, guid: 725170c0f36cc1f45a6e1d461dbcb892, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &155157175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2033,6 +2040,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 7c911bb250c578643b059585c1844670, type: 2}
   myMaterial: {fileID: 2100000, guid: f505612e2f0065141a6f3f9b9f357a44, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &318550853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2373,6 +2381,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 9f2f68c640110dc4ca84e6dcf7a19692, type: 2}
   myMaterial: {fileID: 2100000, guid: 8cb974f31960616448911d98dd015cec, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &405845417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2497,7 +2506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: closeKitas
+  m_text: closeKitas 1G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2765,7 +2774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: homeOffice
+  m_text: homeOffice 1G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2891,6 +2900,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 290bcfeee520f4f43b41554e617f060a, type: 2}
   myMaterial: {fileID: 2100000, guid: e44a9c8f5ca097f4ba106a38754ac393, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &550562109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3002,6 +3012,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 73d35514ef6d94947b01d051cbbe52f7, type: 2}
   myMaterial: {fileID: 2100000, guid: 806b775113f9649498700ccc90910ed6, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &556866519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3113,6 +3124,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: c5fd6a9ffefce85418587bf811417187, type: 2}
   myMaterial: {fileID: 2100000, guid: aa25de89d12823743884cc0e80990571, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &623872796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3491,8 +3503,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 93}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: 78.976}
+  m_SizeDelta: {x: 261.9926, y: 57.951805}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649032295
 MonoBehaviour:
@@ -4275,8 +4287,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -284}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: -299.42}
+  m_SizeDelta: {x: 261.99518, y: 48.38285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807505410
 MonoBehaviour:
@@ -4646,6 +4658,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: aedf65f39c79b8b48a2c74c7e5ce52c0, type: 2}
   myMaterial: {fileID: 2100000, guid: 034123184e8637043a472d8eede10945, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &858332079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4757,6 +4770,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 612321ff808cdac4aa95dbf878782de8, type: 2}
   myMaterial: {fileID: 2100000, guid: 14c99f557df47164184c7e03394d2cb0, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &862313273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4996,7 +5010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: closeSchools
+  m_text: closeSchools 3G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5243,8 +5257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -180}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: -183.10645}
+  m_SizeDelta: {x: 261.9915, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975361526
 MonoBehaviour:
@@ -5534,6 +5548,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 1f76c48d23fc6614db71a9b803d215d4, type: 2}
   myMaterial: {fileID: 2100000, guid: c0743fdfe3d1bf84a8d305f88187d502, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1005715125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5779,6 +5794,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 0bd4561da249e7f47ae3c1a791cbfd27, type: 2}
   myMaterial: {fileID: 2100000, guid: dfb71c45dc0af814d9855eea851741a7, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1108192314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5890,6 +5906,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 4c30ccd3f991a2649b490d26328fd359, type: 2}
   myMaterial: {fileID: 2100000, guid: f4e8801858966ef4b9027b8bd3363376, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1148894902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6549,6 +6566,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 33db95f5ac36a8946a2d4b4ec5092483, type: 2}
   myMaterial: {fileID: 2100000, guid: 170435d42b2ec5f45b72087024060f5a, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1211793979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6660,6 +6678,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 285cde56c4052b944aab3604a458223c, type: 2}
   myMaterial: {fileID: 2100000, guid: 2179b091c860d094a82e6d0a7f943154, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1213306811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6967,6 +6986,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: a05df93a0d050ab4a97be022f0c2f824, type: 2}
   myMaterial: {fileID: 2100000, guid: 7834c2ad5a3987a4ba9d396431ea28fe, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1262316670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7104,8 +7124,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -223}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: -245.14}
+  m_SizeDelta: {x: 261.99518, y: 60.17961}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311631646
 MonoBehaviour:
@@ -7717,7 +7737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: handWash
+  m_text: handWash 1G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7886,6 +7906,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 509eaa1be0fd6064ba3e4e4c80d31858, type: 2}
   myMaterial: {fileID: 2100000, guid: 97b9623ae003e39499e9814b2d81d085, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1380824650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8118,8 +8139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 139}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: 152}
+  m_SizeDelta: {x: 261.99365, y: 55.25052}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425074386
 MonoBehaviour:
@@ -8551,7 +8572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: quarantine
+  m_text: quarantine 6G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8869,7 +8890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: mouthguard
+  m_text: mouthguard 2G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9128,8 +9149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -346}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: -363.88925}
+  m_SizeDelta: {x: 261.99518, y: 57.574234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503707506
 MonoBehaviour:
@@ -9384,6 +9405,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 0cdffeee922736640ad22e41cff1d011, type: 2}
   myMaterial: {fileID: 2100000, guid: 62a6f87ecf98ac2468fa3364e83ead9a, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1543357892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9503,7 +9525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: socialDistancing
+  m_text: socialDistancing 2G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9616,8 +9638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 47}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -133.09659, y: 11.489518}
+  m_SizeDelta: {x: 261.9915, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653253996
 MonoBehaviour:
@@ -9761,6 +9783,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 87c882de81c3a604f90ca64cd6ddb81e, type: 2}
   myMaterial: {fileID: 2100000, guid: 436914c13cf59ee41a59982f23d6bdf9, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1682821326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9880,7 +9903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: closeShops
+  m_text: closeShops 6G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10091,8 +10114,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -120}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: -119}
+  m_SizeDelta: {x: 261.9915, y: 60.00003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737695812
 MonoBehaviour:
@@ -10244,7 +10267,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: closeRoutes
+  m_text: closeRoutes 4G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10490,6 +10513,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 9ffb7658bb5400f4eb5a0f9926649937, type: 2}
   myMaterial: {fileID: 2100000, guid: 7e0a6e92782265647b6a258236aa6d3c, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1822333605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10601,6 +10625,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: f7d26737489465c458e34166d8314f29, type: 2}
   myMaterial: {fileID: 2100000, guid: ae874d7306eb5064eaff6e0c42703494, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &1829249686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10967,8 +10992,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -74}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: -60}
+  m_SizeDelta: {x: 261.9957, y: 58.000374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970017431
 MonoBehaviour:
@@ -11099,8 +11124,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: -404}
-  m_SizeDelta: {x: 189.98297, y: 30}
+  m_AnchoredPosition: {x: -131, y: -426.5}
+  m_SizeDelta: {x: 261.9873, y: 52.978508}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987467378
 MonoBehaviour:
@@ -11244,6 +11269,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 7afc158b88acf4b4783316529509c37e, type: 2}
   myMaterial: {fileID: 2100000, guid: f25728f9e7a1d0e42a510590f0ae0f71, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &2058724908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11355,6 +11381,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 58f0725980652f14982a7c7028bf0540, type: 2}
   myMaterial: {fileID: 2100000, guid: 33b0f302e0802634fa79a87c53722e3b, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &2095757158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11857,7 +11884,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: closeBorders
+  m_text: closeBorders 2G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11983,6 +12010,7 @@ MonoBehaviour:
   country: {fileID: 11400000, guid: 2de0d8616e0bb5545af2b82bcefe1390, type: 2}
   myMaterial: {fileID: 2100000, guid: 7aec9e9cb5381ef4ea515c2adc286d84, type: 2}
   temp: 0
+  eventManager: {fileID: 99060498}
 --- !u!65 &2142398471
 BoxCollider:
   m_ObjectHideFlags: 0

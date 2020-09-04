@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour
     public Earth earth;
     public Continent[] continents;
     public Country[] countries;
+    public Main main;
 
     public List<Continent> infectedContinent;
     public List<Continent> healthyContinent;
@@ -29,6 +30,9 @@ public class EventManager : MonoBehaviour
     public MeasuresMenu measuresMenu;
 
     public MyCamera myCamera;
+
+    public bool win;
+    public bool lose;
 
     int counter = 1;
 
@@ -53,6 +57,7 @@ public class EventManager : MonoBehaviour
 
     private void Update()
     {
+        EndingController();
         ObjectClicker();
     }
 
@@ -88,9 +93,9 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, healthyContinent.Count);
             int rdm2 = Random.Range(0, healthyContinent[rdm].countries.Length - 1);
 
-            Debug.Log(" Angesteckt: " + transmitterCountry.name + " ---> " + healthyContinent[rdm].countries[rdm2]);
+            Debug.Log("Angesteckt: " + transmitterCountry.name + " ---> " + healthyContinent[rdm].countries[rdm2]);
 
-            transmitterCountry.infected -= 1;
+            //transmitterCountry.infected -= 1;
             healthyContinent[rdm].countries[rdm2].infected += 1;
 
             infectedContinent.Add(healthyContinent[rdm]);
@@ -109,9 +114,9 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, healtyCountries.Count);
 
-            Debug.Log(" Angesteckt: " + infectedCountries[rdm].name + " ---> " + healtyCountries[rdm2]);
+            Debug.Log("Angesteckt: " + infectedCountries[rdm].name + " ---> " + healtyCountries[rdm2]);
 
-            infectedCountries[rdm].infected -= 1;
+            //infectedCountries[rdm].infected -= 1;
             healtyCountries[rdm2].infected += 1;
 
             infectedCountries.Add(healtyCountries[rdm2]);
@@ -124,9 +129,9 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, infectedContinent.Count);
 
-            Debug.Log(" Angesteckt: " + infectedCountries[rdm].name + " ---> " + infectedCountries[rdm].name);
+            Debug.Log("Angesteckt: " + infectedCountries[rdm].name + " ---> " + infectedCountries[rdm].name);
 
-            infectedCountries[rdm].infected -= 1;
+            //infectedCountries[rdm].infected -= 1;
             infectedCountries[rdm2].infected += 1;
         }
    
@@ -164,6 +169,17 @@ public class EventManager : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+    public void EndingController()
+    {
+        if (main.MyDateTime.Day == 50)
+        {
+            Debug.Log("Du hast gewonnen!");
+        }
+        else if (lose)
+        {
+            Debug.Log("Du hast verloren!");
         }
     }
 
