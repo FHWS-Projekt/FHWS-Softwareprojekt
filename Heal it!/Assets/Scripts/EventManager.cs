@@ -88,7 +88,7 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, healthyContinent.Count);
             int rdm2 = Random.Range(0, healthyContinent[rdm].countries.Length - 1);
 
-            Debug.Log("Transmitter Continent: " + transmitterContinent.name + " Transmitter Country: " + transmitterCountry.name + " ---> " + "Receiver Continent: " + healthyContinent[rdm] + " Receiver Country: " + healthyContinent[rdm].countries[rdm2]);
+            Debug.Log(" Angesteckt: " + transmitterCountry.name + " ---> " + healthyContinent[rdm].countries[rdm2]);
 
             transmitterCountry.infected -= 1;
             healthyContinent[rdm].countries[rdm2].infected += 1;
@@ -109,7 +109,7 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, healtyCountries.Count);
 
-            Debug.Log("Transmitter Country: " + infectedCountries[rdm].name + " ---> " + "Receiver Country: " + healtyCountries[rdm2]);
+            Debug.Log(" Angesteckt: " + infectedCountries[rdm].name + " ---> " + healtyCountries[rdm2]);
 
             infectedCountries[rdm].infected -= 1;
             healtyCountries[rdm2].infected += 1;
@@ -124,7 +124,7 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, infectedContinent.Count);
 
-            Debug.Log("Transmitter Country: " + infectedCountries[rdm].name + " ---> " + "Receiver Country: " + infectedCountries[rdm].name);
+            Debug.Log(" Angesteckt: " + infectedCountries[rdm].name + " ---> " + infectedCountries[rdm].name);
 
             infectedCountries[rdm].infected -= 1;
             infectedCountries[rdm2].infected += 1;
