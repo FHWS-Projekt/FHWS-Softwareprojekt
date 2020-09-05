@@ -173,6 +173,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: f703ac3318cde3b4ea4d0895e0b622f5, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &9531976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -569,6 +570,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: fcf1b2031a40e4541963605b393b510e, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &85085044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -884,6 +886,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: e9045f885fe232a4f95cf18146b859a1, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &101263185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1031,13 +1034,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140666862}
-  m_LocalRotation: {x: 0.20292455, y: 0.42711413, z: 0.38648447, w: 0.791849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1725883314}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.503, y: 56.44, z: 51.762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &155157172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1091,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 725170c0f36cc1f45a6e1d461dbcb892, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &155157175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1449,7 +1453,7 @@ RectTransform:
   - {fileID: 1354189609}
   - {fileID: 19898194}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2040,6 +2044,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: f505612e2f0065141a6f3f9b9f357a44, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &318550853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2381,6 +2386,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 8cb974f31960616448911d98dd015cec, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &405845417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2900,6 +2906,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: e44a9c8f5ca097f4ba106a38754ac393, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &550562109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3012,6 +3019,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 806b775113f9649498700ccc90910ed6, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &556866519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3124,6 +3132,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: aa25de89d12823743884cc0e80990571, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &623872796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3834,7 +3843,7 @@ Transform:
   - {fileID: 198274106}
   - {fileID: 336802596}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757276087
 GameObject:
@@ -4248,98 +4257,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807505408}
   m_CullTransparentMesh: 0
---- !u!1 &808597835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 808597837}
-  - component: {fileID: 808597836}
-  m_Layer: 0
-  m_Name: Star Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &808597836
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808597835}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.3
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 2
-    m_NormalBias: 0.5
-    m_NearPlane: 0.5
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &808597837
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808597835}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &846100004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4524,6 +4441,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 034123184e8637043a472d8eede10945, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &858332079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4636,6 +4554,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 14c99f557df47164184c7e03394d2cb0, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &862313273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5414,6 +5333,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: c0743fdfe3d1bf84a8d305f88187d502, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1005715125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5660,6 +5580,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: dfb71c45dc0af814d9855eea851741a7, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1108192314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5772,6 +5693,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: f4e8801858966ef4b9027b8bd3363376, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1148894902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6432,6 +6354,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 170435d42b2ec5f45b72087024060f5a, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1211793979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6544,6 +6467,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 2179b091c860d094a82e6d0a7f943154, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1213306811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6852,6 +6776,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 7834c2ad5a3987a4ba9d396431ea28fe, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1262316670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7772,6 +7697,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 97b9623ae003e39499e9814b2d81d085, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1380824650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9271,6 +9197,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 62a6f87ecf98ac2468fa3364e83ead9a, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1543357892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9649,6 +9576,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 436914c13cf59ee41a59982f23d6bdf9, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1682821326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9928,7 +9856,7 @@ Transform:
   m_Children:
   - {fileID: 140666864}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1725883315
 MonoBehaviour:
@@ -10259,6 +10187,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 7e0a6e92782265647b6a258236aa6d3c, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1822333605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10371,6 +10300,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: ae874d7306eb5064eaff6e0c42703494, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &1829249686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11015,6 +10945,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: f25728f9e7a1d0e42a510590f0ae0f71, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &2058724908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11127,6 +11058,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 33b0f302e0802634fa79a87c53722e3b, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &2095757158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11756,6 +11688,7 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 7aec9e9cb5381ef4ea515c2adc286d84, type: 2}
   temp: 0
   eventManager: {fileID: 99060498}
+  fadeColor: 0
 --- !u!65 &2142398471
 BoxCollider:
   m_ObjectHideFlags: 0
