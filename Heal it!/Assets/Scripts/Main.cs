@@ -18,7 +18,7 @@ public class Main : MonoBehaviour {
     // DateTime
     protected MyDateTime myDateTime;
     [SerializeField] protected TextMeshProUGUI timeDisplay;
-    [SerializeField] protected Button[] timeButtons = new Button[3];
+    [SerializeField] protected Button[] timeButtons = new Button[2];
 
     // Money
     protected double money;
@@ -92,13 +92,25 @@ public class Main : MonoBehaviour {
         TimeDisplay.text = MyDateTime.toString();
     }
     public void SetTimeButtonsOnClick() {
-        foreach (Button button in TimeButtons) {
-            button.onClick.AddListener(() => SetTimeButtonsOnClickTask(button));
-        }
+        TimeButtons[0].onClick.AddListener(() => SetTimeButtonPlayPauseOnClickTask());
+        TimeButtons[1].onClick.AddListener(() => SetTimeButtonSkipOnClickTask());
     }
+    /*
     public void SetTimeButtonsOnClickTask(Button button) {
         int indexOfButton = System.Array.IndexOf(TimeButtons, button);
         Time.timeScale = (float)Math.Pow(indexOfButton, 6);
+        MyCamera.Timer = 0;
+    }*/
+    public void SetTimeButtonPlayPauseOnClickTask() {
+        if (Time.timeScale == 0) {
+            Time.timeScale = 1;
+        }else {
+            Time.timeScale = 0;
+        }
+        MyCamera.Timer = 0;
+    }
+    public void SetTimeButtonSkipOnClickTask() {
+        MyDateTime.Hour = 24;
         MyCamera.Timer = 0;
     }
     #endregion Time

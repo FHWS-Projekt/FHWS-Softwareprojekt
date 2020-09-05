@@ -51,12 +51,15 @@ public class MeasuresMenu : MonoBehaviour
         else if(measuresMenuActiv.activeSelf)
         {
             measuresMenuActiv.SetActive(false);
-            mainScript.SetTimeButtonsOnClickTask(startButton);
+            //mainScript.SetTimeButtonsOnClickTask(startButton);
+            mainScript.SetTimeButtonPlayPauseOnClickTask();
+
         }
         else
         {
             measuresMenuActiv.SetActive(true);
-            mainScript.SetTimeButtonsOnClickTask(pauseButton);
+            //mainScript.SetTimeButtonsOnClickTask(pauseButton);
+            mainScript.SetTimeButtonPlayPauseOnClickTask();
         }  
     }
     public void OnClickMenu2Activ()
