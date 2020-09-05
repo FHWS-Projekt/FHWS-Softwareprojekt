@@ -19,6 +19,7 @@ public class Main : MonoBehaviour {
     protected MyDateTime myDateTime;
     [SerializeField] protected TextMeshProUGUI timeDisplay;
     [SerializeField] protected Button[] timeButtons = new Button[2];
+    public bool pause;
 
     // Money
     protected double money;
@@ -104,8 +105,10 @@ public class Main : MonoBehaviour {
     public void SetTimeButtonPlayPauseOnClickTask() {
         if (Time.timeScale == 0) {
             Time.timeScale = 1;
+            pause = false;
         }else {
             Time.timeScale = 0;
+            pause = true;
         }
         MyCamera.Timer = 0;
     }

@@ -64,15 +64,18 @@ public class MeasuresMenu : MonoBehaviour
         else if(measuresMenuActiv.activeSelf)
         {
             measuresMenuActiv.SetActive(false);
-            //mainScript.SetTimeButtonsOnClickTask(startButton);
-            mainScript.SetTimeButtonPlayPauseOnClickTask();
-
+            if (mainScript.pause)
+            {
+                mainScript.SetTimeButtonPlayPauseOnClickTask();
+            }
         }
         else
         {
             measuresMenuActiv.SetActive(true);
-            //mainScript.SetTimeButtonsOnClickTask(pauseButton);
-            mainScript.SetTimeButtonPlayPauseOnClickTask();
+            if (!mainScript.pause)
+            {
+                mainScript.SetTimeButtonPlayPauseOnClickTask();
+            }
         }  
     }
     public void OnClickMenu2Activ()
@@ -151,6 +154,7 @@ public class MeasuresMenu : MonoBehaviour
                 else if (country.measures[i])
                 {
                     country.measures[i] = false;
+                    mainScript.Money += country.moneyV[i];
                     measursButtons[i].image.color = Color.red;
                 }
                 else
