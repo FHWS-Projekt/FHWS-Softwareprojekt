@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour
     public Earth earth;
     public Continent[] continents;
     public Country[] countries;
+    public Main main;
 
     public List<Continent> infectedContinent;
     public List<Continent> healthyContinent;
@@ -30,6 +31,9 @@ public class EventManager : MonoBehaviour
 
     public MyCamera myCamera;
 
+    public bool win;
+    public bool lose;
+
     int counter = 1;
 
     #endregion Attributes
@@ -47,12 +51,13 @@ public class EventManager : MonoBehaviour
             healthyContinent.Add(continents[i]);
         }
         RandomStart();
-        Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
- 
+        Main.Instance.MyDateTime.DayTasks.Add(() => BRandomDistribution());
+        // Main.Instance.MyDateTime.DayTasks.Sort();
     }
 
     private void Update()
     {
+        EndingController();
         ObjectClicker();
     }
 
@@ -68,7 +73,7 @@ public class EventManager : MonoBehaviour
 
         Debug.Log("Start continent: " + continents[rdm].name + " Start country: " + continents[rdm].countries[rdm2].countryName);
 
-        continents[rdm].countries[rdm2].infected += 2;
+        continents[rdm].countries[rdm2].infected += 1;
 
         infectedContinent.Add(continents[rdm]);
         healthyContinent.Remove(continents[rdm]);
@@ -80,7 +85,7 @@ public class EventManager : MonoBehaviour
         transmitterCountry = continents[rdm].countries[rdm2];
 
     }
-    public void RandomDistribution()
+    public void BRandomDistribution()
     {
  
         if(counter < 6)
@@ -88,9 +93,9 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, healthyContinent.Count);
             int rdm2 = Random.Range(0, healthyContinent[rdm].countries.Length - 1);
 
-            Debug.Log("Transmitter Continent: " + transmitterContinent.name + " Transmitter Country: " + transmitterCountry.name + " ---> " + "Receiver Continent: " + healthyContinent[rdm] + " Receiver Country: " + healthyContinent[rdm].countries[rdm2]);
+            Debug.Log("Angesteckt: " + transmitterCountry.name + " ---> " + healthyContinent[rdm].countries[rdm2]);
 
-            transmitterCountry.infected -= 1;
+            //transmitterCountry.infected -= 1;
             healthyContinent[rdm].countries[rdm2].infected += 1;
 
             infectedContinent.Add(healthyContinent[rdm]);
@@ -109,9 +114,9 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, healtyCountries.Count);
 
-            Debug.Log("Transmitter Country: " + infectedCountries[rdm].name + " ---> " + "Receiver Country: " + healtyCountries[rdm2]);
+            Debug.Log("Angesteckt: " + infectedCountries[rdm].name + " ---> " + healtyCountries[rdm2]);
 
-            infectedCountries[rdm].infected -= 1;
+            //infectedCountries[rdm].infected -= 1;
             healtyCountries[rdm2].infected += 1;
 
             infectedCountries.Add(healtyCountries[rdm2]);
@@ -124,9 +129,9 @@ public class EventManager : MonoBehaviour
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, infectedContinent.Count);
 
-            Debug.Log("Transmitter Country: " + infectedCountries[rdm].name + " ---> " + "Receiver Country: " + infectedCountries[rdm].name);
+            Debug.Log("Angesteckt: " + infectedCountries[rdm].name + " ---> " + infectedCountries[rdm].name);
 
-            infectedCountries[rdm].infected -= 1;
+            //infectedCountries[rdm].infected -= 1;
             infectedCountries[rdm2].infected += 1;
         }
    
@@ -164,6 +169,17 @@ public class EventManager : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+    public void EndingController()
+    {
+        if (main.MyDateTime.Day == 50)
+        {
+            Debug.Log("Du hast gewonnen!");
+        }
+        else if (lose)
+        {
+            Debug.Log("Du hast verloren!");
         }
     }
 

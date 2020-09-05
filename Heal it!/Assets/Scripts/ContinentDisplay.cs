@@ -6,7 +6,18 @@ using UnityEngine;
 
 public class ContinentDisplay : MonoBehaviour
 {
-    public Continent continent;
-    public Material Material; 
+    #region Attributes
 
+    public Continent continent;
+    public Material Material;
+
+    #endregion Attributes
+
+    #region Unity Methods
+
+    #endregion Unity Methods
+
+    #region Methods
+
+    #endregion Methods
 }
