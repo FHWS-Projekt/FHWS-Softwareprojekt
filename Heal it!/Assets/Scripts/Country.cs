@@ -18,4 +18,6 @@ public class Country : ScriptableObject
     public bool[] measures;
     public double[] measuresV;
     public double[] moneyV;
+
+    public Sprite flag;
 }
