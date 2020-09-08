@@ -105,10 +105,10 @@ public class CountryDisplay : MonoBehaviour
     //Method to calculate the infected for the next cycle;
     void ACalculateResidents()
     {
-        temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
+        temp = System.Math.Round(1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
         country.deathCount = System.Math.Round(country.deathCount + temp);
-        country.residents = System.Math.Round(country.residents - temp);
-        country.infected = System.Math.Round(temp);
+        //country.residents = System.Math.Round(country.residents - temp);
+        country.infected = temp;
 
         if(country.deathCount > 0)
         {

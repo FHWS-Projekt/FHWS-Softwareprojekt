@@ -32,7 +32,7 @@ public class MyDateTime {
     #region Constructors
     public MyDateTime() {
         Hour = 0;
-        Day = 0;
+        Day = 1;
     }
     public MyDateTime(double hour, double day) {
         Hour = hour;
