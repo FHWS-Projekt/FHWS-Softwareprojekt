@@ -112,10 +112,16 @@ public class CountryDisplay : MonoBehaviour
 
         if(country.deathCount > 0)
         {
+
             color.g =  1 - (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
             color.r = (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
+            if(country.name == "Vietnam")
+            {
+                Debug.Log(country.name + " " + color.g + " " + color.r);
+            }
+            myMaterial.color = color;
         }
-        myMaterial.color = color;
+
 
         if (country.residents <= (country.startResidents / 2))
         {

@@ -9,7 +9,6 @@ public class ContinentDisplay : MonoBehaviour
     #region Attributes
 
     public Continent continent;
-    public Material Material;
 
     #endregion Attributes
 

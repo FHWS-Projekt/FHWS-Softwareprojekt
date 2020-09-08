@@ -146,9 +146,11 @@ public class EventManager : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
+                
                 if (hit.transform)
                 {
                     GameObject continent = hit.transform.gameObject;
+                    Debug.Log(continent.name);
                     ContinentDisplay continentDisplay = (ContinentDisplay)continent.GetComponent(typeof(ContinentDisplay));
                     if (continentDisplay != null){
 
