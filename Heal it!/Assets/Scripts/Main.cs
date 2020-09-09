@@ -73,6 +73,7 @@ public class Main : MonoBehaviour {
         // Adds OnClick Listener to Buttons
         SetTimeButtonsOnClick();
         MyDateTime.DayTasks.Add(() => AddMoney());
+        AddMoney();
     }
 
     // Update is called once per frame
