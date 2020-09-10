@@ -97,12 +97,6 @@ public class Main : MonoBehaviour {
         TimeButtons[0].onClick.AddListener(() => SetTimeButtonPlayPauseOnClickTask());
         TimeButtons[1].onClick.AddListener(() => SetTimeButtonSkipOnClickTask());
     }
-    /*
-    public void SetTimeButtonsOnClickTask(Button button) {
-        int indexOfButton = System.Array.IndexOf(TimeButtons, button);
-        Time.timeScale = (float)Math.Pow(indexOfButton, 6);
-        MyCamera.Timer = 0;
-    }*/
     public void SetTimeButtonPlayPauseOnClickTask() {
         if (Time.timeScale == 0) {
             Time.timeScale = 1;
