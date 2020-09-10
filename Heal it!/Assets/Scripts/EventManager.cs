@@ -29,11 +29,11 @@ public class EventManager : MonoBehaviour
     public GameObject measures2;
     public MeasuresMenu measuresMenu;
 
-    public GameObject plane;
+    /*public GameObject plane;
     public Vector3 start;
     public float planeSpeed;
     public Country destinationCountry;
-    public Country startCountry;
+    public Country startCountry;*/
 
     public GameObject[] flightPoints;
 
@@ -67,10 +67,10 @@ public class EventManager : MonoBehaviour
 
     private void Update()
     {
-        if (move)
+        /*if (move)
         {
             PlaneMove();
-        }
+        }*/
         EndingController();
         ObjectClicker();
     }
@@ -112,11 +112,11 @@ public class EventManager : MonoBehaviour
             //transmitterCountry.infected -= 1;
             healthyContinent[rdm].countries[rdm2].infected += 1;
 
-            start = transmitterCountry.airport;
+            /*start = transmitterCountry.airport;
             startCountry = transmitterCountry;
             destinationCountry = healthyContinent[rdm].countries[rdm2];
             plane.transform.position = start;
-            move = true;
+            move = true;*/
 
             infectedContinent.Add(healthyContinent[rdm]);
             infectedCountries.Add(healthyContinent[rdm].countries[rdm2]);
@@ -140,11 +140,11 @@ public class EventManager : MonoBehaviour
             //infectedCountries[rdm].infected -= 1;
             healtyCountries[rdm2].infected += 1;
 
-            start = infectedCountries[rdm].airport;
+            /*start = infectedCountries[rdm].airport;
             startCountry = infectedCountries[rdm];
             destinationCountry = healtyCountries[rdm2];
             plane.transform.position = start;
-            move = true;
+            move = true;*/
 
             infectedCountries.Add(healtyCountries[rdm2]);
             healtyCountries.Remove(healtyCountries[rdm2]);
@@ -161,11 +161,11 @@ public class EventManager : MonoBehaviour
             //infectedCountries[rdm].infected -= 1;
             infectedCountries[rdm2].infected += 1;
 
-            start = infectedCountries[rdm].airport;
+            /*start = infectedCountries[rdm].airport;
             startCountry = infectedCountries[rdm];
             destinationCountry = infectedCountries[rdm2];
             plane.transform.position = start;
-            move = true;
+            move = true;*/
         }
 
     }
@@ -186,11 +186,11 @@ public class EventManager : MonoBehaviour
                     Debug.Log(continent.name);
                     ContinentDisplay continentDisplay = (ContinentDisplay)continent.GetComponent(typeof(ContinentDisplay));
                     if (continentDisplay != null){
-
                         if (measures2.activeSelf)
                         {
                             measures2.SetActive(false);
                             measuresMenu.ShowContinent(continentDisplay);
+
                         }
                         else if (measures.activeSelf)
                         {
@@ -217,7 +217,7 @@ public class EventManager : MonoBehaviour
             Debug.Log("Du hast verloren!");
         }
     }
-    public void PlaneMove()
+    /*public void PlaneMove()
     {
         string countryName = startCountry.name;
         switch (countryName)
@@ -252,7 +252,7 @@ public class EventManager : MonoBehaviour
             Debug.Log("Did it");
             move = false;
         }
-    }
+    }*/
 
     #endregion Methods
 }

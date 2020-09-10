@@ -29,7 +29,7 @@ public class CountryDisplay : MonoBehaviour
         country.influenceE = 10;
         country.influenceP = 0.2;
 
-        country.airport = this.gameObject.transform.GetChild(0).transform.position;
+        /*country.airport = this.gameObject.transform.GetChild(0).transform.position;*/
         
         color = myMaterial.color;
 
