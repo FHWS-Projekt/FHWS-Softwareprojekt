@@ -10,6 +10,7 @@ public class CountryDisplay : MonoBehaviour
     public Material myMaterial;
     public double temp;
     public EventManager eventManager;
+    
 
     public float fadeColor = 0f;
     Color color;
@@ -21,13 +22,15 @@ public class CountryDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Main.Instance.MyDateTime.DayTasks.Add(() => ACalculateResidents());
+        Main.Instance.MyDateTime.DayTasks.Add(() => CalculateResidents());
         myMaterial.color = Color.green;
         country.residents = country.startResidents;
         country.deathCount = 0;
         country.influenceE = 10;
         country.influenceP = 0.2;
 
+        country.airport = this.gameObject.transform.GetChild(0).transform.position;
+        
         color = myMaterial.color;
 
         color.g = 1f;
@@ -96,6 +99,7 @@ public class CountryDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*country.airport = airport.position;*/
         CheckMeasures();
     }
 
@@ -103,7 +107,7 @@ public class CountryDisplay : MonoBehaviour
 
     #region Methods
     //Method to calculate the infected for the next cycle;
-    void ACalculateResidents()
+    void CalculateResidents()
     {
         temp = System.Math.Round(1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
         country.deathCount = System.Math.Round(country.deathCount + temp);
@@ -115,10 +119,7 @@ public class CountryDisplay : MonoBehaviour
 
             color.g =  1 - (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
             color.r = (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
-            if(country.name == "Vietnam")
-            {
-                Debug.Log(country.name + " " + color.g + " " + color.r);
-            }
+
             myMaterial.color = color;
         }
 

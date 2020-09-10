@@ -29,10 +29,19 @@ public class EventManager : MonoBehaviour
     public GameObject measures2;
     public MeasuresMenu measuresMenu;
 
+    public GameObject plane;
+    public Vector3 start;
+    public float planeSpeed;
+    public Country destinationCountry;
+    public Country startCountry;
+
+    public GameObject[] flightPoints;
+
     public MyCamera myCamera;
 
     public bool win;
     public bool lose;
+    public bool move;
 
     int counter = 1;
 
@@ -41,6 +50,7 @@ public class EventManager : MonoBehaviour
     #region Unity Methods
     private void Start()
     {
+        move = false;
         for(int i = 0; i < countries.Length; i++)
         {
             countries[i].infected = 0;
@@ -51,12 +61,16 @@ public class EventManager : MonoBehaviour
             healthyContinent.Add(continents[i]);
         }
         RandomStart();
-        Main.Instance.MyDateTime.DayTasks.Add(() => BRandomDistribution());
+        Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
         // Main.Instance.MyDateTime.DayTasks.Sort();
     }
 
     private void Update()
     {
+        if (move)
+        {
+            PlaneMove();
+        }
         EndingController();
         ObjectClicker();
     }
@@ -85,10 +99,10 @@ public class EventManager : MonoBehaviour
         transmitterCountry = continents[rdm].countries[rdm2];
 
     }
-    public void BRandomDistribution()
+    public void RandomDistribution()
     {
- 
-        if(counter < 6)
+
+        if (counter < 6)
         {
             int rdm = Random.Range(0, healthyContinent.Count);
             int rdm2 = Random.Range(0, healthyContinent[rdm].countries.Length - 1);
@@ -97,6 +111,12 @@ public class EventManager : MonoBehaviour
 
             //transmitterCountry.infected -= 1;
             healthyContinent[rdm].countries[rdm2].infected += 1;
+
+            start = transmitterCountry.airport;
+            startCountry = transmitterCountry;
+            destinationCountry = healthyContinent[rdm].countries[rdm2];
+            plane.transform.position = start;
+            move = true;
 
             infectedContinent.Add(healthyContinent[rdm]);
             infectedCountries.Add(healthyContinent[rdm].countries[rdm2]);
@@ -108,8 +128,9 @@ public class EventManager : MonoBehaviour
             healthyContinent.Remove(healthyContinent[rdm]);
 
             counter++;
+
         }
-        else if(counter < 25)
+        else if (counter < 25)
         {
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, healtyCountries.Count);
@@ -118,6 +139,12 @@ public class EventManager : MonoBehaviour
 
             //infectedCountries[rdm].infected -= 1;
             healtyCountries[rdm2].infected += 1;
+
+            start = infectedCountries[rdm].airport;
+            startCountry = infectedCountries[rdm];
+            destinationCountry = healtyCountries[rdm2];
+            plane.transform.position = start;
+            move = true;
 
             infectedCountries.Add(healtyCountries[rdm2]);
             healtyCountries.Remove(healtyCountries[rdm2]);
@@ -133,8 +160,14 @@ public class EventManager : MonoBehaviour
 
             //infectedCountries[rdm].infected -= 1;
             infectedCountries[rdm2].infected += 1;
+
+            start = infectedCountries[rdm].airport;
+            startCountry = infectedCountries[rdm];
+            destinationCountry = infectedCountries[rdm2];
+            plane.transform.position = start;
+            move = true;
         }
-   
+
     }
     public void ObjectClicker()
     {
@@ -182,6 +215,42 @@ public class EventManager : MonoBehaviour
         else if (lose)
         {
             Debug.Log("Du hast verloren!");
+        }
+    }
+    public void PlaneMove()
+    {
+        string countryName = startCountry.name;
+        switch (countryName)
+        {
+            case "Algerien":
+            case "Nigeria":
+            case "Kongo":
+            case "Äthiopien":
+                if(plane.transform.position != flightPoints[0].transform.position)
+                {
+                    plane.transform.position = Vector3.MoveTowards(plane.transform.position, flightPoints[0].transform.position, Time.deltaTime * planeSpeed);
+                    break;
+                }
+                else if(plane.transform.position != destinationCountry.airport)
+                {
+                    plane.transform.position = Vector3.MoveTowards(plane.transform.position, destinationCountry.airport, Time.deltaTime * planeSpeed);
+                    break;
+                }
+                else
+                {
+                    Debug.Log("Did it");
+                    move = false;
+                    break;
+                }
+
+        }
+
+        plane.transform.position = Vector3.MoveTowards(plane.transform.position, destinationCountry.airport, Time.deltaTime * planeSpeed);
+
+        if(plane.transform.position == destinationCountry.airport)
+        {
+            Debug.Log("Did it");
+            move = false;
         }
     }
 
