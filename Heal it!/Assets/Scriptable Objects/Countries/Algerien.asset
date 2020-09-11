@@ -43,3 +43,5 @@ MonoBehaviour:
   - 2
   - 1
   - 1
+  airport: {x: 0, y: 0, z: 0}
+  flag: {fileID: 0}
