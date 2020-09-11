@@ -18,12 +18,13 @@ public class PopUpTexts : MonoBehaviour
     void Awake()
     {
         popUpText = GameObject.Find("PopUpText").GetComponent<Text>();
+        Main.Instance.MyDateTime.DayTasks.Add(() => gamePopUps());
         PausePanel.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
     {
-        //Main.Instance.MyDateTime.DayTasks.Add(() => gamePopUps());
+        
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class PopUpTexts : MonoBehaviour
         mainScript.SetTimeButtonPlayPauseOnClickTask();
     }
     public void gamePopUps() {
-        if (Main.Instance.MyDateTime.Day > 2 && Main.Instance.MyDateTime.Day < 3) {
+        if (Main.Instance.MyDateTime.Day >= 25 && Main.Instance.MyDateTime.Day < 26) {
             popUp(midgameText);
         }
     }
