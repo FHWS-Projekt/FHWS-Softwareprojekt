@@ -1005,7 +1005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &860425456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1254,7 +1254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &1274660777
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1833,8 +1833,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.8862745, g: 0.20392156, b: 0.25619927, a: 0.5254902}
-    m_PressedColor: {r: 0.8509804, g: 0.227451, b: 0.26442447, a: 0.5176471}
+    m_HighlightedColor: {r: 0.49411768, g: 0.74509805, b: 0.9843138, a: 0.39215687}
+    m_PressedColor: {r: 0.49411768, g: 0.74509805, b: 0.9843138, a: 0.39215687}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
