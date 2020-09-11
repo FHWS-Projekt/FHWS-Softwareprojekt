@@ -103,6 +103,7 @@ public class EventManager : MonoBehaviour
             //transmitterCountry.infected -= 1;
             healthyContinent[rdm].countries[rdm2].infected += 1;
 
+            
 
             infectedContinent.Add(healthyContinent[rdm]);
             infectedCountries.Add(healthyContinent[rdm].countries[rdm2]);
