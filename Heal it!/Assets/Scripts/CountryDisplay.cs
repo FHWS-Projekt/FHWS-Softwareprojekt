@@ -29,8 +29,6 @@ public class CountryDisplay : MonoBehaviour
         country.influenceE = 10;
         country.influenceP = 0.2;
 
-        /*country.airport = this.gameObject.transform.GetChild(0).transform.position;*/
-        
         color = myMaterial.color;
 
         color.g = 1f;
@@ -99,7 +97,6 @@ public class CountryDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*country.airport = airport.position;*/
         CheckMeasures();
     }
 
@@ -247,10 +244,8 @@ public class CountryDisplay : MonoBehaviour
                         break;
                     }
             }
-
             country.influenceP = 0.2 - country.measuresV[0] - country.measuresV[1] - country.measuresV[2];
             country.influenceE = 10 - country.measuresV[3] - country.measuresV[4] - country.measuresV[5] - country.measuresV[6] - country.measuresV[7] - country.measuresV[8] - country.measuresV[9]; 
-
         }
     }
 
