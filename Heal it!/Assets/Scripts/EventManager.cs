@@ -29,6 +29,8 @@ public class EventManager : MonoBehaviour
     public GameObject measures2;
     public MeasuresMenu measuresMenu;
 
+    public GameObject[] flightPoints;
+
     public MyCamera myCamera;
 
     public PlayerSettings playerSettings;

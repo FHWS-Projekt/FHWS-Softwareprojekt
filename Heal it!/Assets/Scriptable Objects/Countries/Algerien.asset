@@ -43,5 +43,8 @@ MonoBehaviour:
   - 2
   - 1
   - 1
+<<<<<<< HEAD
   airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: e84fe33ee968146b5a66fc8f7f5a4d9e, type: 3}
+=======
+>>>>>>> parent of db793a5... Add EntryAnimaitons;

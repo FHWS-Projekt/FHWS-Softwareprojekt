@@ -10,7 +10,6 @@ public class CountryDisplay : MonoBehaviour
     public Material myMaterial;
     public double temp;
     public EventManager eventManager;
-    public Animator anim;
     
 
     public float fadeColor = 0f;
@@ -31,10 +30,6 @@ public class CountryDisplay : MonoBehaviour
         country.influenceP = 0.2;
 
         color = myMaterial.color;
-
-        anim = GetComponent<Animator>();
-        if(anim != null)
-        anim.enabled = false;
 
         color.g = 1f;
         color.b = 0f;
@@ -252,17 +247,6 @@ public class CountryDisplay : MonoBehaviour
             country.influenceP = 0.2 - country.measuresV[0] - country.measuresV[1] - country.measuresV[2];
             country.influenceE = 10 - country.measuresV[3] - country.measuresV[4] - country.measuresV[5] - country.measuresV[6] - country.measuresV[7] - country.measuresV[8] - country.measuresV[9]; 
         }
-    }
-    public void PlayAnimation()
-    {
-        anim.enabled = true;
-        anim.Play(country.name + "Animation");
-        StartCoroutine("WaitForSeconds");
-    }
-    IEnumerator WaitForSeconds()
-    {
-        yield return new WaitForSeconds(1);
-        anim.enabled = false;
     }
 
     #endregion Methods
