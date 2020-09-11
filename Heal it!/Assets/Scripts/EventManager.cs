@@ -29,15 +29,11 @@ public class EventManager : MonoBehaviour
     public GameObject measures2;
     public MeasuresMenu measuresMenu;
 
-    /*public GameObject plane;
-    public Vector3 start;
-    public float planeSpeed;
-    public Country destinationCountry;
-    public Country startCountry;*/
-
     public GameObject[] flightPoints;
 
     public MyCamera myCamera;
+
+    public PlayerSettings playerSettings;
 
     public bool win;
     public bool lose;
@@ -62,15 +58,10 @@ public class EventManager : MonoBehaviour
         }
         RandomStart();
         Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
-        // Main.Instance.MyDateTime.DayTasks.Sort();
     }
 
     private void Update()
     {
-        /*if (move)
-        {
-            PlaneMove();
-        }*/
         EndingController();
         ObjectClicker();
     }
@@ -112,11 +103,6 @@ public class EventManager : MonoBehaviour
             //transmitterCountry.infected -= 1;
             healthyContinent[rdm].countries[rdm2].infected += 1;
 
-            /*start = transmitterCountry.airport;
-            startCountry = transmitterCountry;
-            destinationCountry = healthyContinent[rdm].countries[rdm2];
-            plane.transform.position = start;
-            move = true;*/
 
             infectedContinent.Add(healthyContinent[rdm]);
             infectedCountries.Add(healthyContinent[rdm].countries[rdm2]);
@@ -140,12 +126,6 @@ public class EventManager : MonoBehaviour
             //infectedCountries[rdm].infected -= 1;
             healtyCountries[rdm2].infected += 1;
 
-            /*start = infectedCountries[rdm].airport;
-            startCountry = infectedCountries[rdm];
-            destinationCountry = healtyCountries[rdm2];
-            plane.transform.position = start;
-            move = true;*/
-
             infectedCountries.Add(healtyCountries[rdm2]);
             healtyCountries.Remove(healtyCountries[rdm2]);
 
@@ -161,11 +141,6 @@ public class EventManager : MonoBehaviour
             //infectedCountries[rdm].infected -= 1;
             infectedCountries[rdm2].infected += 1;
 
-            /*start = infectedCountries[rdm].airport;
-            startCountry = infectedCountries[rdm];
-            destinationCountry = infectedCountries[rdm2];
-            plane.transform.position = start;
-            move = true;*/
         }
 
     }
@@ -208,52 +183,40 @@ public class EventManager : MonoBehaviour
     }
     public void EndingController()
     {
-        if (main.MyDateTime.Day == 50)
+        if(playerSettings.difficulty == 0)
         {
-            Debug.Log("Du hast gewonnen!");
+            if (main.MyDateTime.Day == 50)
+            {
+                Debug.Log("Du hast gewonnen!");
+            }
+            else if (lose)
+            {
+                Debug.Log("Du hast verloren!");
+            }
         }
-        else if (lose)
+        else if(playerSettings.difficulty == 1)
         {
-            Debug.Log("Du hast verloren!");
+            if (main.MyDateTime.Day == 50)
+            {
+                Debug.Log("Du hast gewonnen!");
+            }
+            else if (lose)
+            {
+                Debug.Log("Du hast verloren!");
+            }
+        }
+        else if(playerSettings.difficulty == 2)
+        {
+            if (main.MyDateTime.Day == 50)
+            {
+                Debug.Log("Du hast gewonnen!");
+            }
+            else if (lose)
+            {
+                Debug.Log("Du hast verloren!");
+            }
         }
     }
-    /*public void PlaneMove()
-    {
-        string countryName = startCountry.name;
-        switch (countryName)
-        {
-            case "Algerien":
-            case "Nigeria":
-            case "Kongo":
-            case "Äthiopien":
-                if(plane.transform.position != flightPoints[0].transform.position)
-                {
-                    plane.transform.position = Vector3.MoveTowards(plane.transform.position, flightPoints[0].transform.position, Time.deltaTime * planeSpeed);
-                    break;
-                }
-                else if(plane.transform.position != destinationCountry.airport)
-                {
-                    plane.transform.position = Vector3.MoveTowards(plane.transform.position, destinationCountry.airport, Time.deltaTime * planeSpeed);
-                    break;
-                }
-                else
-                {
-                    Debug.Log("Did it");
-                    move = false;
-                    break;
-                }
-
-        }
-
-        plane.transform.position = Vector3.MoveTowards(plane.transform.position, destinationCountry.airport, Time.deltaTime * planeSpeed);
-
-        if(plane.transform.position == destinationCountry.airport)
-        {
-            Debug.Log("Did it");
-            move = false;
-        }
-    }*/
-
     #endregion Methods
 }
 
