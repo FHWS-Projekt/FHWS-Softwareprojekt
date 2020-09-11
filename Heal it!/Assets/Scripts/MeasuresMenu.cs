@@ -113,7 +113,9 @@ public class MeasuresMenu : MonoBehaviour
             {
                 countryButtons[i].gameObject.SetActive(true);
                 TextMeshProUGUI buttonText = countryButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+                Image buttonImage = countryButtons[i].GetComponent<Image>();
                 buttonText.text = continent.countries[i].countryName;
+                buttonImage.sprite = continent.countries[i].flag;
                 Buttons buttonsCountry = countryButtons[i].GetComponentInChildren<Buttons>();
                 buttonsCountry.country = continent.countries[i];
             }

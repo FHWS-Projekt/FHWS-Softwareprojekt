@@ -14,30 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countryName: China
   startResidents: 1300000000
-  residents: 1299999968.317944
-  infected: 22.41
-  deathCount: 31.682055977374997
+  residents: 1300000000
+  infected: 0
+  deathCount: 0
   recoveryRateG: 0.955
   influenceE: 10
-  influenceP: 0.17
+  influenceP: 0.2
   measures: 00000000000000000000
-  handWash: 0
-  handWashV: 0.01
-  mouthguard: 0
-  mouthguardV: 0.02
-  socialDistancing: 0
-  socialDistancingV: 0
-  quarantine: 0
-  quarantineV: 0
-  closeShops: 0
-  closeShopsV: 0
-  closeRoutes: 0
-  closeRoutesV: 0
-  closeSchools: 0
-  closeSchoolsV: 0
-  closeBorders: 0
-  closeBordersV: 0
-  closeKitas: 0
-  closeKitasV: 0
-  homeOffice: 0
-  homeOfficeV: 0
+  measuresV:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  moneyV:
+  - 1
+  - 2
+  - 2
+  - 6
+  - 6
+  - 4
+  - 3
+  - 2
+  - 1
+  - 1
+  airport: {x: 0, y: 0, z: 0}
+  flag: {fileID: 21300000, guid: ef2debbb3400f451baed08c827f2767f, type: 3}
