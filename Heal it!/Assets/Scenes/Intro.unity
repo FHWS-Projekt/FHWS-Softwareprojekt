@@ -998,7 +998,6 @@ GameObject:
   - component: {fileID: 860425460}
   - component: {fileID: 860425459}
   - component: {fileID: 860425458}
-  - component: {fileID: 860425457}
   - component: {fileID: 860425456}
   m_Layer: 5
   m_Name: Intro_Screen
@@ -1015,21 +1014,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860425455}
   m_CullTransparentMesh: 0
---- !u!114 &860425457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860425455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e0a475cd319b8b43b3244e9ea45d464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
-  UserPanel: {fileID: 0}
-  Input: {fileID: 0}
 --- !u!114 &860425458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,8 +1647,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.20496619, g: 0.34635538, b: 0.8867924, a: 1}
-    m_PressedColor: {r: 0.22828408, g: 0.3768663, b: 0.8490566, a: 1}
+    m_HighlightedColor: {r: 0.8862745, g: 0.20392156, b: 0.25619927, a: 0.5254902}
+    m_PressedColor: {r: 0.8509804, g: 0.227451, b: 0.26442447, a: 0.5176471}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1684,7 +1668,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1648288168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1274660776}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 860425455}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1648288168
 MonoBehaviour:
   m_ObjectHideFlags: 0
