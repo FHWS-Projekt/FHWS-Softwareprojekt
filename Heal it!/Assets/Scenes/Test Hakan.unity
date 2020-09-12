@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 293.98, y: 82}
+  m_AnchoredPosition: {x: 140.98, y: 90}
   m_SizeDelta: {x: 1332.0308, y: 63.942078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &19898195
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 31.658457, z: 464.25574, w: -30.264595}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10055,7 +10055,7 @@ Skybox:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725883311}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: 754ce1a22b00e4bacb576b668da14199, type: 2}
+  m_CustomSkybox: {fileID: 2100000, guid: 3c6d7a2c93866409f915479ba5ee41d1, type: 2}
 --- !u!1 &1737695810
 GameObject:
   m_ObjectHideFlags: 0

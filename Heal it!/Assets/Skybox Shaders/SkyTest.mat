@@ -78,8 +78,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.5438323, g: 0.7221372, b: 0.9528302, a: 0}
-    - _Color2: {r: 0.1966002, g: 0.35249633, b: 0.8867924, a: 0}
+    - _Color1: {r: 0.3921569, g: 0.80953777, b: 0.98039216, a: 0}
+    - _Color2: {r: 0.27058828, g: 0.32187912, b: 0.85882354, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _UpVector: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
