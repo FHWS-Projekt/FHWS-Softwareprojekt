@@ -563,7 +563,6 @@ GameObject:
   - component: {fileID: 99060496}
   - component: {fileID: 99060495}
   - component: {fileID: 99060498}
-  - component: {fileID: 99060499}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -682,21 +681,6 @@ MonoBehaviour:
   win: 0
   lose: 0
   move: 0
---- !u!114 &99060499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99060494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d35d808965149594380df68d87cf5d7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlightMaterial: {fileID: 2100000, guid: 918d42a72c34fbc4298d58448f998567, type: 2}
-  defaultMaterial: {fileID: 0}
-  _selection: {fileID: 0}
 --- !u!135 &105250705
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1033,7 +1017,6 @@ RectTransform:
   - {fileID: 1354189609}
   - {fileID: 19898194}
   - {fileID: 1851614159}
-  - {fileID: 876880539}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11796,85 +11779,6 @@ MonoBehaviour:
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
   fadeColor: 0
---- !u!1 &2033928038
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2033928039}
-  - component: {fileID: 2033928041}
-  - component: {fileID: 2033928040}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2033928039
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033928038}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 876880539}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2033928040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033928038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Button
---- !u!222 &2033928041
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033928038}
-  m_CullTransparentMesh: 0
 --- !u!114 &2048283180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12738,7 +12642,6 @@ GameObject:
   - component: {fileID: 1380079767}
   - component: {fileID: 233621711314007597}
   - component: {fileID: 233621711314007598}
-  - component: {fileID: 233621711314007599}
   m_Layer: 0
   m_Name: Kanada
   m_TagString: Untagged
@@ -12773,25 +12676,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 32395641800956c409ec43979784b356, type: 2}
---- !u!95 &233621711314007599
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233621711314007596}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a718bd64e774a2e418984632b823a45b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &250594928800710407
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12847,7 +12731,6 @@ GameObject:
   - component: {fileID: 297078083}
   - component: {fileID: 260711214800350054}
   - component: {fileID: 260711214800350055}
-  - component: {fileID: 260711214800350056}
   m_Layer: 0
   m_Name: Russland
   m_TagString: Untagged
@@ -12882,25 +12765,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
---- !u!95 &260711214800350056
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260711214800350053}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c229dfbcc941bca42aebde709c2421e5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &299195955721444389
 Transform:
   m_ObjectHideFlags: 0
@@ -13039,7 +12903,6 @@ GameObject:
   - component: {fileID: 1453058752}
   - component: {fileID: 577370370511764136}
   - component: {fileID: 577370370511764137}
-  - component: {fileID: 577370370511764138}
   m_Layer: 0
   m_Name: Brasilien
   m_TagString: Untagged
@@ -13074,25 +12937,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 1d926f57be4089847bb0358900d3b346, type: 2}
---- !u!95 &577370370511764138
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577370370511764135}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fc49f8259b8da2e488476390baf563d2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &592921063655134189
 Transform:
   m_ObjectHideFlags: 0
@@ -13163,7 +13007,6 @@ GameObject:
   - component: {fileID: 662021342}
   - component: {fileID: 666808315721341566}
   - component: {fileID: 666808315721341567}
-  - component: {fileID: 666808315721341568}
   m_Layer: 0
   m_Name: Spanien
   m_TagString: Untagged
@@ -13198,25 +13041,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: fe302fe6c19d8d54486c66e2075203de, type: 2}
---- !u!95 &666808315721341568
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666808315721341565}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c39edab92c6a727469a8a93e6de516cd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &704802767705501213
 Transform:
   m_ObjectHideFlags: 0
@@ -13245,7 +13069,6 @@ GameObject:
   - component: {fileID: 836600650}
   - component: {fileID: 809655247885946134}
   - component: {fileID: 809655247885946135}
-  - component: {fileID: 809655247885946136}
   m_Layer: 0
   m_Name: Algerien
   m_TagString: Untagged
@@ -13280,25 +13103,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 00c3cbae249cc3e458a8a8cd333d5745, type: 2}
---- !u!95 &809655247885946136
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809655247885946133}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 27ddc46e5181a1e48bc9810decf4805e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &919132149388266125
 GameObject:
   m_ObjectHideFlags: 0
@@ -13353,7 +13157,6 @@ GameObject:
   - component: {fileID: 68011230}
   - component: {fileID: 1125499838416282050}
   - component: {fileID: 1125499838416282051}
-  - component: {fileID: 1125499838416282052}
   m_Layer: 0
   m_Name: Japan
   m_TagString: Untagged
@@ -13388,25 +13191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
---- !u!95 &1125499838416282052
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125499838416282049}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c4648ccdbcacf1944ad18ba8f637c8ab, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &1218199925005843582
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13503,7 +13287,6 @@ GameObject:
   - component: {fileID: 2011998337}
   - component: {fileID: 1516764504277912272}
   - component: {fileID: 1516764504277912273}
-  - component: {fileID: 1516764504277912274}
   m_Layer: 0
   m_Name: Frankreich
   m_TagString: Untagged
@@ -13538,25 +13321,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: fe302fe6c19d8d54486c66e2075203de, type: 2}
---- !u!95 &1516764504277912274
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516764504277912271}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0217f40f859c1d84983b1df5697dc13f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1589498284196623237
 Transform:
   m_ObjectHideFlags: 0
@@ -13770,7 +13534,6 @@ GameObject:
   - component: {fileID: 1178702507}
   - component: {fileID: 2578619518192856003}
   - component: {fileID: 2578619518192856004}
-  - component: {fileID: 2578619518192856005}
   m_Layer: 0
   m_Name: "\xC4thiopien"
   m_TagString: Untagged
@@ -13805,25 +13568,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 00c3cbae249cc3e458a8a8cd333d5745, type: 2}
---- !u!95 &2578619518192856005
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2578619518192856002}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be9a7e137a6e5ec4a9754a5ad83c8dff, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2704984626982973532
 GameObject:
   m_ObjectHideFlags: 0
@@ -13838,7 +13582,6 @@ GameObject:
   - component: {fileID: 197967856}
   - component: {fileID: 2704984626982973533}
   - component: {fileID: 2704984626982973534}
-  - component: {fileID: 2704984626982973535}
   m_Layer: 0
   m_Name: "\xC4gypten"
   m_TagString: Untagged
@@ -13873,25 +13616,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 00c3cbae249cc3e458a8a8cd333d5745, type: 2}
---- !u!95 &2704984626982973535
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704984626982973532}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0401c9e6d97a9614ea307a473a23d65f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &2769708279454437053
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13955,7 +13679,6 @@ GameObject:
   - component: {fileID: 1155595747}
   - component: {fileID: 2942169432081659001}
   - component: {fileID: 2942169432081659002}
-  - component: {fileID: 2942169432081659003}
   m_Layer: 0
   m_Name: Argentinien
   m_TagString: Untagged
@@ -13990,25 +13713,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 1d926f57be4089847bb0358900d3b346, type: 2}
---- !u!95 &2942169432081659003
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2942169432081659000}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ab4ed3a2026860c4a91e1c0341ddbb63, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &2975342744673588174
 Transform:
   m_ObjectHideFlags: 0
@@ -14037,7 +13741,6 @@ GameObject:
   - component: {fileID: 997900150}
   - component: {fileID: 2977543257259937647}
   - component: {fileID: 2977543257259937648}
-  - component: {fileID: 2977543257259937649}
   m_Layer: 0
   m_Name: Iran
   m_TagString: Untagged
@@ -14072,25 +13775,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
---- !u!95 &2977543257259937649
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2977543257259937646}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e42bc7ff37454d14583c7aceb9943b5a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &3013112527592849974
 Transform:
   m_ObjectHideFlags: 0
@@ -14119,7 +13803,6 @@ GameObject:
   - component: {fileID: 2065977694}
   - component: {fileID: 3079315649096158243}
   - component: {fileID: 3079315649096158244}
-  - component: {fileID: 3079315649096158245}
   m_Layer: 0
   m_Name: USA
   m_TagString: Untagged
@@ -14154,25 +13837,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 32395641800956c409ec43979784b356, type: 2}
---- !u!95 &3079315649096158245
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3079315649096158242}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 14a53a82492316e49adf9b1414f033fc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &3140616335551030459
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14217,7 +13881,6 @@ GameObject:
   - component: {fileID: 1881313007}
   - component: {fileID: 3296111991133493968}
   - component: {fileID: 3296111991133493969}
-  - component: {fileID: 3296111991133493970}
   m_Layer: 0
   m_Name: Peru
   m_TagString: Untagged
@@ -14252,25 +13915,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 1d926f57be4089847bb0358900d3b346, type: 2}
---- !u!95 &3296111991133493970
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3296111991133493967}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bd6e4072d1b0aca4daf585962e375b9d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &3384988933193725488
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14408,7 +14052,6 @@ GameObject:
   - component: {fileID: 293760422}
   - component: {fileID: 3481806971173375718}
   - component: {fileID: 3481806971173375719}
-  - component: {fileID: 3481806971173375720}
   m_Layer: 0
   m_Name: Germany
   m_TagString: Untagged
@@ -14443,25 +14086,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: fe302fe6c19d8d54486c66e2075203de, type: 2}
---- !u!95 &3481806971173375720
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3481806971173375717}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8aee69488397f47489485dee4e75c6d2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &3547977797794756381
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14508,7 +14132,6 @@ GameObject:
   - component: {fileID: 1217683447}
   - component: {fileID: 3907098479668270402}
   - component: {fileID: 3907098479668270403}
-  - component: {fileID: 3907098479668270404}
   m_Layer: 0
   m_Name: Indonesien
   m_TagString: Untagged
@@ -14543,25 +14166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
---- !u!95 &3907098479668270404
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3907098479668270401}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 72687fe1d1395e041816a3eb2406940f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3923482987181984309
 GameObject:
   m_ObjectHideFlags: 0
@@ -15017,7 +14621,6 @@ GameObject:
   - component: {fileID: 55088439}
   - component: {fileID: 4911680883679117084}
   - component: {fileID: 4911680883679117085}
-  - component: {fileID: 4911680883679117086}
   m_Layer: 0
   m_Name: Indien
   m_TagString: Untagged
@@ -15052,25 +14655,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
---- !u!95 &4911680883679117086
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4911680883679117083}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 35fd3843ccd7610458572554b8ea8824, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4913305497597529163
 GameObject:
   m_ObjectHideFlags: 0
@@ -15085,7 +14669,6 @@ GameObject:
   - component: {fileID: 2058761378}
   - component: {fileID: 4913305497597529164}
   - component: {fileID: 4913305497597529165}
-  - component: {fileID: 4913305497597529166}
   m_Layer: 0
   m_Name: UK
   m_TagString: Untagged
@@ -15120,25 +14703,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: fe302fe6c19d8d54486c66e2075203de, type: 2}
---- !u!95 &4913305497597529166
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4913305497597529163}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cdf721d61fc3bfa40a914655f34b14be, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &4952279659870665109
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15266,7 +14830,6 @@ GameObject:
   - component: {fileID: 7546154442621571622}
   - component: {fileID: 1588553887}
   - component: {fileID: 5595079577056324635}
-  - component: {fileID: 5595079577056324636}
   m_Layer: 0
   m_Name: Nigeria
   m_TagString: Untagged
@@ -15287,25 +14850,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 00c3cbae249cc3e458a8a8cd333d5745, type: 2}
---- !u!95 &5595079577056324636
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5595079577056324634}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b638758cdcd03a544a1562facbc6f31a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &5645568296134420788
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15383,7 +14927,6 @@ GameObject:
   - component: {fileID: 969152032}
   - component: {fileID: 5952247846241854581}
   - component: {fileID: 5952247846241854582}
-  - component: {fileID: 5952247846241854583}
   m_Layer: 0
   m_Name: China
   m_TagString: Untagged
@@ -15418,25 +14961,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
---- !u!95 &5952247846241854583
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5952247846241854580}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 55cb80c894eb37d43ad9f19b8ee92c0f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &5964913730172756625
 Transform:
   m_ObjectHideFlags: 0
@@ -15466,7 +14990,6 @@ GameObject:
   - component: {fileID: 686158573}
   - component: {fileID: 6045036149241752533}
   - component: {fileID: 6045036149241752534}
-  - component: {fileID: 6045036149241752535}
   m_Layer: 0
   m_Name: Italy
   m_TagString: Untagged
@@ -15501,25 +15024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: fe302fe6c19d8d54486c66e2075203de, type: 2}
---- !u!95 &6045036149241752535
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6045036149241752532}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8d398dc1c5e220d4ea9c3e6fc55e26c9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &6080915976353935385
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15575,7 +15079,6 @@ GameObject:
   - component: {fileID: 717794073}
   - component: {fileID: 6109415166952623055}
   - component: {fileID: 6109415166952623056}
-  - component: {fileID: 6109415166952623057}
   m_Layer: 0
   m_Name: Kongo
   m_TagString: Untagged
@@ -15610,25 +15113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 00c3cbae249cc3e458a8a8cd333d5745, type: 2}
---- !u!95 &6109415166952623057
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109415166952623054}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 20601548337f25c42af9a0e2b86e9256, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &6109705643694859503
 Transform:
   m_ObjectHideFlags: 0
@@ -15970,7 +15454,6 @@ GameObject:
   - component: {fileID: 1105150630}
   - component: {fileID: 6951005563679265388}
   - component: {fileID: 6951005563679265389}
-  - component: {fileID: 6951005563679265390}
   m_Layer: 0
   m_Name: Vietnam
   m_TagString: Untagged
@@ -16005,25 +15488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
---- !u!95 &6951005563679265390
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6951005563679265387}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2234cf1846cfb0c45aa7fece20a6994b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &7080972384365151731
 Transform:
   m_ObjectHideFlags: 0
@@ -16158,7 +15622,6 @@ GameObject:
   - component: {fileID: 722035485}
   - component: {fileID: 7345929137958331296}
   - component: {fileID: 7345929137958331297}
-  - component: {fileID: 7345929137958331298}
   m_Layer: 0
   m_Name: Australien
   m_TagString: Untagged
@@ -16193,25 +15656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: f4e58b03e7d29c143a3740eb969313ad, type: 2}
---- !u!95 &7345929137958331298
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7345929137958331295}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d6c2e61b95c49744c9ece52a0e8218c0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &7408883399088560001
 Transform:
   m_ObjectHideFlags: 0
@@ -16296,7 +15740,6 @@ GameObject:
   - component: {fileID: 926094544}
   - component: {fileID: 7832328949167515292}
   - component: {fileID: 7832328949167515293}
-  - component: {fileID: 7832328949167515294}
   m_Layer: 0
   m_Name: Mexiko
   m_TagString: Untagged
@@ -16331,25 +15774,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 32395641800956c409ec43979784b356, type: 2}
---- !u!95 &7832328949167515294
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7832328949167515291}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1ec72aaba8330a04bac51e58c11e067d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &7877619468149236660
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16462,7 +15886,6 @@ GameObject:
   - component: {fileID: 952891650}
   - component: {fileID: 8427606813694329772}
   - component: {fileID: 8427606813694329773}
-  - component: {fileID: 8427606813694329774}
   m_Layer: 0
   m_Name: Pakistan
   m_TagString: Untagged
@@ -16497,25 +15920,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
---- !u!95 &8427606813694329774
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427606813694329771}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4424a947b648dad4c86db6107ccbc131, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &8432148432130711240
 MeshRenderer:
   m_ObjectHideFlags: 0
