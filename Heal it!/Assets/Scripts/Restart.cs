@@ -9,5 +9,8 @@ public class Restart : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
     }
-
+    public void playGame()
+    {
+        SceneManager.LoadScene("Test Hakan");
+    }
 }
