@@ -27,7 +27,7 @@ public class EventManager : MonoBehaviour
 
     public GameObject measures;
     public GameObject measures2;
-    public MeasuresMenu measuresMenu;
+    public MenuManager measuresMenu;
 
     public MyCamera myCamera;
 
@@ -115,7 +115,7 @@ public class EventManager : MonoBehaviour
             counter++;
 
         }
-        else if (counter < 25)
+        else if (counter <= 25)
         {
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, healtyCountries.Count);
@@ -130,7 +130,7 @@ public class EventManager : MonoBehaviour
 
             counter++;
         }
-        else
+        /*else
         {
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, infectedContinent.Count);
@@ -140,7 +140,7 @@ public class EventManager : MonoBehaviour
             //infectedCountries[rdm].infected -= 1;
             infectedCountries[rdm2].infected += 1;
 
-        }
+        }*/
 
     }
     public void ObjectClicker()
@@ -157,7 +157,7 @@ public class EventManager : MonoBehaviour
                 if (hit.transform)
                 {
                     GameObject continent = hit.transform.gameObject;
-                    Debug.Log(continent.name);
+  
                     ContinentDisplay continentDisplay = (ContinentDisplay)continent.GetComponent(typeof(ContinentDisplay));
                     if (continentDisplay != null){
                         if (measures2.activeSelf)
@@ -216,6 +216,7 @@ public class EventManager : MonoBehaviour
             }
         }
     }
+
     #endregion Methods
 }
 
