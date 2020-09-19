@@ -18,26 +18,30 @@ MonoBehaviour:
   infected: 0
   deathCount: 0
   recoveryRateG: 0.944
-  influenceE: 0
-  influenceP: 0
+  influenceE: 10
+  influenceP: 0.2
   measures: 00000000000000000000
-  handWash: 0
-  handWashV: 0
-  mouthguard: 0
-  mouthguardV: 0
-  socialDistancing: 0
-  socialDistancingV: 0
-  quarantine: 0
-  quarantineV: 0
-  closeShops: 0
-  closeShopsV: 0
-  closeRoutes: 0
-  closeRoutesV: 0
-  closeSchools: 0
-  closeSchoolsV: 0
-  closeBorders: 0
-  closeBordersV: 0
-  closeKitas: 0
-  closeKitasV: 0
-  homeOffice: 0
-  homeOfficeV: 0
+  measuresV:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  moneyV:
+  - 1
+  - 2
+  - 2
+  - 6
+  - 6
+  - 4
+  - 3
+  - 2
+  - 1
+  - 1
+  airport: {x: 0, y: 0, z: 0}
+  flag: {fileID: 21300000, guid: 056f874442d2347b6aaacdc95d60c98b, type: 3}

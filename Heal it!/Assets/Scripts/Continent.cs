@@ -7,4 +7,6 @@ public class Continent : ScriptableObject
 {
     public string continentName;
     public Country[] countries;
+
+    public Vector3 airport;
 }

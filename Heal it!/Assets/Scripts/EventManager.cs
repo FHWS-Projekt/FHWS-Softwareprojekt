@@ -27,12 +27,15 @@ public class EventManager : MonoBehaviour
 
     public GameObject measures;
     public GameObject measures2;
-    public MeasuresMenu measuresMenu;
+    public MenuManager measuresMenu;
 
     public MyCamera myCamera;
 
+    public PlayerSettings playerSettings;
+
     public bool win;
     public bool lose;
+    public bool move;
 
     int counter = 1;
 
@@ -41,6 +44,7 @@ public class EventManager : MonoBehaviour
     #region Unity Methods
     private void Start()
     {
+        move = false;
         for(int i = 0; i < countries.Length; i++)
         {
             countries[i].infected = 0;
@@ -51,8 +55,7 @@ public class EventManager : MonoBehaviour
             healthyContinent.Add(continents[i]);
         }
         RandomStart();
-        Main.Instance.MyDateTime.DayTasks.Add(() => BRandomDistribution());
-        // Main.Instance.MyDateTime.DayTasks.Sort();
+        Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
     }
 
     private void Update()
@@ -85,10 +88,10 @@ public class EventManager : MonoBehaviour
         transmitterCountry = continents[rdm].countries[rdm2];
 
     }
-    public void BRandomDistribution()
+    public void RandomDistribution()
     {
- 
-        if(counter < 6)
+
+        if (counter < 6)
         {
             int rdm = Random.Range(0, healthyContinent.Count);
             int rdm2 = Random.Range(0, healthyContinent[rdm].countries.Length - 1);
@@ -97,6 +100,8 @@ public class EventManager : MonoBehaviour
 
             //transmitterCountry.infected -= 1;
             healthyContinent[rdm].countries[rdm2].infected += 1;
+
+            
 
             infectedContinent.Add(healthyContinent[rdm]);
             infectedCountries.Add(healthyContinent[rdm].countries[rdm2]);
@@ -108,8 +113,9 @@ public class EventManager : MonoBehaviour
             healthyContinent.Remove(healthyContinent[rdm]);
 
             counter++;
+
         }
-        else if(counter < 25)
+        else if (counter <= 25)
         {
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, healtyCountries.Count);
@@ -124,7 +130,7 @@ public class EventManager : MonoBehaviour
 
             counter++;
         }
-        else
+        /*else
         {
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, infectedContinent.Count);
@@ -133,8 +139,9 @@ public class EventManager : MonoBehaviour
 
             //infectedCountries[rdm].infected -= 1;
             infectedCountries[rdm2].infected += 1;
-        }
-   
+
+        }*/
+
     }
     public void ObjectClicker()
     {
@@ -150,14 +157,14 @@ public class EventManager : MonoBehaviour
                 if (hit.transform)
                 {
                     GameObject continent = hit.transform.gameObject;
-                    Debug.Log(continent.name);
+  
                     ContinentDisplay continentDisplay = (ContinentDisplay)continent.GetComponent(typeof(ContinentDisplay));
                     if (continentDisplay != null){
-
                         if (measures2.activeSelf)
                         {
                             measures2.SetActive(false);
                             measuresMenu.ShowContinent(continentDisplay);
+
                         }
                         else if (measures.activeSelf)
                         {
@@ -175,13 +182,38 @@ public class EventManager : MonoBehaviour
     }
     public void EndingController()
     {
-        if (main.MyDateTime.Day == 50)
+        if(playerSettings.difficulty == 0)
         {
-            Debug.Log("Du hast gewonnen!");
+            if (main.MyDateTime.Day == 50)
+            {
+                Debug.Log("Du hast gewonnen!");
+            }
+            else if (lose)
+            {
+                Debug.Log("Du hast verloren!");
+            }
         }
-        else if (lose)
+        else if(playerSettings.difficulty == 1)
         {
-            Debug.Log("Du hast verloren!");
+            if (main.MyDateTime.Day == 50)
+            {
+                Debug.Log("Du hast gewonnen!");
+            }
+            else if (lose)
+            {
+                Debug.Log("Du hast verloren!");
+            }
+        }
+        else if(playerSettings.difficulty == 2)
+        {
+            if (main.MyDateTime.Day == 50)
+            {
+                Debug.Log("Du hast gewonnen!");
+            }
+            else if (lose)
+            {
+                Debug.Log("Du hast verloren!");
+            }
         }
     }
 

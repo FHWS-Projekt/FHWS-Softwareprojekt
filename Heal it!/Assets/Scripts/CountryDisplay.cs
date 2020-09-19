@@ -10,6 +10,8 @@ public class CountryDisplay : MonoBehaviour
     public Material myMaterial;
     public double temp;
     public EventManager eventManager;
+    public Animator anim;
+    
 
     public float fadeColor = 0f;
     Color color;
@@ -21,7 +23,7 @@ public class CountryDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Main.Instance.MyDateTime.DayTasks.Add(() => ACalculateResidents());
+        Main.Instance.MyDateTime.DayTasks.Add(() => CalculateResidents());
         myMaterial.color = Color.green;
         country.residents = country.startResidents;
         country.deathCount = 0;
@@ -29,6 +31,10 @@ public class CountryDisplay : MonoBehaviour
         country.influenceP = 0.2;
 
         color = myMaterial.color;
+
+        anim = GetComponent<Animator>();
+        if(anim != null)
+        anim.enabled = false;
 
         color.g = 1f;
         color.b = 0f;
@@ -103,11 +109,11 @@ public class CountryDisplay : MonoBehaviour
 
     #region Methods
     //Method to calculate the infected for the next cycle;
-    void ACalculateResidents()
+    void CalculateResidents()
     {
-        temp = System.Math.Round(1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
-        country.deathCount = System.Math.Round(country.deathCount + temp);
-        //country.residents = System.Math.Round(country.residents - temp);
+        temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
+        country.deathCount = country.deathCount + temp;
+        country.residents = country.residents - temp;
         country.infected = temp;
 
         if(country.deathCount > 0)
@@ -115,10 +121,7 @@ public class CountryDisplay : MonoBehaviour
 
             color.g =  1 - (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
             color.r = (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
-            if(country.name == "Vietnam")
-            {
-                Debug.Log(country.name + " " + color.g + " " + color.r);
-            }
+
             myMaterial.color = color;
         }
 
@@ -246,11 +249,20 @@ public class CountryDisplay : MonoBehaviour
                         break;
                     }
             }
-
             country.influenceP = 0.2 - country.measuresV[0] - country.measuresV[1] - country.measuresV[2];
             country.influenceE = 10 - country.measuresV[3] - country.measuresV[4] - country.measuresV[5] - country.measuresV[6] - country.measuresV[7] - country.measuresV[8] - country.measuresV[9]; 
-
         }
+    }
+    public void PlayAnimation()
+    {
+        anim.enabled = true;
+        anim.Play(country.name + "Animation");
+        StartCoroutine("WaitForSeconds");
+    }
+    IEnumerator WaitForSeconds()
+    {
+        yield return new WaitForSeconds(1);
+        anim.enabled = false;
     }
 
     #endregion Methods

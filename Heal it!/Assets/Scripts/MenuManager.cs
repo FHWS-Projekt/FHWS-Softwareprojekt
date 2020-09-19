@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MeasuresMenu : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     #region Attributes
 
@@ -44,8 +44,8 @@ public class MeasuresMenu : MonoBehaviour
         if(country != null)
         {
             countryName.text = country.countryName;
-            residents.text = "Residents: " + country.residents;
-            infected.text = "Infected: " + country.infected;
+            residents.text = "Residents: " + country.startResidents;
+            infected.text = "Infected: " + System.Math.Round(country.infected);
             influenceE.text = "Influence: " + country.influenceE;
             influenceP.text = "Influence: " + country.influenceP;
         }
@@ -113,7 +113,9 @@ public class MeasuresMenu : MonoBehaviour
             {
                 countryButtons[i].gameObject.SetActive(true);
                 TextMeshProUGUI buttonText = countryButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+                Image buttonImage = countryButtons[i].GetComponent<Image>();
                 buttonText.text = continent.countries[i].countryName;
+                buttonImage.sprite = continent.countries[i].flag;
                 Buttons buttonsCountry = countryButtons[i].GetComponentInChildren<Buttons>();
                 buttonsCountry.country = continent.countries[i];
             }

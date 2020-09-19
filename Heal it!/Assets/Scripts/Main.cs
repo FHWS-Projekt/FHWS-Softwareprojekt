@@ -24,6 +24,9 @@ public class Main : MonoBehaviour {
     // Money
     protected double money;
     [SerializeField] protected TextMeshProUGUI moneyDisplay;
+
+    // Difficulty 
+    public PlayerSettings playerSettings;
     #endregion Attributes
 
     #region Getter and Setter
@@ -119,44 +122,243 @@ public class Main : MonoBehaviour {
     }
 
     public void AddMoney() {
-        if (MyDateTime.Day < 4) {
-            Money += 1;
-        }else if (MyDateTime.Day < 7) {
-            Money += 3;
-        }else if (MyDateTime.Day < 10) {
-            Money += 5;
-        } else if (MyDateTime.Day < 12) {
-            Money += 8;
-        } else if (MyDateTime.Day < 14) {
-            Money += 9;
-        } else if (MyDateTime.Day < 16) {
-            Money += 15;
-        } else if (MyDateTime.Day < 19) {
-            Money += 21;
-        } else if (MyDateTime.Day < 22) {
-            Money += 22;
-        } else if (MyDateTime.Day < 25) {
-            Money += 24;
-        } else if (MyDateTime.Day < 27) {
-            Money += 28;
-        } else if (MyDateTime.Day < 30) {
-            Money += 27;
-        } else if (MyDateTime.Day < 33) {
-            Money += 25;
-        } else if (MyDateTime.Day < 36) {
-            Money += 23;
-        } else if (MyDateTime.Day < 38) {
-            Money += 20;
-        } else if (MyDateTime.Day < 40) {
-            Money += 19;
-        } else if (MyDateTime.Day < 42) {
-            Money += 13;
-        } else if (MyDateTime.Day < 45) {
-            Money += 7;
-        } else if (MyDateTime.Day < 48) {
-            Money += 6;
-        } else {
-            Money += 4;
+        
+        if(playerSettings.difficulty == 0)
+        {
+            if (MyDateTime.Day < 4)
+            {
+                Money += 1;
+            }
+            else if (MyDateTime.Day < 7)
+            {
+                Money += 3;
+            }
+            else if (MyDateTime.Day < 10)
+            {
+                Money += 5;
+            }
+            else if (MyDateTime.Day < 12)
+            {
+                Money += 8;
+            }
+            else if (MyDateTime.Day < 14)
+            {
+                Money += 9;
+            }
+            else if (MyDateTime.Day < 16)
+            {
+                Money += 15;
+            }
+            else if (MyDateTime.Day < 19)
+            {
+                Money += 21;
+            }
+            else if (MyDateTime.Day < 22)
+            {
+                Money += 22;
+            }
+            else if (MyDateTime.Day < 25)
+            {
+                Money += 24;
+            }
+            else if (MyDateTime.Day < 27)
+            {
+                Money += 28;
+            }
+            else if (MyDateTime.Day < 30)
+            {
+                Money += 27;
+            }
+            else if (MyDateTime.Day < 33)
+            {
+                Money += 25;
+            }
+            else if (MyDateTime.Day < 36)
+            {
+                Money += 23;
+            }
+            else if (MyDateTime.Day < 38)
+            {
+                Money += 20;
+            }
+            else if (MyDateTime.Day < 40)
+            {
+                Money += 19;
+            }
+            else if (MyDateTime.Day < 42)
+            {
+                Money += 13;
+            }
+            else if (MyDateTime.Day < 45)
+            {
+                Money += 7;
+            }
+            else if (MyDateTime.Day < 48)
+            {
+                Money += 6;
+            }
+            else
+            {
+                Money += 4;
+            }
+        }
+        else if(playerSettings.difficulty == 1)
+        {
+            if (MyDateTime.Day < 4)
+            {
+                Money += 1;
+            }
+            else if (MyDateTime.Day < 7)
+            {
+                Money += 3;
+            }
+            else if (MyDateTime.Day < 10)
+            {
+                Money += 5;
+            }
+            else if (MyDateTime.Day < 12)
+            {
+                Money += 8;
+            }
+            else if (MyDateTime.Day < 14)
+            {
+                Money += 9;
+            }
+            else if (MyDateTime.Day < 16)
+            {
+                Money += 15;
+            }
+            else if (MyDateTime.Day < 19)
+            {
+                Money += 21;
+            }
+            else if (MyDateTime.Day < 22)
+            {
+                Money += 22;
+            }
+            else if (MyDateTime.Day < 25)
+            {
+                Money += 24;
+            }
+            else if (MyDateTime.Day < 27)
+            {
+                Money += 28;
+            }
+            else if (MyDateTime.Day < 30)
+            {
+                Money += 27;
+            }
+            else if (MyDateTime.Day < 33)
+            {
+                Money += 25;
+            }
+            else if (MyDateTime.Day < 36)
+            {
+                Money += 23;
+            }
+            else if (MyDateTime.Day < 38)
+            {
+                Money += 20;
+            }
+            else if (MyDateTime.Day < 40)
+            {
+                Money += 19;
+            }
+            else if (MyDateTime.Day < 42)
+            {
+                Money += 13;
+            }
+            else if (MyDateTime.Day < 45)
+            {
+                Money += 7;
+            }
+            else if (MyDateTime.Day < 48)
+            {
+                Money += 6;
+            }
+            else
+            {
+                Money += 4;
+            }
+        }
+        else if(playerSettings.difficulty == 2)
+        {
+            if (MyDateTime.Day < 4)
+            {
+                Money += 1;
+            }
+            else if (MyDateTime.Day < 7)
+            {
+                Money += 3;
+            }
+            else if (MyDateTime.Day < 10)
+            {
+                Money += 5;
+            }
+            else if (MyDateTime.Day < 12)
+            {
+                Money += 8;
+            }
+            else if (MyDateTime.Day < 14)
+            {
+                Money += 9;
+            }
+            else if (MyDateTime.Day < 16)
+            {
+                Money += 15;
+            }
+            else if (MyDateTime.Day < 19)
+            {
+                Money += 21;
+            }
+            else if (MyDateTime.Day < 22)
+            {
+                Money += 22;
+            }
+            else if (MyDateTime.Day < 25)
+            {
+                Money += 24;
+            }
+            else if (MyDateTime.Day < 27)
+            {
+                Money += 28;
+            }
+            else if (MyDateTime.Day < 30)
+            {
+                Money += 27;
+            }
+            else if (MyDateTime.Day < 33)
+            {
+                Money += 25;
+            }
+            else if (MyDateTime.Day < 36)
+            {
+                Money += 23;
+            }
+            else if (MyDateTime.Day < 38)
+            {
+                Money += 20;
+            }
+            else if (MyDateTime.Day < 40)
+            {
+                Money += 19;
+            }
+            else if (MyDateTime.Day < 42)
+            {
+                Money += 13;
+            }
+            else if (MyDateTime.Day < 45)
+            {
+                Money += 7;
+            }
+            else if (MyDateTime.Day < 48)
+            {
+                Money += 6;
+            }
+            else
+            {
+                Money += 4;
+            }
         }
     }
 }
