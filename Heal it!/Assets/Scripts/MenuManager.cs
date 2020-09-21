@@ -44,8 +44,8 @@ public class MenuManager : MonoBehaviour
         if(country != null)
         {
             countryName.text = country.countryName;
-            residents.text = "Residents: " + country.startResidents;
-            infected.text = "Infected: " + System.Math.Round(country.infected);
+            residents.text = country.startResidents + "";
+            infected.text = System.Math.Round(country.infected) + "";
             influenceE.text = "Influence: " + country.influenceE;
             influenceP.text = "Influence: " + country.influenceP;
         }
