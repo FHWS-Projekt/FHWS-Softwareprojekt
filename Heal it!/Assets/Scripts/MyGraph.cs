@@ -84,9 +84,9 @@ public EventManager eventManager;
         double infected = 0;
         double population = 0;
         foreach (Country country in eventManager.countries ) {
-            if()
-            infected = infected + (int)country.infected;
-            population = population + country.startResidents;
+            // if()
+            // infected = infected + (int)country.infected;
+            // population = population + country.startResidents;
         }
         Debug.Log(infected);
 
