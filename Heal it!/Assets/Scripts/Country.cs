@@ -15,6 +15,8 @@ public class Country : ScriptableObject
     public double influenceE;
     public double influenceP;
 
+    public string info;
+
     public bool[] measures;
     public double[] measuresV;
     public double[] moneyV;
