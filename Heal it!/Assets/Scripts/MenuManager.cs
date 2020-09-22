@@ -130,7 +130,7 @@ public class MenuManager : MonoBehaviour
         {
             if (!country.measures[i])
             {
-                measursButtons[i].image.color = Color.red;
+                measursButtons[i].image.color = new Color(50,50,50);
             }
             else if (country.measures[i])
             {
@@ -157,7 +157,7 @@ public class MenuManager : MonoBehaviour
                 {
                     country.measures[i] = false;
                     mainScript.Money += country.moneyV[i];
-                    measursButtons[i].image.color = Color.red;
+                    measursButtons[i].image.color = new Color(50,50,50);
                 }
                 else
                 {
