@@ -27,7 +27,8 @@ public class InfoMeasures : MonoBehaviour
 
     void Awake()
     {
-        //infoText = GameObject.Find("InfoText").GetComponent<Text>(); // Wirft aktuel noch Fehler 18.09.2020 -hakan
+        infoPanel.SetActive(true);
+        infoText = GameObject.Find("InfoText").GetComponent<Text>();
         infoPanel.SetActive(false);
     }
     #endregion Unity Methods
