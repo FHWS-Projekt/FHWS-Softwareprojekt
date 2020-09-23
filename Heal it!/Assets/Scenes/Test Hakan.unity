@@ -2270,6 +2270,7 @@ GameObject:
   - component: {fileID: 200565418}
   - component: {fileID: 200565420}
   - component: {fileID: 200565419}
+  - component: {fileID: 200565421}
   m_Layer: 5
   m_Name: Measures2
   m_TagString: Untagged
@@ -2355,6 +2356,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200565417}
   m_CullTransparentMesh: 0
+--- !u!114 &200565421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200565417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e8c006d9e65ea4c8339e201bc6916a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoPanel: {fileID: 1318919057}
 --- !u!1 &210819775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,14 +2936,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3526,7 +3540,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
@@ -3928,14 +3942,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5421,14 +5435,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5552,14 +5566,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6851,14 +6865,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12735,14 +12749,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -13869,14 +13883,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -15440,14 +15454,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: setText
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -16598,7 +16612,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1591068343}
+      - m_Target: {fileID: 200565421}
         m_TargetAssemblyTypeName: InfoMeasures, Assembly-CSharp
         m_MethodName: closePanel
         m_Mode: 1
