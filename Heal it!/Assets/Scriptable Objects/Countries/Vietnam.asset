@@ -20,6 +20,7 @@ MonoBehaviour:
   recoveryRateG: 0.905
   influenceE: 10
   influenceP: 0.2
+  info: Die Hauptstadt von Vietnam ist Hanoi.
   measures: 00000000000000000000
   measuresV:
   - 0

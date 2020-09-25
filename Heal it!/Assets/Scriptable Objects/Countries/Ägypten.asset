@@ -20,6 +20,10 @@ MonoBehaviour:
   recoveryRateG: 0.906
   influenceE: 10
   influenceP: 0.2
+  info: "\xC4gyptens Hauptstadt ist Kairo und zugleich Afrikas und Arabiens gr\xF6\xDFte
+    Metropole. \xC4gypten zeichnet sich durch seine Vergangenheit und dessen Hochkulturen
+    aus. Die Pyramiden von Gizeh sind wohl das bekannteste Weltwunder des Planeten.
+    Weitere Millionenst\xE4dte des Landes sind Alexandria und Gizeh."
   measures: 00000000000000000000
   measuresV:
   - 0

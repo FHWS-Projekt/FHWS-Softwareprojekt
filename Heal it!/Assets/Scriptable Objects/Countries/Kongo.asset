@@ -20,6 +20,11 @@ MonoBehaviour:
   recoveryRateG: 0.903
   influenceE: 10
   influenceP: 0.2
+  info: "Die DR Kongo ist eines der gr\xF6\xDFten L\xE4nder Afrikas, sowohl fl\xE4chenm\xE4\xDFig
+    als auch einwohnerm\xE4\xDFig. Der \xC4quator l\xE4uft durch das Land. Es herrscht
+    ein tropisches Klima und der Gro\xDFteil des Staates ist vom Regenwald bedeckt.
+    Die Hauptstadt Kinshasa ist mit 13 Millionen Einwohnern die drittgr\xF6\xDFte
+    Stadt Afrikas. Die Amtssprache ist Franz\xF6sisch."
   measures: 00000000000000000000
   measuresV:
   - 0

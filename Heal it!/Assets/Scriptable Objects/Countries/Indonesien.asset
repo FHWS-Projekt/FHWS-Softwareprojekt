@@ -20,6 +20,10 @@ MonoBehaviour:
   recoveryRateG: 0.9249
   influenceE: 10
   influenceP: 0.2
+  info: "Indonesien ist weltweit der gr\xF6\xDFte Inselstaat und der viertbev\xF6lkerungsreichste
+    Staat der Welt. Des Weiteren hat es weltweit die gr\xF6\xDFte Anzahl an Muslimen.
+    Die Hauptstadt ist Jakarta. Ein Teil des Inselstaats befindet sich auf dem asiatischen
+    Kontinent, der andere auf dem australischen."
   measures: 00000000000000000000
   measuresV:
   - 0

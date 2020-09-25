@@ -20,6 +20,10 @@ MonoBehaviour:
   recoveryRateG: 0.911
   influenceE: 10
   influenceP: 0.2
+  info: "Fl\xE4chenm\xE4\xDFig ist Japan der viertgr\xF6\xDFte Inselstaat der Welt
+    und besitzt knapp 6852 Inseln. Tokio ist die Hauptstadt Japans. Japan hat eine
+    sehr hoch entwickelte Volkswirtschaft und war zeitweise die zweitgr\xF6\xDFte
+    Wirtschaftskraft der Erde. Es ist das elfbev\xF6lkerungsreichste Land der Welt."
   measures: 00000000000000000000
   measuresV:
   - 0

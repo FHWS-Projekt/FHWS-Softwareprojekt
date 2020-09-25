@@ -20,6 +20,11 @@ MonoBehaviour:
   recoveryRateG: 0.8984
   influenceE: 10
   influenceP: 0.2
+  info: "GB ist der gr\xF6\xDFte Inselstaat Europas. Es ist eine Union aus den Landesteilen
+    England, Wales, Schottland und Nordirland. Es ist eines der bev\xF6lkerungsreichsten
+    Staaten Europas und Gr\xFCndungsmitglied der NATO und der Vereinten Nationen.
+    Am 31. Januar 2020 ist GB aus der EU ausgetreten. Das Staatsoberhaupt ist die
+    wohl bekannteste K\xF6nigin der Welt: K\xF6nigin Elisabeth II."
   measures: 00000000000000000000
   measuresV:
   - 0

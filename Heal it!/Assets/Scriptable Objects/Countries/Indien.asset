@@ -20,6 +20,9 @@ MonoBehaviour:
   recoveryRateG: 0.955
   influenceE: 10
   influenceP: 0.2
+  info: "Indien ist das zweitbev\xF6lkerungsreichste Land der Erde. Direkt nach China.
+    Die Nordgrenze des Landes wird durch das bekannte Himalayagebirge abgegrenzt.
+    Hier befindet sich der Mount Everest, der gr\xF6\xDFte Berg der Erde."
   measures: 00000000000000000000
   measuresV:
   - 0

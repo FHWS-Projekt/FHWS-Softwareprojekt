@@ -20,6 +20,10 @@ MonoBehaviour:
   recoveryRateG: 0.908
   influenceE: 10
   influenceP: 0.2
+  info: "\xC4thiopien ist ein Vielv\xF6lkerstaat. \xDCber 80 ethnische Gruppen leben
+    hier miteinander. Es ist der bev\xF6lkerungsreichste Binnenstaat der Welt. \xC4thiopien
+    gilt als Ursprungsland des Kaffees. Die Hauptstadt ist Addis Abeba und gilt zu
+    den gr\xF6\xDFten St\xE4dten in Afrika."
   measures: 00000000000000000000
   measuresV:
   - 0

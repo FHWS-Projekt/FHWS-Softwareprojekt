@@ -20,6 +20,10 @@ MonoBehaviour:
   recoveryRateG: 0.911
   influenceE: 10
   influenceP: 0.2
+  info: "Mexiko geh\xF6rt zu Nordamerika und besitzt 31 Bundesstaaten. Die Hauptstadt
+    ist Mexiko-Stadt. Es ist das einwohnerreichste spanischsprachige Land der Welt.
+    In Mexiko sind knapp 10 bis 12 Prozent aller weltweiten bekannten Tierarten zu
+    finden."
   measures: 00000000000000000000
   measuresV:
   - 0

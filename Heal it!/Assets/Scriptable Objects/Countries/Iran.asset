@@ -20,6 +20,12 @@ MonoBehaviour:
   recoveryRateG: 0.902
   influenceE: 10
   influenceP: 0.2
+  info: "Der Iran geh\xF6rt noch zu den Top 20 der gr\xF6\xDFten Staaten der Erde.
+    Iran hat einige Millionenst\xE4dte, die gr\xF6\xDFte darunter ist die Hauptstadt
+    Teheran. Seit 1979 bezeichnet sich der Iran als Islamische Republik. Es besteht
+    vor allem aus hohen Gebirgen und trockenen, w\xFCstenhaften Becken. Der Iran
+    hat die gr\xF6\xDFten Erdgas- und die viertgr\xF6\xDFten Erd\xF6lvorr\xE4te der
+    Welt."
   measures: 00000000000000000000
   measuresV:
   - 0
