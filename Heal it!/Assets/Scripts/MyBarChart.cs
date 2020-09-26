@@ -22,7 +22,7 @@ public class MyBarChart : MonoBehaviour {
     private List<BarChartVisual.BarChartVisualObject> graphVisualObjectList;
 
     // Attributes
-    private List<int> valueList;
+    private List<int> valueList = new List<int>();
     private BarChartVisual graphVisual;
     private int maxVisibleValueAmount;
     private Func<int, string> getAxisLabelX;
@@ -37,8 +37,8 @@ public class MyBarChart : MonoBehaviour {
         BarChartVisual barChartVisual = new BarChartVisual(graphContainer, Color.white, .8f);
 
         // Set up start values
-        List<int> valueList = new List<int>() { 0 };
-        ShowGraph(valueList, barChartVisual, -1, (int _i) => "Day " + (_i), (float _f) => "" + Mathf.RoundToInt(_f));
+        //List<int> valueList = new List<int>() { 0 };
+        //ShowGraph(valueList, barChartVisual, -1, (int _i) => "Day " + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
     }
 
     // Start is called before the first frame update
@@ -61,7 +61,7 @@ public class MyBarChart : MonoBehaviour {
         if (!graphContainer.gameObject.activeSelf) {
             graphContainer.gameObject.SetActive(true);
             BarChartVisual barChartVisual = new BarChartVisual(graphContainer, Color.white, .8f);
-            ShowGraph(valueList, barChartVisual, -1, (int _i) => "Day " + (_i), (float _f) => "" + Mathf.RoundToInt(_f));
+            ShowGraph(valueList, barChartVisual, -1, (int _i) => "Day " + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
         } else {
             graphContainer.gameObject.SetActive(false);
 
