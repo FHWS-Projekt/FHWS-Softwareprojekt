@@ -16,7 +16,7 @@ public class ContinentDisplay : MonoBehaviour
 
     void Start()
     {
-        continent.airport = this.gameObject.transform.position;
+
     }
 
     #endregion Unity Methods
