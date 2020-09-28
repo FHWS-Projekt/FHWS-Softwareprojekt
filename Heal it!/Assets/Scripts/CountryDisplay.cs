@@ -36,9 +36,9 @@ public class CountryDisplay : MonoBehaviour
         if(anim != null)
         anim.enabled = false;
 
-        color.g = 1f;
-        color.b = 0f;
-        color.r = 0f;
+        color.g = 0.7254902f;
+        color.b = 0.082605f;
+        color.r = 0.07058825f;
 
         myMaterial.color = color;
 
@@ -119,9 +119,9 @@ public class CountryDisplay : MonoBehaviour
         if(country.deathCount > 0)
         {
 
-            color.g =  1 - (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
-            color.r = (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
-
+            color.g =  color.g - (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
+            color.r = color.r + (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
+    
             myMaterial.color = color;
         }
 
