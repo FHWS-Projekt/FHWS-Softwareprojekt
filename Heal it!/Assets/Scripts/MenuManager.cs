@@ -25,7 +25,6 @@ public class MenuManager : MonoBehaviour
     public Main mainScript;
     public Button pauseButton;
     public Button startButton;
-    public ButtonAnimaitor buttonAnimaitor;
 
     public Button[] countryButtons;
     public Button[] measursButtons;
@@ -68,7 +67,6 @@ public class MenuManager : MonoBehaviour
             if (mainScript.pause)
             {
                 mainScript.SetTimeButtonPlayPauseOnClickTask();
-                buttonAnimaitor.ChangeSprite();
             }
         }
         else
@@ -77,7 +75,6 @@ public class MenuManager : MonoBehaviour
             if (!mainScript.pause)
             {
                 mainScript.SetTimeButtonPlayPauseOnClickTask();
-                buttonAnimaitor.ChangeSprite();
             }
         }  
     }
