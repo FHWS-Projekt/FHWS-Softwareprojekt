@@ -4,7 +4,7 @@ using System.Configuration;
 using UnityEditorInternal;
 using UnityEngine;
 
-public class SelectionManager : MonoBehaviour
+/*public class SelectionManager : MonoBehaviour
 {
     [SerializeField] private string selectableTag = "Selectable";
     [SerializeField] private Material highlightMaterial;
@@ -41,4 +41,4 @@ public class SelectionManager : MonoBehaviour
 
         }
     }
-}
+}*/

@@ -21,7 +21,5 @@ public class Country : ScriptableObject
     public double[] measuresV;
     public double[] moneyV;
 
-    public Vector3 airport;   
-
     public Sprite flag;
 }
