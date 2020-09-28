@@ -985,6 +985,7 @@ MonoBehaviour:
   mainScript: {fileID: 1229859505}
   pauseButton: {fileID: 884453319}
   startButton: {fileID: 884453319}
+  buttonAnim: {fileID: 884453323}
   countryButtons:
   - {fileID: 1004019673}
   - {fileID: 1953008544}
@@ -8296,6 +8297,7 @@ GameObject:
   - component: {fileID: 884453320}
   - component: {fileID: 884453319}
   - component: {fileID: 884453322}
+  - component: {fileID: 884453323}
   m_Layer: 5
   m_Name: TimeButtonPlayPause
   m_TagString: Untagged
@@ -8377,13 +8379,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 884453323}
+        m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+        m_MethodName: ChangeSprite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8523,6 +8525,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &884453323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884453317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2925e82094b7afb4d8ea81c678c0e328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 21300000, guid: 47b43565386904e9caffad5e1b93c241, type: 3}
+  play: {fileID: 21300000, guid: 49584354b73bc4c3689a06dc23ab8ab8, type: 3}
+  mode: 0
+  buttonImage: {fileID: 0}
 --- !u!1 &897021200
 GameObject:
   m_ObjectHideFlags: 0
