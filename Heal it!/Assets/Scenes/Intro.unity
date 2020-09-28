@@ -7272,8 +7272,8 @@ GameObject:
   - component: {fileID: 1857412966}
   - component: {fileID: 1857412965}
   - component: {fileID: 1857412964}
-  - component: {fileID: 1857412967}
   - component: {fileID: 1857412968}
+  - component: {fileID: 1857412967}
   m_Layer: 5
   m_Name: NewGameButton
   m_TagString: Untagged
@@ -7415,7 +7415,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1857412962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6728dab97df56e048924e1dcb14a4eee, type: 3}
+  m_Script: {fileID: 11500000, guid: 06d86d84e5fa74f0fbebc1d10c5c128c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &1857412968
