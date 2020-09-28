@@ -92,14 +92,14 @@ public class MenuManager : MonoBehaviour
             measures2MenuActiv.SetActive(true);
         }
     }
-    public CountryDisplay OnClickCountryButton(Button button)
+    /*public CountryDisplay OnClickCountryButton(Button button)
     {
 
         CountryDisplay countryDisplay = null;
 
         return countryDisplay;
 
-    }
+    }*/
     public void ShowContinent(ContinentDisplay continentDisplay)
     {
         Continent continent = continentDisplay.continent;
@@ -167,6 +167,21 @@ public class MenuManager : MonoBehaviour
                     Debug.Log("Du hast zu wenig Gold!");
                 }
             }
+        }
+    }
+    public void OpenMenu(GameObject menu)
+    {
+        if (menu.activeSelf)
+        {
+            menu.SetActive(false);
+            mainScript.SetTimeButtonPlayPauseOnClickTask();
+            buttonAnim.ChangeSprite();
+        }
+        else if (!menu.activeSelf)
+        {
+            menu.SetActive(true);
+            mainScript.SetTimeButtonPlayPauseOnClickTask();
+            buttonAnim.ChangeSprite();
         }
     }
 

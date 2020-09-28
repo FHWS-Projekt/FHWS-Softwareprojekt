@@ -3852,7 +3852,7 @@ GameObject:
   - component: {fileID: 347990352}
   - component: {fileID: 347990351}
   m_Layer: 5
-  m_Name: ContinentName
+  m_Name: OptionenName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3897,7 +3897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continent
+  m_text: Optionen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
   m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
@@ -5287,11 +5287,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99060499}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: OnClickMenuActiv
-        m_Mode: 1
+        m_MethodName: OpenMenu
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1929941043}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19301,7 +19301,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1711070795}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 99060499}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OpenMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1929941043}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1711070795
 MonoBehaviour:
   m_ObjectHideFlags: 0
