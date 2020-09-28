@@ -7345,11 +7345,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1857412967}
-        m_TargetAssemblyTypeName: Restart, Assembly-CSharp
-        m_MethodName: playGame
-        m_Mode: 1
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 102900000, guid: d8757b2b9435b9a4f90209c4d6a9545d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

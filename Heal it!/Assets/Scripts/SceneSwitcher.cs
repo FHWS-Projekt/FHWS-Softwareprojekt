@@ -2,20 +2,15 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class SceneSwitcher : MonoBehaviour
+public class SceneSwitch : MonoBehaviour
 {
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
     }
-    // public void playGame()
-    // {
-    //     SceneManager.LoadScene("Test Hakan");
-    // }
-
-    public void LoadScene(Object scene) 
+    public void playGame()
     {
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene("Test Hakan");
     }
 }
