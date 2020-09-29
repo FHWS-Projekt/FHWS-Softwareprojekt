@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 65810560}
   - component: {fileID: 65810559}
   - component: {fileID: 65810558}
+  - component: {fileID: 65810562}
   m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
@@ -538,7 +539,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1274660776}
+      - m_Target: {fileID: 1641712160}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -550,7 +551,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 860425455}
+      - m_Target: {fileID: 2054621015}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -574,6 +575,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 65810562}
+        m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+        m_MethodName: SaveSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &65810560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,6 +625,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65810556}
   m_CullTransparentMesh: 0
+--- !u!114 &65810562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65810556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2925e82094b7afb4d8ea81c678c0e328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  play: {fileID: 0}
+  mode: 0
+  buttonImage: {fileID: 0}
+  playerSettings: {fileID: 11400000, guid: 80b1920c2a5db814bbc1bdf7bcbf5953, type: 2}
+  playerTextMeshPro: {fileID: 388845476}
+  musicToggle: {fileID: 763576717}
+  dropdownMenu: {fileID: 644756280}
+  musicText: {fileID: 0}
 --- !u!1 &67318917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +1984,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u200B"
+  m_text: Presi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3036,9 +3070,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Medium
-      m_Image: {fileID: 0}
     - m_Text: Leicht
+      m_Image: {fileID: 0}
+    - m_Text: Medium
       m_Image: {fileID: 0}
     - m_Text: Schwer
       m_Image: {fileID: 0}
@@ -3360,6 +3394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 763576716}
   - component: {fileID: 763576717}
+  - component: {fileID: 763576718}
   m_Layer: 5
   m_Name: MusicToggle
   m_TagString: Untagged
@@ -3434,8 +3469,41 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 763576718}
+        m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+        m_MethodName: ChangeText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
+--- !u!114 &763576718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763576715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2925e82094b7afb4d8ea81c678c0e328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  play: {fileID: 0}
+  mode: 0
+  buttonImage: {fileID: 0}
+  playerSettings: {fileID: 0}
+  playerTextMeshPro: {fileID: 0}
+  musicToggle: {fileID: 763576717}
+  dropdownMenu: {fileID: 0}
+  musicText: {fileID: 1950853686}
 --- !u!1 &764354972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +3920,7 @@ GameObject:
   - component: {fileID: 860425459}
   - component: {fileID: 860425458}
   - component: {fileID: 860425456}
+  - component: {fileID: 860425457}
   m_Layer: 5
   m_Name: Intro_Screen
   m_TagString: Untagged
@@ -3867,6 +3936,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860425455}
   m_CullTransparentMesh: 0
+--- !u!114 &860425457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860425455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53940d004ad4788468c8cc29b36bee76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSettings: {fileID: 11400000, guid: 80b1920c2a5db814bbc1bdf7bcbf5953, type: 2}
 --- !u!114 &860425458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5744,19 +5826,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 998292807}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2054621015}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -8105,7 +8175,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -18.1, y: 3.7}
-  m_SizeDelta: {x: 48.585754, y: 36.65802}
+  m_SizeDelta: {x: 70, y: 36.65802}
   m_Pivot: {x: 0.4999991, y: 0.5}
 --- !u!114 &1950853686
 MonoBehaviour:
@@ -9009,6 +9079,7 @@ GameObject:
   - component: {fileID: 2121673599}
   - component: {fileID: 2121673598}
   - component: {fileID: 2121673597}
+  - component: {fileID: 2121673600}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -9103,6 +9174,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2121673600}
+        m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+        m_MethodName: SaveSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2121673598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9141,6 +9224,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121673595}
   m_CullTransparentMesh: 0
+--- !u!114 &2121673600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121673595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2925e82094b7afb4d8ea81c678c0e328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  play: {fileID: 0}
+  mode: 0
+  buttonImage: {fileID: 0}
+  playerSettings: {fileID: 11400000, guid: 80b1920c2a5db814bbc1bdf7bcbf5953, type: 2}
+  playerTextMeshPro: {fileID: 485874726}
+  musicToggle: {fileID: 0}
+  dropdownMenu: {fileID: 0}
+  musicText: {fileID: 0}
 --- !u!1 &2137531676
 GameObject:
   m_ObjectHideFlags: 0

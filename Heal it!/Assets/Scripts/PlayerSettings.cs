@@ -8,4 +8,7 @@ public class PlayerSettings : ScriptableObject
 {
     public int difficulty;
     public string playerName;
+    public bool sound;
+
+    public bool oneTimeEvent;
 }
