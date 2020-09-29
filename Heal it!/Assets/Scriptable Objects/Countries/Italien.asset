@@ -20,6 +20,12 @@ MonoBehaviour:
   recoveryRateG: 0.896
   influenceE: 10
   influenceP: 0.2
+  info: "Der Gro\xDFteil Italiens ist vom Mittelmeer umschlossen. Der Umriss des
+    Landes sieht aus wie ein Stiefel. Die Hauptstadt ist Rom, welches bekannt f\xFCr
+    das Kolosseum ist. Das Kolosseum ist eines der sieben modernen Weltwunder. Des
+    Weiteren ist der Kleinstaat Vatikan komplett von Italien umschlossen und ist
+    das zu Hause des Papstes. Italien war in der Antike die Kernregion des R\xF6mischen
+    Reiches."
   measures: 00000000000000000000
   measuresV:
   - 0

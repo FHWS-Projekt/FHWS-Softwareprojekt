@@ -20,6 +20,8 @@ MonoBehaviour:
   recoveryRateG: 0.9
   influenceE: 10
   influenceP: 0.2
+  info: "Deutschland ist ein f\xF6deraler Bundesstaat und setzt sich aus 16 Bundesl\xE4ndern
+    zusammen. Die Hauptstadt ist Berlin."
   measures: 00000000000000000000
   measuresV:
   - 0

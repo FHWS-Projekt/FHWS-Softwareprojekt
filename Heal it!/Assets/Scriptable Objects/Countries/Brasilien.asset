@@ -20,6 +20,10 @@ MonoBehaviour:
   recoveryRateG: 0.92
   influenceE: 10
   influenceP: 0.2
+  info: "Brasilien ist fl\xE4chenm\xE4\xDFig der f\xFCnftgr\xF6\xDFte Staat der Erde
+    und das gr\xF6\xDFte Land S\xFCdamerikas. Die Hauptstadt ist Brasilia. Brasilien
+    hat mit fast jedem s\xFCdamerikanischen Staat eine gemeinsame Grenze. Die Ausnahmen
+    sind Chile und Ecuador."
   measures: 00000000000000000000
   measuresV:
   - 0

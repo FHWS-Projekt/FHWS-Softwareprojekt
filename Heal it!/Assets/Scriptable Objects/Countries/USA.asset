@@ -20,6 +20,9 @@ MonoBehaviour:
   recoveryRateG: 0.944
   influenceE: 10
   influenceP: 0.2
+  info: "Die Vereinigten Staaten von Amerika sind eine f\xF6derale Republik, bestehend
+    aus 50 Bundesstaaten. Die Hauptstadt ist Washington D.C. Fl\xE4chenm\xE4\xDFig
+    ist die USA der drittgr\xF6\xDFte Staat der Erde."
   measures: 00000000000000000000
   measuresV:
   - 0

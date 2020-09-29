@@ -82,7 +82,7 @@ public class Main : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         UpdateTimestamp();
-        MoneyDisplay.text = money.ToString() + " Gold";
+        MoneyDisplay.text = money.ToString() + " Mio.";
 
         if (MyCamera.Timer <= 0) {
             RotateEarth();

@@ -25,6 +25,7 @@ public class MenuManager : MonoBehaviour
     public Main mainScript;
     public Button pauseButton;
     public Button startButton;
+    public ButtonAnim buttonAnim;
 
     public Button[] countryButtons;
     public Button[] measursButtons;
@@ -44,8 +45,8 @@ public class MenuManager : MonoBehaviour
         if(country != null)
         {
             countryName.text = country.countryName;
-            residents.text = "Residents: " + country.startResidents;
-            infected.text = "Infected: " + System.Math.Round(country.infected);
+            residents.text = country.startResidents + "";
+            infected.text = System.Math.Round(country.infected) + "";
             influenceE.text = "Influence: " + country.influenceE;
             influenceP.text = "Influence: " + country.influenceP;
         }
@@ -67,6 +68,7 @@ public class MenuManager : MonoBehaviour
             if (mainScript.pause)
             {
                 mainScript.SetTimeButtonPlayPauseOnClickTask();
+                buttonAnim.ChangeSprite();
             }
         }
         else
@@ -75,6 +77,7 @@ public class MenuManager : MonoBehaviour
             if (!mainScript.pause)
             {
                 mainScript.SetTimeButtonPlayPauseOnClickTask();
+                buttonAnim.ChangeSprite();
             }
         }  
     }
@@ -89,14 +92,14 @@ public class MenuManager : MonoBehaviour
             measures2MenuActiv.SetActive(true);
         }
     }
-    public CountryDisplay OnClickCountryButton(Button button)
+    /*public CountryDisplay OnClickCountryButton(Button button)
     {
 
         CountryDisplay countryDisplay = null;
 
         return countryDisplay;
 
-    }
+    }*/
     public void ShowContinent(ContinentDisplay continentDisplay)
     {
         Continent continent = continentDisplay.continent;
@@ -130,7 +133,7 @@ public class MenuManager : MonoBehaviour
         {
             if (!country.measures[i])
             {
-                measursButtons[i].image.color = Color.red;
+                measursButtons[i].image.color = new Color(50,50,50);
             }
             else if (country.measures[i])
             {
@@ -157,13 +160,28 @@ public class MenuManager : MonoBehaviour
                 {
                     country.measures[i] = false;
                     mainScript.Money += country.moneyV[i];
-                    measursButtons[i].image.color = Color.red;
+                    measursButtons[i].image.color = new Color(50,50,50);
                 }
                 else
                 {
                     Debug.Log("Du hast zu wenig Gold!");
                 }
             }
+        }
+    }
+    public void OpenMenu(GameObject menu)
+    {
+        if (menu.activeSelf)
+        {
+            menu.SetActive(false);
+            mainScript.SetTimeButtonPlayPauseOnClickTask();
+            buttonAnim.ChangeSprite();
+        }
+        else if (!menu.activeSelf)
+        {
+            menu.SetActive(true);
+            mainScript.SetTimeButtonPlayPauseOnClickTask();
+            buttonAnim.ChangeSprite();
         }
     }
 

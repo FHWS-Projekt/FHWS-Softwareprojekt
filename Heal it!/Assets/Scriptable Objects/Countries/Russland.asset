@@ -20,6 +20,11 @@ MonoBehaviour:
   recoveryRateG: 0.913
   influenceE: 10
   influenceP: 0.2
+  info: "Russland ist fl\xE4chenm\xE4\xDFig der gr\xF6\xDFte Staat der Welt und umfasst
+    circa ein Achtel der bewohnten Landmasse der Erde. Durch diese enorme Fl\xE4che
+    ist es zugleich eines der am d\xFCnnsten besiedelten Staaten. Der Gro\xDFteil
+    der Bev\xF6lkerung wohnt westlich des Uralgebirges. Die Hauptstadt ist Moskau
+    und ist eine der gr\xF6\xDFten St\xE4dte der Welt."
   measures: 00000000000000000000
   measuresV:
   - 0

@@ -20,6 +20,11 @@ MonoBehaviour:
   recoveryRateG: 0.8924
   influenceE: 10
   influenceP: 0.2
+  info: "Spanien geh\xF6rt zu den sehr hoch entwickelten L\xE4ndern und zu den 20
+    gr\xF6\xDFten Export und Importnationen der Welt. Es ist nach Frankreich das
+    am zweit h\xE4ufigsten besuchte Land der Welt. Spanien liegt auf der Iberischen
+    Halbinsel in Europa und besitzt zwei Exklaven in Nordafrika. Die Hauptstadt ist
+    Madrid."
   measures: 00000000000000000000
   measuresV:
   - 0

@@ -20,6 +20,9 @@ MonoBehaviour:
   recoveryRateG: 0.92
   influenceE: 10
   influenceP: 0.2
+  info: "Pakistan war das erste Land welches sich zu einer Islamischen Republik der
+    Welt ausgerufen hat. Das Land ist von permanenter religi\xF6ser, wirtschaftlicher
+    und politischer Instabilit\xE4t gepr\xE4gt. Die Hauptstadt ist Islamabad."
   measures: 00000000000000000000
   measuresV:
   - 0

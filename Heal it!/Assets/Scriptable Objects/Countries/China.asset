@@ -20,6 +20,9 @@ MonoBehaviour:
   recoveryRateG: 0.955
   influenceE: 10
   influenceP: 0.2
+  info: "China ist eines der bev\xF6lkerungsreichsten L\xE4nder der Erde. Die Hauptstadt
+    ist Peking. Au\xDFerdem geh\xF6rt es zu den gr\xF6\xDFten Wirtschaftsm\xE4chten
+    auf dem Planeten.  COVID-19 hatte hier seinen Ursprung."
   measures: 00000000000000000000
   measuresV:
   - 0

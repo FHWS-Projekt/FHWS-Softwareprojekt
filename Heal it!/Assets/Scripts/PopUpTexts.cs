@@ -10,7 +10,10 @@ public class PopUpTexts : MonoBehaviour
     public  Main mainScript;
     private Text popUpText;
     private string midgameText = "Hey! Bis jetzt schlägst du dich gut im Kampf gegen den Virus. Wir arbeiten weiterhin mit Nachdruck an der Entwicklung eines Impfstoffs! Halte die Infektionszahlen noch eine Weile gering, bis wir die Entwicklung abschließen konnten und der Impfstoff eingesetzt werden kann.";
+    private string startGameText = "Es geht los! Im Newsfeed wird dir angezeigt welches Land bereits einen Infizierten aufweist. Du kannst die Erdkugel drehen und auf einen Kontinent klicken, um in das jeweilige Menü zu gelangen. Versuche deine Maßnahmen möglichst in den Ländern mit Infizierten zu verteilen. Viel Erfolg!";
+    private string highMoneyText = "Hey, du hast ganz schön viel Gold angespart. Vielleicht solltest du etwas davon in weitere Maßnahmen investieren!";
     private int day;
+    private bool notAgain = false;
     #endregion Attributes
     #region Unity Methods
 
@@ -19,12 +22,12 @@ public class PopUpTexts : MonoBehaviour
     {
         popUpText = GameObject.Find("PopUpText").GetComponent<Text>();
         Main.Instance.MyDateTime.DayTasks.Add(() => gamePopUps());
-        PausePanel.SetActive(false);
+        //PausePanel.SetActive(false); /auskommentiert für neues Start Pop-Up -Andrej 23.09.2020
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        popUp(startGameText);
     }
 
     // Update is called once per frame
@@ -43,9 +46,18 @@ public class PopUpTexts : MonoBehaviour
         mainScript.SetTimeButtonPlayPauseOnClickTask();
     }
     public void gamePopUps() {
+        if (Main.Instance.Money >= 17 && !notAgain) {
+            popUp(highMoneyText);
+            notAgain = true;
+        }
         if (Main.Instance.MyDateTime.Day >= 25 && Main.Instance.MyDateTime.Day < 26) {
             popUp(midgameText);
         }
+    }
+    public void startPopUp() {
+        mainScript.SetTimeButtonPlayPauseOnClickTask();
+        PausePanel.SetActive(true);
+        popUpText.text = startGameText;
     }
     #endregion Methods
 

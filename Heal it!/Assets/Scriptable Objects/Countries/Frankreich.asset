@@ -20,6 +20,12 @@ MonoBehaviour:
   recoveryRateG: 0.8985
   influenceE: 10
   influenceP: 0.2
+  info: "Frankreich ist fl\xE4chenm\xE4\xDFig das gr\xF6\xDFte Land der Europ\xE4ischen
+    Union. Einwohnerm\xE4\xDFig ist es nach Deutschland das zweitgr\xF6\xDFte Land
+    der EU. Die Hauptstadt ist Paris, welche oft auch als Stadt der Liebe bezeichnet
+    wird. Frankreich ist die sechstgr\xF6\xDFte Volkswirtschaft der Welt. Knapp 83
+    Millionen ausl\xE4ndische Touristen kommen j\xE4hrlich nach Frankreich. Dies
+    macht das Land zum meistbesuchten Land der Welt."
   measures: 00000000000000000000
   measuresV:
   - 0
