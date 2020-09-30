@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: ad5cfb69703a243bbb387f4863df959e
   - enabled: 1
-    path: Assets/Scenes/Test Hakan.unity
+    path: Assets/Scenes/Main.unity
     guid: d8757b2b9435b9a4f90209c4d6a9545d
   - enabled: 1
     path: Assets/Scenes/Outro.unity

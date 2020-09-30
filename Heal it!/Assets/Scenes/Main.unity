@@ -1858,6 +1858,17 @@ MonoBehaviour:
   - {fileID: 324291963}
   - {fileID: 1960800911}
   - {fileID: 498133780}
+  measursCosts:
+  - {fileID: 1372996838}
+  - {fileID: 932349141}
+  - {fileID: 535352594}
+  - {fileID: 912297295}
+  - {fileID: 219388628}
+  - {fileID: 107002074}
+  - {fileID: 1001149250}
+  - {fileID: 373491187}
+  - {fileID: 1008010455}
+  - {fileID: 773618662}
 --- !u!1 &100229191
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,7 +2028,7 @@ GameObject:
   - component: {fileID: 107002075}
   - component: {fileID: 107002074}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: closeRoutesCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3889,7 +3900,7 @@ GameObject:
   - component: {fileID: 219388629}
   - component: {fileID: 219388628}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: closeShopsCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5694,7 +5705,7 @@ GameObject:
   - component: {fileID: 373491188}
   - component: {fileID: 373491187}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: closeBordersCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8600,7 +8611,7 @@ GameObject:
   - component: {fileID: 535352595}
   - component: {fileID: 535352594}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: socialDistancingCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11261,7 +11272,7 @@ GameObject:
   - component: {fileID: 773618663}
   - component: {fileID: 773618662}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: homeOfficeCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13906,7 +13917,7 @@ GameObject:
   - component: {fileID: 912297296}
   - component: {fileID: 912297295}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: quarantineCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14344,7 +14355,7 @@ GameObject:
   - component: {fileID: 932349142}
   - component: {fileID: 932349141}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: mouthguardCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15747,7 +15758,7 @@ GameObject:
   - component: {fileID: 1001149251}
   - component: {fileID: 1001149250}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: closeSchoolsCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16270,7 +16281,7 @@ GameObject:
   - component: {fileID: 1008010456}
   - component: {fileID: 1008010455}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: closeKitasCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21367,7 +21378,7 @@ GameObject:
   - component: {fileID: 1372996839}
   - component: {fileID: 1372996838}
   m_Layer: 5
-  m_Name: Costs
+  m_Name: handWashCosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

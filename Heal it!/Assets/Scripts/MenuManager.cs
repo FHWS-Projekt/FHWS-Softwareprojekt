@@ -29,6 +29,7 @@ public class MenuManager : MonoBehaviour
 
     public Button[] countryButtons;
     public Button[] measursButtons;
+    public TextMeshProUGUI[] measursCosts;
 
     #endregion Attributes
 
@@ -133,10 +134,13 @@ public class MenuManager : MonoBehaviour
         {
             if (!country.measures[i])
             {
+
+                measursCosts[i].text = "" + country.moneyV[i];
                 measursButtons[i].image.color = new Color(50,50,50);
             }
             else if (country.measures[i])
             {
+                measursCosts[i].text = "" + country.moneyV[i];
                 measursButtons[i].image.color = Color.green;
             }
         }   
