@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
@@ -187,10 +188,12 @@ public class EventManager : MonoBehaviour
             if (main.MyDateTime.Day == 50)
             {
                 Debug.Log("Du hast gewonnen!");
+                SceneManager.LoadScene("Outro");
             }
             else if (lose)
             {
                 Debug.Log("Du hast verloren!");
+                SceneManager.LoadScene("Outro");
             }
         }
         else if(playerSettings.difficulty == 1)
@@ -198,10 +201,12 @@ public class EventManager : MonoBehaviour
             if (main.MyDateTime.Day == 50)
             {
                 Debug.Log("Du hast gewonnen!");
+                SceneManager.LoadScene("Outro");
             }
             else if (lose)
             {
                 Debug.Log("Du hast verloren!");
+                SceneManager.LoadScene("Outro");
             }
         }
         else if(playerSettings.difficulty == 2)
@@ -209,10 +214,12 @@ public class EventManager : MonoBehaviour
             if (main.MyDateTime.Day == 50)
             {
                 Debug.Log("Du hast gewonnen!");
+                SceneManager.LoadScene("Outro");
             }
             else if (lose)
             {
                 Debug.Log("Du hast verloren!");
+                SceneManager.LoadScene("Outro");
             }
         }
     }
