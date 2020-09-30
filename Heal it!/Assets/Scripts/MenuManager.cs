@@ -178,14 +178,20 @@ public class MenuManager : MonoBehaviour
         if (menu.activeSelf)
         {
             menu.SetActive(false);
-            mainScript.SetTimeButtonPlayPauseOnClickTask();
-            buttonAnim.ChangeSprite();
+            if(Time.timeScale == 0)
+            {
+                mainScript.SetTimeButtonPlayPauseOnClickTask();
+                buttonAnim.ChangeSprite();
+            }
         }
         else if (!menu.activeSelf)
         {
             menu.SetActive(true);
-            mainScript.SetTimeButtonPlayPauseOnClickTask();
-            buttonAnim.ChangeSprite();
+            if(Time.timeScale == 1)
+            {
+                mainScript.SetTimeButtonPlayPauseOnClickTask();
+                buttonAnim.ChangeSprite();
+            }
         }
     }
 
