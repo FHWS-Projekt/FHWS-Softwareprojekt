@@ -23,10 +23,12 @@ public class MenuManager : MonoBehaviour
 
     public Country country;
     public Main mainScript;
+    public EventManager eventScript;
     public Button pauseButton;
     public Button startButton;
     public ButtonAnim buttonAnim;
 
+    public Button[] continentButtons;
     public Button[] countryButtons;
     public Button[] measursButtons;
     public TextMeshProUGUI[] measursCosts;
@@ -91,6 +93,24 @@ public class MenuManager : MonoBehaviour
         else
         {
             measures2MenuActiv.SetActive(true);
+        }
+    }
+    public void OnClickMenu3Activ(ContinentDisplay continentDisplay)
+    {
+        if (measures2MenuActiv.activeSelf)
+        {
+            measures2MenuActiv.SetActive(false);
+            ShowContinent(continentDisplay);
+
+        }
+        else if (measuresMenuActiv.activeSelf)
+        {
+            ShowContinent(continentDisplay);
+        }
+        else
+        {
+            OnClickMenuActiv();
+            ShowContinent(continentDisplay);
         }
     }
     /*public CountryDisplay OnClickCountryButton(Button button)

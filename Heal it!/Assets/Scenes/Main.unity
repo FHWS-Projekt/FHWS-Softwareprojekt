@@ -438,7 +438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Contient
+  m_text: Nordamerika
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
   m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
@@ -1162,8 +1162,9 @@ GameObject:
   - component: {fileID: 93886665}
   - component: {fileID: 93886664}
   - component: {fileID: 93886663}
+  - component: {fileID: 93886668}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: EuropaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1343,11 +1344,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99060499}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: ShowCountry
+        m_MethodName: OnClickMenu3Activ
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 93886664}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 93886668}
+          m_ObjectArgumentAssemblyTypeName: ContinentDisplay, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1357,6 +1358,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 571802549}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1385,7 +1398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a68225d318ab49aa8244109614a5a30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecd44dd0668994975a9ba6f1aa7938f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1403,6 +1416,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93886661}
   m_CullTransparentMesh: 0
+--- !u!114 &93886668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93886661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c98d8ae179374fa78fbb3e15f394a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continent: {fileID: 11400000, guid: fe302fe6c19d8d54486c66e2075203de, type: 2}
 --- !u!1 &94695982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,9 +1861,17 @@ MonoBehaviour:
   influenceP: {fileID: 519322891}
   country: {fileID: 0}
   mainScript: {fileID: 1229859505}
+  eventScript: {fileID: 0}
   pauseButton: {fileID: 884453319}
   startButton: {fileID: 884453319}
   buttonAnim: {fileID: 884453323}
+  continentButtons:
+  - {fileID: 1179443731}
+  - {fileID: 473474390}
+  - {fileID: 1942746953}
+  - {fileID: 93886665}
+  - {fileID: 1326114088}
+  - {fileID: 1833327622}
   countryButtons:
   - {fileID: 1004019673}
   - {fileID: 1953008544}
@@ -2357,7 +2391,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Contient
+  m_text: 'Afrika
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
   m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
@@ -4103,7 +4139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &232942521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4800,7 +4836,7 @@ GameObject:
   - component: {fileID: 300247812}
   - component: {fileID: 300247811}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: DifficultyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5616,7 +5652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Contient
+  m_text: Europa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
   m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
@@ -7439,8 +7475,9 @@ GameObject:
   - component: {fileID: 473474390}
   - component: {fileID: 473474389}
   - component: {fileID: 473474388}
+  - component: {fileID: 473474393}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: AsienButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7620,11 +7657,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99060499}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: ShowCountry
+        m_MethodName: OnClickMenu3Activ
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 473474389}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 473474393}
+          m_ObjectArgumentAssemblyTypeName: ContinentDisplay, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7634,6 +7671,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 571802549}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7662,7 +7711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a68225d318ab49aa8244109614a5a30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02ad994c8ef894938b13d9b08eb2216a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7680,6 +7729,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473474386}
   m_CullTransparentMesh: 0
+--- !u!114 &473474393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473474386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c98d8ae179374fa78fbb3e15f394a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continent: {fileID: 11400000, guid: 4e9c7f8d0a19038488fcf9cd01a17c9a, type: 2}
 --- !u!1 &473570875
 GameObject:
   m_ObjectHideFlags: 0
@@ -9027,7 +9089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &571802550
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9220,7 +9282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Contient
+  m_text: Asien
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
   m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
@@ -9307,7 +9369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586871965}
   m_Layer: 5
-  m_Name: CountryButtons
+  m_Name: ContinentButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12737,7 +12799,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Contient
+  m_text: Australien
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
   m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
@@ -13219,7 +13281,7 @@ GameObject:
   - component: {fileID: 897021203}
   - component: {fileID: 897021202}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: MusicText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17998,8 +18060,9 @@ GameObject:
   - component: {fileID: 1179443731}
   - component: {fileID: 1179443730}
   - component: {fileID: 1179443729}
+  - component: {fileID: 1179443734}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: AfrikaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18179,11 +18242,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99060499}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: ShowCountry
+        m_MethodName: OnClickMenu3Activ
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1179443730}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1179443734}
+          m_ObjectArgumentAssemblyTypeName: ContinentDisplay, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18193,6 +18256,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 571802549}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18221,7 +18296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a68225d318ab49aa8244109614a5a30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab19f7234134a4fc08ffa8ef636d3cad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18239,6 +18314,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179443727}
   m_CullTransparentMesh: 0
+--- !u!114 &1179443734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179443727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c98d8ae179374fa78fbb3e15f394a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continent: {fileID: 11400000, guid: 00c3cbae249cc3e458a8a8cd333d5745, type: 2}
 --- !u!1 &1183306635
 GameObject:
   m_ObjectHideFlags: 0
@@ -20339,8 +20427,9 @@ GameObject:
   - component: {fileID: 1326114088}
   - component: {fileID: 1326114087}
   - component: {fileID: 1326114086}
+  - component: {fileID: 1326114091}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: NorthamericaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20520,11 +20609,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99060499}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: ShowCountry
+        m_MethodName: OnClickMenu3Activ
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1326114087}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1326114091}
+          m_ObjectArgumentAssemblyTypeName: ContinentDisplay, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -20534,6 +20623,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 571802549}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20562,7 +20663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a68225d318ab49aa8244109614a5a30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 056f874442d2347b6aaacdc95d60c98b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20580,6 +20681,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326114084}
   m_CullTransparentMesh: 0
+--- !u!114 &1326114091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326114084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c98d8ae179374fa78fbb3e15f394a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continent: {fileID: 11400000, guid: 32395641800956c409ec43979784b356, type: 2}
 --- !u!1 &1327297107
 GameObject:
   m_ObjectHideFlags: 0
@@ -28623,7 +28737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Contient
+  m_text: "S\xFCdamerika"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
   m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
@@ -28714,8 +28828,9 @@ GameObject:
   - component: {fileID: 1833327622}
   - component: {fileID: 1833327621}
   - component: {fileID: 1833327620}
+  - component: {fileID: 1833327625}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: SouthamericaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28895,11 +29010,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99060499}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: ShowCountry
+        m_MethodName: OnClickMenu3Activ
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1833327621}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1833327625}
+          m_ObjectArgumentAssemblyTypeName: ContinentDisplay, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28909,6 +29024,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 571802549}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -28937,7 +29064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a68225d318ab49aa8244109614a5a30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b07dd081f589449d4b57c6657313dd0f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28955,6 +29082,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833327618}
   m_CullTransparentMesh: 0
+--- !u!114 &1833327625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833327618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c98d8ae179374fa78fbb3e15f394a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continent: {fileID: 11400000, guid: 1d926f57be4089847bb0358900d3b346, type: 2}
 --- !u!1 &1838719835
 GameObject:
   m_ObjectHideFlags: 0
@@ -30166,8 +30306,9 @@ GameObject:
   - component: {fileID: 1942746953}
   - component: {fileID: 1942746952}
   - component: {fileID: 1942746951}
+  - component: {fileID: 1942746956}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: AustralienButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30347,11 +30488,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99060499}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: ShowCountry
+        m_MethodName: OnClickMenu3Activ
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1942746952}
-          m_ObjectArgumentAssemblyTypeName: Buttons, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1942746956}
+          m_ObjectArgumentAssemblyTypeName: ContinentDisplay, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30361,6 +30502,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 571802549}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -30389,7 +30542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a68225d318ab49aa8244109614a5a30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f1247fefcbfc4538882accefed57951, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30407,6 +30560,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942746949}
   m_CullTransparentMesh: 0
+--- !u!114 &1942746956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942746949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c98d8ae179374fa78fbb3e15f394a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continent: {fileID: 11400000, guid: f4e58b03e7d29c143a3740eb969313ad, type: 2}
 --- !u!1 &1943456305
 GameObject:
   m_ObjectHideFlags: 0
@@ -31395,7 +31561,7 @@ GameObject:
   - component: {fileID: 2025587124}
   - component: {fileID: 2025587123}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32668,7 +32834,7 @@ GameObject:
   - component: {fileID: 2112691514}
   - component: {fileID: 2112691517}
   m_Layer: 5
-  m_Name: Button
+  m_Name: GameOverButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
