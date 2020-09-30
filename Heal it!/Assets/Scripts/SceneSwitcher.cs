@@ -9,10 +9,10 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
     }
-    // public void playGame()
-    // {
-    //     SceneManager.LoadScene("Test Hakan");
-    // }
+    public void playGame()
+    {
+     SceneManager.LoadScene("Main");
+    }
 
     public void LoadScene(Object scene) 
     {

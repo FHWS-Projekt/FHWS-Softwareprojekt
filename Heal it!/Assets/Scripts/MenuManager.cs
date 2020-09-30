@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -20,7 +21,6 @@ public class MenuManager : MonoBehaviour
     public TextMeshProUGUI influenceE;
     public TextMeshProUGUI influenceP;
 
-
     public Country country;
     public Main mainScript;
     public EventManager eventScript;
@@ -31,8 +31,11 @@ public class MenuManager : MonoBehaviour
     public Button[] continentButtons;
     public Button[] countryButtons;
     public Button[] measursButtons;
+    public Button[] rankingButtons;
     public TextMeshProUGUI[] measursCosts;
-
+    public TextMeshProUGUI[] infectedCount;
+    public Country[] countriesSort;
+    
     #endregion Attributes
 
     #region Unity Methods
@@ -42,6 +45,11 @@ public class MenuManager : MonoBehaviour
         measuresMenuActiv.SetActive(false);
 
         measures2MenuActiv.SetActive(false);
+
+        for(int i = 0; i < countriesSort.Length; i++)
+        {
+            countriesSort[i] = eventScript.countries[i];
+        }
     }
     private void Update()
     {
@@ -214,7 +222,36 @@ public class MenuManager : MonoBehaviour
             }
         }
     }
+    public void OpenRankingMenu()
+    {
+        Country temp = null;
 
+        for(int i = 0; i < countriesSort.Length; i++)
+        {
+            for (int a = 0; a < countriesSort.Length -1; a++)
+            {
+                if(countriesSort[a].infected < countriesSort[a + 1].infected)
+                {
+                    temp = countriesSort[a + 1];
+                    countriesSort[a + 1] = countriesSort[a];
+                    countriesSort[a] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < rankingButtons.Length; i++)
+        {
+            TextMeshProUGUI rankingButtonText = rankingButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+            TextMeshProUGUI rankingButtonCount = infectedCount[i];
+            Image rankingButtonImage = rankingButtons[i].GetComponent<Image>();
+            Buttons button = rankingButtons[i].GetComponent<Buttons>();
+            rankingButtonText.text = countriesSort[i].countryName;
+            rankingButtonImage.sprite = countriesSort[i].flag;
+            rankingButtonCount.text = "" + Math.Round(countriesSort[i].infected);
+            button.country = countriesSort[i];
+        }
+
+
+    }
 
     #endregion Methods
 }
