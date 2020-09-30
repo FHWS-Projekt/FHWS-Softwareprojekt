@@ -4738,7 +4738,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -16.871487, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7366,6 +7366,18 @@ MonoBehaviour:
       - m_Target: {fileID: 472727852}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1929941047}
+        m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+        m_MethodName: SaveSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19470,7 +19482,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1929941047}
+        m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+        m_MethodName: ChangeText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1247628042
 GameObject:
@@ -29899,6 +29923,7 @@ GameObject:
   - component: {fileID: 1929941044}
   - component: {fileID: 1929941046}
   - component: {fileID: 1929941045}
+  - component: {fileID: 1929941047}
   m_Layer: 5
   m_Name: OptionMenu
   m_TagString: Untagged
@@ -29972,6 +29997,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929941043}
   m_CullTransparentMesh: 0
+--- !u!114 &1929941047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929941043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2925e82094b7afb4d8ea81c678c0e328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  play: {fileID: 0}
+  mode: 0
+  buttonImage: {fileID: 0}
+  playerSettings: {fileID: 11400000, guid: 80b1920c2a5db814bbc1bdf7bcbf5953, type: 2}
+  playerTextMeshPro: {fileID: 1632022065}
+  musicToggle: {fileID: 1241384785}
+  dropdownMenu: {fileID: 376372827}
+  musicText: {fileID: 280000924}
 --- !u!1 &1938798096
 GameObject:
   m_ObjectHideFlags: 0
