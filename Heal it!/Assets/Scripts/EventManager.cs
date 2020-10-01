@@ -36,7 +36,6 @@ public class EventManager : MonoBehaviour
 
     public bool win;
     public bool lose;
-    public bool move;
 
     int counter = 1;
 
@@ -45,17 +44,21 @@ public class EventManager : MonoBehaviour
     #region Unity Methods
     private void Start()
     {
-        move = false;
+
+        //Generates a list of countries that are not infected
         for(int i = 0; i < countries.Length; i++)
         {
             countries[i].infected = 0;
             healtyCountries.Add(countries[i]);
         }
+        //Genreates a list of countinents that are not infected
         for(int i = 0; i < continents.Length; i++)
         {
             healthyContinent.Add(continents[i]);
         }
+        //Start of the game with the Patient Zero
         RandomStart();
+        //Adds the RandomDistribution into the Daily Task System
         Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
     }
 
@@ -69,53 +72,54 @@ public class EventManager : MonoBehaviour
 
     #region Methods
 
-    //Patient zero
+    //Randomly distributes the "Patient Zero"
     public void RandomStart()
     {
+        //Randomly selcetes a contieneten and then a country for the healty list
         int rdm = Random.Range(0, continents.Length - 1);
         int rdm2 = Random.Range(0, continents[rdm].countries.Length - 1);
 
         Debug.Log("Start continent: " + continents[rdm].name + " Start country: " + continents[rdm].countries[rdm2].countryName);
 
+        //Distribuits the Patient Zero
         continents[rdm].countries[rdm2].infected += 1;
 
+        //Removes the contineten and country from the healty list and puts them into the infected list
         infectedContinent.Add(continents[rdm]);
         healthyContinent.Remove(continents[rdm]);
-
         infectedCountries.Add(continents[rdm].countries[rdm2]);
         healtyCountries.Remove(continents[rdm].countries[rdm2]);
-
         transmitterContinent = continents[rdm];
         transmitterCountry = continents[rdm].countries[rdm2];
 
     }
+    //Semi-randomly selects the next country that gets a infected 
     public void RandomDistribution()
     {
-
+        //In the first 5 days every contineten has to get one infected  
         if (counter < 6)
         {
+            //Randomly selcetes a contieneten and then a country for the healty list
             int rdm = Random.Range(0, healthyContinent.Count);
             int rdm2 = Random.Range(0, healthyContinent[rdm].countries.Length - 1);
 
             Debug.Log("Angesteckt: " + healthyContinent[rdm].countries[rdm2].countryName);
 
-            //transmitterCountry.infected -= 1;
+            //Distribuits the infected
             healthyContinent[rdm].countries[rdm2].infected += 1;
 
-            
-
+            //Removes the contineten and country from the healty list and puts them into the infected list
             infectedContinent.Add(healthyContinent[rdm]);
             infectedCountries.Add(healthyContinent[rdm].countries[rdm2]);
-
             transmitterContinent = healthyContinent[rdm];
             transmitterCountry = healthyContinent[rdm].countries[rdm2];
-
             healtyCountries.Remove(healthyContinent[rdm].countries[rdm2]);
             healthyContinent.Remove(healthyContinent[rdm]);
 
             counter++;
 
         }
+        //After the first 5 Days every country will get one infected
         else if (counter <= 25)
         {
             int rdm = Random.Range(0, infectedCountries.Count);
@@ -131,6 +135,7 @@ public class EventManager : MonoBehaviour
 
             counter++;
         }
+        //After every Country gets infected, the methode can fully randomly distribute infected ppl (idea got stiched)
         /*else
         {
             int rdm = Random.Range(0, infectedCountries.Count);
@@ -144,6 +149,7 @@ public class EventManager : MonoBehaviour
         }*/
 
     }
+    //Allows that GameObjects in the Scene are clickebale 
     public void ObjectClicker()
     {
         if (Input.GetMouseButtonDown(0))
@@ -181,6 +187,7 @@ public class EventManager : MonoBehaviour
             }
         }
     }
+    //Checkes if the condincens are set to end the game 
     public void EndingController()
     {
         if(playerSettings.difficulty == 0)

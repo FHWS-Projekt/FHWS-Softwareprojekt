@@ -139,8 +139,7 @@ public class CountryDisplay : MonoBehaviour
         if (country.residents <= (country.startResidents / 2))
         {
             eventManager.lose = true;
-        }
-    }
+        }    }
 
     //Method to check the activ measures;
     public void CheckMeasures()
