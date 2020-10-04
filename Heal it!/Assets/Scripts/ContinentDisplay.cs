@@ -14,10 +14,6 @@ public class ContinentDisplay : MonoBehaviour
 
     #region Unity Methods
 
-    void Start()
-    {
-
-    }
 
     #endregion Unity Methods
 

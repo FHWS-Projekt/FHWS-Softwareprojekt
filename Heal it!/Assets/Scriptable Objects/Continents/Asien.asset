@@ -22,3 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c5fd6a9ffefce85418587bf811417187, type: 2}
   - {fileID: 11400000, guid: a05df93a0d050ab4a97be022f0c2f824, type: 2}
   - {fileID: 11400000, guid: 0cdffeee922736640ad22e41cff1d011, type: 2}
+  flag: {fileID: 21300000, guid: 02ad994c8ef894938b13d9b08eb2216a, type: 3}
