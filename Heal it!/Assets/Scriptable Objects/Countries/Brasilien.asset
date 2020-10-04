@@ -17,7 +17,7 @@ MonoBehaviour:
   residents: 210000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.92
+  recoveryRateG: 0.7195
   influenceE: 10
   influenceP: 0.2
   info: "Brasilien ist fl\xE4chenm\xE4\xDFig der f\xFCnftgr\xF6\xDFte Staat der Erde
@@ -47,5 +47,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: 6a68225d318ab49aa8244109614a5a30, type: 3}

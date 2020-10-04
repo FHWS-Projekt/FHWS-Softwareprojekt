@@ -17,7 +17,7 @@ MonoBehaviour:
   residents: 210000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.92
+  recoveryRateG: 0.7195
   influenceE: 10
   influenceP: 0.2
   info: "Pakistan war das erste Land welches sich zu einer Islamischen Republik der
@@ -46,5 +46,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: 549fa91e204f74dd5940ce4431d666ba, type: 3}

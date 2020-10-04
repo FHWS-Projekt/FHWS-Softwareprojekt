@@ -17,9 +17,10 @@ MonoBehaviour:
   residents: 25324713
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.881
+  recoveryRateG: 0.646
   influenceE: 10
   influenceP: 0.2
+  info: 
   measures: 00000000000000000000
   measuresV:
   - 0
@@ -43,5 +44,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: 5e338ce142ff241f88843ea11c010997, type: 3}

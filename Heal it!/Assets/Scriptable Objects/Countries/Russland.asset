@@ -17,7 +17,7 @@ MonoBehaviour:
   residents: 145000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.913
+  recoveryRateG: 0.708
   influenceE: 10
   influenceP: 0.2
   info: "Russland ist fl\xE4chenm\xE4\xDFig der gr\xF6\xDFte Staat der Welt und umfasst
@@ -48,5 +48,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: 1070f1f301d4b49cebda83c8d4121d17, type: 3}
