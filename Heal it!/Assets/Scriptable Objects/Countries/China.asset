@@ -17,7 +17,7 @@ MonoBehaviour:
   residents: 1300000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.955
+  recoveryRateG: 0.75
   influenceE: 10
   influenceP: 0.2
   info: "China ist eines der bev\xF6lkerungsreichsten L\xE4nder der Erde. Die Hauptstadt
@@ -46,5 +46,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: ef2debbb3400f451baed08c827f2767f, type: 3}

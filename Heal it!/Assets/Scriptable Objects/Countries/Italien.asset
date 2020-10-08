@@ -17,7 +17,7 @@ MonoBehaviour:
   residents: 60260229
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.896
+  recoveryRateG: 0.663
   influenceE: 10
   influenceP: 0.2
   info: "Der Gro\xDFteil Italiens ist vom Mittelmeer umschlossen. Der Umriss des
@@ -49,5 +49,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: 2abcc36024fe14f86bb67342b3d5ab3d, type: 3}

@@ -17,7 +17,7 @@ MonoBehaviour:
   residents: 110000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.908
+  recoveryRateG: 0.7
   influenceE: 10
   influenceP: 0.2
   info: "\xC4thiopien ist ein Vielv\xF6lkerstaat. \xDCber 80 ethnische Gruppen leben
@@ -47,5 +47,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: c021d682bd4574331b42d1825f7fb15f, type: 3}

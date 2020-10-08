@@ -17,7 +17,7 @@ MonoBehaviour:
   residents: 328000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.944
+  recoveryRateG: 0.71
   influenceE: 10
   influenceP: 0.2
   info: "Die Vereinigten Staaten von Amerika sind eine f\xF6derale Republik, bestehend
@@ -46,5 +46,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: 056f874442d2347b6aaacdc95d60c98b, type: 3}

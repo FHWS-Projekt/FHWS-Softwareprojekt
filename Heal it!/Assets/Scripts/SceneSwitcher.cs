@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class Restart : MonoBehaviour
+public class SceneSwitcher : MonoBehaviour
 {
 
     public void RestartGame()
@@ -11,6 +11,11 @@ public class Restart : MonoBehaviour
     }
     public void playGame()
     {
-        SceneManager.LoadScene("Test Hakan");
+     SceneManager.LoadScene("Main");
+    }
+
+    public void LoadScene(Object scene) 
+    {
+        SceneManager.LoadScene(scene.name);
     }
 }

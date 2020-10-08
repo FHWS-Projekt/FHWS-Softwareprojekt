@@ -17,7 +17,7 @@ MonoBehaviour:
   residents: 8300000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.9
+  recoveryRateG: 0.67
   influenceE: 10
   influenceP: 0.2
   info: "Deutschland ist ein f\xF6deraler Bundesstaat und setzt sich aus 16 Bundesl\xE4ndern
@@ -45,5 +45,4 @@ MonoBehaviour:
   - 2
   - 1
   - 1
-  airport: {x: 0, y: 0, z: 0}
   flag: {fileID: 21300000, guid: 090a4d72c435742a990302dc1a8c0fb0, type: 3}
