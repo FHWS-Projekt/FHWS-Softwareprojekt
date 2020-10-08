@@ -11,4 +11,5 @@ public class PlayerSettings : ScriptableObject
     public bool sound;
 
     public bool oneTimeEvent;
+    public bool gameEnding;
 }
