@@ -22,7 +22,7 @@ public class MyBarChart : MonoBehaviour {
     private List<BarChartVisual.BarChartVisualObject> graphVisualObjectList;
 
     // Attributes
-    private List<int> valueList = new List<int>();
+    private List<int> valueList = new List<int>() { 0 };
     private BarChartVisual graphVisual;
     private int maxVisibleValueAmount;
     private Func<int, string> getAxisLabelX;
@@ -37,7 +37,7 @@ public class MyBarChart : MonoBehaviour {
         BarChartVisual barChartVisual = new BarChartVisual(graphContainer, Color.white, .8f);
 
         // Set up start values
-        //List<int> valueList = new List<int>() { 0 };
+        List<int> valueList = new List<int>() { 0 };
         //ShowGraph(valueList, barChartVisual, -1, (int _i) => "Day " + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
     }
 
@@ -53,8 +53,13 @@ public class MyBarChart : MonoBehaviour {
                 infected = infected + (int)country.infected;
             }
         }
-        valueList.Add(infected);
 
+        int day = (int)Main.Instance.MyDateTime.Day;
+        if(valueList.Count <= day) {
+            valueList.Add(infected);
+        }else {
+            valueList[day] = infected;
+        }
     }
 
     public void ShowGraph() {
