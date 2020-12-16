@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Diagnostics;
 using UnityEngine;
 
 public class MyDateTime {
 
     #region Attributes
+    public static MyDateTimeData myDateTimeData;
+    protected static readonly string myDatabase = Path.Combine(Application.streamingAssetsPath, "MyDatabase.json");
     protected double hour;
     protected double day;
 
@@ -33,10 +36,12 @@ public class MyDateTime {
     public MyDateTime() {
         Hour = 0;
         Day = 1;
+        myDateTimeData = new JsonParser().ReadFromJson<MyDateTimeData>(myDatabase);
     }
     public MyDateTime(double hour, double day) {
         Hour = hour;
         Day = day;
+        myDateTimeData = new JsonParser().ReadFromJson<MyDateTimeData>(myDatabase);
     }
     #endregion Constructors
 
@@ -57,6 +62,11 @@ public class MyDateTime {
 
     public string toString() {
         CalculateDateTime();
-        return day + " Tag\n" + (int)Hour + " Uhr";
+        return day + " " + myDateTimeData.day + "\n" + (int)Hour + " " + myDateTimeData.hour;
+    }
+
+    public class MyDateTimeData {
+        public string day;
+        public string hour ;
     }
 }

@@ -61,10 +61,11 @@ public class EventManager : MonoBehaviour
         //Adds the RandomDistribution into the Daily Task System
         Main.Instance.MyDateTime.DayTasks.Add(() => RandomDistribution());
     }
-
     private void Update()
     {
+        //Checks if the game is finished 
         EndingController();
+        //Allows to click objects in the game
         ObjectClicker();
     }
 
@@ -127,7 +128,6 @@ public class EventManager : MonoBehaviour
 
             Debug.Log("Angesteckt: " + healtyCountries[rdm2].countryName);
 
-            //infectedCountries[rdm].infected -= 1;
             healtyCountries[rdm2].infected += 1;
 
             infectedCountries.Add(healtyCountries[rdm2]);
@@ -187,7 +187,7 @@ public class EventManager : MonoBehaviour
             }
         }
     }
-    //Checkes if the condincens are set to end the game 
+    //Checkes if the conditions are set to end the game 
     public void EndingController()
     {
         if(playerSettings.difficulty == 0)
@@ -236,7 +236,6 @@ public class EventManager : MonoBehaviour
             }
         }
     }
-
     #endregion Methods
 }
 

@@ -11,15 +11,15 @@ public class EndingControler : MonoBehaviour
 
     void Start()
     {
+        //If the player won the game 
         if (playerSettings.gameEnding)
         {
             win.gameObject.SetActive(true);
         }
+        //If the player lost the game 
         else
         {
             lose.gameObject.SetActive(true);
         }
     }
-
-
 }

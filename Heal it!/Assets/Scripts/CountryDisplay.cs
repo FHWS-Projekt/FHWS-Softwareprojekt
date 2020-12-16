@@ -134,7 +134,6 @@ public class CountryDisplay : MonoBehaviour
         //Changes the color of the countryObject dependent of the infected count;
         if(country.deathCount > 0)
         {
-
             color.g =  color.g - (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
             color.r = color.r + (System.Convert.ToSingle(country.deathCount / (country.startResidents / 2)));
     
@@ -270,20 +269,5 @@ public class CountryDisplay : MonoBehaviour
             country.influenceE = 10 - country.measuresV[3] - country.measuresV[4] - country.measuresV[5] - country.measuresV[6] - country.measuresV[7] - country.measuresV[8] - country.measuresV[9]; 
         }
     }
-
-    //Method to play a Animation when the country gets a infected for the first time;
-    public void PlayAnimation()
-    {
-        anim.enabled = true;
-        anim.Play(country.name + "Animation");
-        StartCoroutine("WaitForSeconds");
-    }
-
-    IEnumerator WaitForSeconds()
-    {
-        yield return new WaitForSeconds(1);
-        anim.enabled = false;
-    }
-
     #endregion Methods
 }

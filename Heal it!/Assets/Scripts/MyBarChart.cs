@@ -22,7 +22,7 @@ public class MyBarChart : MonoBehaviour {
     private List<BarChartVisual.BarChartVisualObject> graphVisualObjectList;
 
     // Attributes
-    private List<int> valueList = new List<int>() { 0 };
+    private List<int> valueList = new List<int>() { 1 };
     private BarChartVisual graphVisual;
     private int maxVisibleValueAmount;
     private Func<int, string> getAxisLabelX;
@@ -44,21 +44,23 @@ public class MyBarChart : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         Main.Instance.MyDateTime.DayTasks.Add(() => UpdateGraph());
+        Main.Instance.MyDateTime.DayTasks.Add(() => newDay());
+    }
+
+    public void newDay() {
+        ShowGraph();
+        ShowGraph();
     }
 
     private void UpdateGraph() {
         int infected = 0;
-        foreach (Country country in eventManager.countries) {
-            if(infected < country.startResidents * 0.5) {
-                infected = infected + (int)country.infected;
-            }
+        foreach (Country country in eventManager.infectedCountries) {
+            infected = (int)(infected + country.infected);
         }
 
-        int day = (int)Main.Instance.MyDateTime.Day;
-        if(valueList.Count <= day) {
+        double day = Main.Instance.MyDateTime.Day;
+        if(day > 1) {
             valueList.Add(infected);
-        }else {
-            valueList[day] = infected;
         }
     }
 
