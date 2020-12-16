@@ -120,7 +120,7 @@ public class EventManager : MonoBehaviour
 
         }
         //After the first 5 Days every country will get one infected
-        else if (counter <= 25)
+        else if (counter < 25)
         {
             int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, healtyCountries.Count);
@@ -136,17 +136,17 @@ public class EventManager : MonoBehaviour
             counter++;
         }
         //After every Country gets infected, the methode can fully randomly distribute infected ppl (idea got stiched)
-        /*else
+        else
         {
-            int rdm = Random.Range(0, infectedCountries.Count);
+            /*int rdm = Random.Range(0, infectedCountries.Count);
             int rdm2 = Random.Range(0, infectedContinent.Count);
 
             Debug.Log("Angesteckt: " + infectedCountries[rdm].countryName);
 
             //infectedCountries[rdm].infected -= 1;
-            infectedCountries[rdm2].infected += 1;
+            infectedCountries[rdm2].infected += 1;*/
 
-        }*/
+        }
 
     }
     //Allows that GameObjects in the Scene are clickebale 

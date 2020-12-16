@@ -120,10 +120,16 @@ public class CountryDisplay : MonoBehaviour
     void CalculateResidents()
     {
         //x(n) = (1+ep) * ((n+1)*g)
-        temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
-        country.deathCount = country.deathCount + temp;
-        country.residents = country.residents - temp;
-        country.infected = temp;
+        if(country.infected >= 0)
+        {
+            temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
+            country.deathCount = country.deathCount + temp;
+            country.residents = country.residents - temp;
+            if(temp >= 0)
+            {
+                country.infected = temp;
+            }
+        }
 
         //Changes the color of the countryObject dependent of the infected count;
         if(country.deathCount > 0)
@@ -139,7 +145,8 @@ public class CountryDisplay : MonoBehaviour
         if (country.residents <= (country.startResidents / 2))
         {
             eventManager.lose = true;
-        }    }
+        }    
+    }
 
     //Method to check the activ measures;
     public void CheckMeasures()
