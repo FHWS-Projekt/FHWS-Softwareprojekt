@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class MyBarChart : MonoBehaviour {
 
-    private static MyBarChart instance;
-
     // Graph Objects
     [SerializeField] private RectTransform graphContainer;
     [SerializeField] private RectTransform labelTemplateX;
@@ -17,28 +15,15 @@ public class MyBarChart : MonoBehaviour {
 
     // Country Object
     [SerializeField] private EventManager eventManager;
+    private List<int> infectedList = new List<int>() { 1 };
 
     private List<GameObject> gameObjectList;
     private List<BarChartVisual.BarChartVisualObject> graphVisualObjectList;
 
-    // Attributes
-    private List<int> valueList = new List<int>() { 1 };
-    private BarChartVisual graphVisual;
-    private int maxVisibleValueAmount;
-    private Func<int, string> getAxisLabelX;
-    private Func<float, string> getAxisLabelY;
-
     private void Awake() {
-        instance = this;
         // Grab base objects references
         gameObjectList = new List<GameObject>();
         graphVisualObjectList = new List<BarChartVisual.BarChartVisualObject>();
-
-        BarChartVisual barChartVisual = new BarChartVisual(graphContainer, Color.white, .8f);
-
-        // Set up start values
-        List<int> valueList = new List<int>() { 0 };
-        //ShowGraph(valueList, barChartVisual, -1, (int _i) => "Day " + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
     }
 
     // Start is called before the first frame update
@@ -57,48 +42,23 @@ public class MyBarChart : MonoBehaviour {
         foreach (Country country in eventManager.infectedCountries) {
             infected = (int)(infected + country.infected);
         }
-
         double day = Main.Instance.MyDateTime.Day;
         if(day > 1) {
-            valueList.Add(infected);
+            infectedList.Add(infected);
         }
     }
 
     public void ShowGraph() {
         if (!graphContainer.gameObject.activeSelf) {
             graphContainer.gameObject.SetActive(true);
-            BarChartVisual barChartVisual = new BarChartVisual(graphContainer, Color.white, .8f);
-            ShowGraph(valueList, barChartVisual, -1, (int _i) => "Day " + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
+            BarChartVisual barChartVisual = new BarChartVisual(graphContainer, Color.yellow, .8f);
+            ShowGraph(barChartVisual, (int _i) => "Day " + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
         } else {
             graphContainer.gameObject.SetActive(false);
-
         }
     }
     
-    private void ShowGraph(List<int> valueList, BarChartVisual graphVisual, int maxVisibleValueAmount = -1, Func<int, string> getAxisLabelX = null, Func<float, string> getAxisLabelY = null) {
-        this.valueList = valueList;
-        this.graphVisual = graphVisual;
-        this.getAxisLabelX = getAxisLabelX;
-        this.getAxisLabelY = getAxisLabelY;
-
-        if (maxVisibleValueAmount <= 0) {
-            // Show all if no amount specified
-            maxVisibleValueAmount = valueList.Count;
-        }
-        if (maxVisibleValueAmount > valueList.Count) {
-            // Validate the amount to show the maximum
-            maxVisibleValueAmount = valueList.Count;
-        }
-
-        this.maxVisibleValueAmount = maxVisibleValueAmount;
-
-        // Test for label defaults
-        if (getAxisLabelX == null) {
-            getAxisLabelX = delegate (int _i) { return _i.ToString(); };
-        }
-        if (getAxisLabelY == null) {
-            getAxisLabelY = delegate (float _f) { return Mathf.RoundToInt(_f).ToString(); };
-        }
+    private void ShowGraph(BarChartVisual graphVisual, Func<int, string> getAxisLabelX = null, Func<float, string> getAxisLabelY = null) {
 
         // Clean up previous graph
         foreach (GameObject gameObject in gameObjectList) {
@@ -116,16 +76,13 @@ public class MyBarChart : MonoBehaviour {
         float graphHeight = graphContainer.sizeDelta.y;
 
         // Identify y Min and Max values
-        float yMaximum = valueList[0];
-        float yMinimum = valueList[0];
-        
-        for (int i = Mathf.Max(valueList.Count - maxVisibleValueAmount, 0); i < valueList.Count; i++) {
-            int value = valueList[i];
+        float yMaximum = infectedList[0];
+        float yMinimum = 0f; // Start the graph at zero
+
+        for (int i = 0; i < infectedList.Count; i++) {
+            int value = infectedList[i];
             if (value > yMaximum) {
                 yMaximum = value;
-            }
-            if (value < yMinimum) {
-                yMinimum = value;
             }
         }
 
@@ -134,22 +91,18 @@ public class MyBarChart : MonoBehaviour {
             yDifference = 5f;
         }
         yMaximum = yMaximum + (yDifference * 0.2f);
-        yMinimum = yMinimum - (yDifference * 0.2f);
-
-        yMinimum = 0f; // Start the graph at zero
 
         // Set the distance between each point on the graph 
-        float xSize = graphWidth / (maxVisibleValueAmount + 1);
+        float xSize = graphWidth / (infectedList.Count + 1);
 
         // Cycle through all visible data points
         int xIndex = 0;
-        for (int i = Mathf.Max(valueList.Count - maxVisibleValueAmount, 0); i < valueList.Count; i++) {
-            float xPosition = xSize + xIndex * xSize;
-            float yPosition = ((valueList[i] - yMinimum) / (yMaximum - yMinimum)) * graphHeight;
+        for (int i = 0; i < infectedList.Count; i++) {
+            float xPosition = xIndex * xSize + xSize;
+            float yPosition = (infectedList[i] / yMaximum) * graphHeight;
 
             // Add data point visual
-            string tooltipText = getAxisLabelY(valueList[i]);
-            graphVisualObjectList.Add(graphVisual.CreateGraphVisualObject(new Vector2(xPosition, yPosition), xSize, tooltipText));
+            graphVisualObjectList.Add(graphVisual.CreateGraphVisualObject(new Vector2(xPosition, yPosition), xSize));
 
             // Duplicate the x label template
             RectTransform labelX = Instantiate(labelTemplateX);
@@ -190,9 +143,7 @@ public class MyBarChart : MonoBehaviour {
         }
     }
 
-    /*
-     * Displays data points as a Bar Chart
-     * */
+    // Displays data points as a Bar Chart
     private class BarChartVisual {
 
         private RectTransform graphContainer;
@@ -205,11 +156,11 @@ public class MyBarChart : MonoBehaviour {
             this.barWidthMultiplier = barWidthMultiplier;
         }
 
-        public BarChartVisualObject CreateGraphVisualObject(Vector2 graphPosition, float graphPositionWidth, string tooltipText) {
+        public BarChartVisualObject CreateGraphVisualObject(Vector2 graphPosition, float graphPositionWidth) {
             GameObject barGameObject = CreateBar(graphPosition, graphPositionWidth);
 
             BarChartVisualObject barChartVisualObject = new BarChartVisualObject(barGameObject, barWidthMultiplier);
-            barChartVisualObject.SetGraphVisualObjectInfo(graphPosition, graphPositionWidth, tooltipText);
+            barChartVisualObject.SetGraphVisualObjectInfo(graphPosition, graphPositionWidth);
 
             return barChartVisualObject;
         }
@@ -238,7 +189,7 @@ public class MyBarChart : MonoBehaviour {
                 this.barWidthMultiplier = barWidthMultiplier;
             }
 
-            public void SetGraphVisualObjectInfo(Vector2 graphPosition, float graphPositionWidth, string tooltipText) {
+            public void SetGraphVisualObjectInfo(Vector2 graphPosition, float graphPositionWidth) {
                 RectTransform rectTransform = barGameObject.GetComponent<RectTransform>();
                 rectTransform.anchoredPosition = new Vector2(graphPosition.x, 0f);
                 rectTransform.sizeDelta = new Vector2(graphPositionWidth * barWidthMultiplier, graphPosition.y);

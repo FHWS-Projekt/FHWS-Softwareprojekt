@@ -58,8 +58,9 @@ public class MyCamera : MonoBehaviour {
             Position = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         } else if (Input.GetMouseButton(0)) {
             Vector3 newPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-
             Vector3 direction = Position - newPosition;
+            Position = newPosition;
+
             float rotationAroundYAxis = -direction.x * 180; // camera moves horizontally
             float rotationAroundXAxis = direction.y * 180; // camera moves vertically
 
@@ -75,8 +76,6 @@ public class MyCamera : MonoBehaviour {
             
             MainCamera.transform.position = Target.transform.position;  // teleports the camera to the origin of the target
             MainCamera.transform.Translate(new Vector3(0, 0, -6));      // moves the camera x units back
-
-            Position = newPosition;
             ResetTimer();
         }
 
