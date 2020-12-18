@@ -22,7 +22,11 @@ public class MyBarChart : MonoBehaviour {
     private List<BarChartVisual.BarChartVisualObject> graphVisualObjectList;
 
     // Attributes
+<<<<<<< HEAD
     private List<int> valueList = new List<int>();
+=======
+    private List<int> valueList = new List<int>() { 0 };
+>>>>>>> parent of cf0688f... Delet dead code; Clean Code; Small Bug fixing
     private BarChartVisual graphVisual;
     private int maxVisibleValueAmount;
     private Func<int, string> getAxisLabelX;
@@ -55,6 +59,15 @@ public class MyBarChart : MonoBehaviour {
         }
         valueList.Add(infected);
 
+<<<<<<< HEAD
+=======
+        int day = (int)Main.Instance.MyDateTime.Day;
+        if(valueList.Count <= day) {
+            valueList.Add(infected);
+        }else {
+            valueList[day] = infected;
+        }
+>>>>>>> parent of cf0688f... Delet dead code; Clean Code; Small Bug fixing
     }
 
     public void ShowGraph() {
