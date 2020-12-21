@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 130000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.705
+  recoveryRateG: 0.806
+  recoveryRateG2: 0.8648
+  recoveryRateG3: 0.9078
   influenceE: 10
   influenceP: 0.2
   info: "Fl\xE4chenm\xE4\xDFig ist Japan der viertgr\xF6\xDFte Inselstaat der Welt

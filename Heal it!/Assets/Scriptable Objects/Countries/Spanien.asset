@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 47100369
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.656
+  recoveryRateG: 0.7786
+  recoveryRateG2: 0.8458
+  recoveryRateG3: 0.8886
   influenceE: 10
   influenceP: 0.2
   info: "Spanien geh\xF6rt zu den sehr hoch entwickelten L\xE4ndern und zu den 20

@@ -194,12 +194,14 @@ public class EventManager : MonoBehaviour
         {
             if (main.MyDateTime.Day == 50)
             {
+                playerSettings.endingDay = (int)main.MyDateTime.Day;
                 playerSettings.gameEnding = true;
                 Debug.Log("Du hast gewonnen!");
                 SceneManager.LoadScene("Outro");
             }
             else if (lose)
             {
+                playerSettings.endingDay = (int)main.MyDateTime.Day;
                 playerSettings.gameEnding = false;
                 Debug.Log("Du hast verloren!");
                 SceneManager.LoadScene("Outro");
@@ -209,12 +211,14 @@ public class EventManager : MonoBehaviour
         {
             if (main.MyDateTime.Day == 50)
             {
+                playerSettings.endingDay = (int)main.MyDateTime.Day;
                 playerSettings.gameEnding = true;
                 Debug.Log("Du hast gewonnen!");
                 SceneManager.LoadScene("Outro");
             }
             else if (lose)
             {
+                playerSettings.endingDay = (int)main.MyDateTime.Day;
                 playerSettings.gameEnding = false;
                 Debug.Log("Du hast verloren!");
                 SceneManager.LoadScene("Outro");
@@ -224,12 +228,14 @@ public class EventManager : MonoBehaviour
         {
             if (main.MyDateTime.Day == 50)
             {
+                playerSettings.endingDay = (int)main.MyDateTime.Day;
                 playerSettings.gameEnding = true;
                 Debug.Log("Du hast gewonnen!");
                 SceneManager.LoadScene("Outro");
             }
             else if (lose)
             {
+                playerSettings.endingDay = (int)main.MyDateTime.Day;
                 playerSettings.gameEnding = false;
                 Debug.Log("Du hast verloren!");
                 SceneManager.LoadScene("Outro");

@@ -12,4 +12,9 @@ public class PlayerSettings : ScriptableObject
 
     public bool oneTimeEvent;
     public bool gameEnding;
+
+    public string endingCountry;
+    public int endingDay;
+    public Sprite endingFlag;
+    public int endingCount;
 }

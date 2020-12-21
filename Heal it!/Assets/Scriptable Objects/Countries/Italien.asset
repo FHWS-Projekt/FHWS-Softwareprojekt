@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 60260229
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.663
+  recoveryRateG: 0.7856
+  recoveryRateG2: 0.8504
+  recoveryRateG3: 0.8935
   influenceE: 10
   influenceP: 0.2
   info: "Der Gro\xDFteil Italiens ist vom Mittelmeer umschlossen. Der Umriss des

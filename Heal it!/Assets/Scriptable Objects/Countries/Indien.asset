@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 1300000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.67
+  recoveryRateG: 0.861
+  recoveryRateG2: 0.9059
+  recoveryRateG3: 0.9517
   influenceE: 10
   influenceP: 0.2
   info: "Indien ist das zweitbev\xF6lkerungsreichste Land der Erde. Direkt nach China.

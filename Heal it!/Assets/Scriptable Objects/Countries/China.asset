@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 1300000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.75
+  recoveryRateG: 0.861
+  recoveryRateG2: 0.9059
+  recoveryRateG3: 0.9517
   influenceE: 10
   influenceP: 0.2
   info: "China ist eines der bev\xF6lkerungsreichsten L\xE4nder der Erde. Die Hauptstadt

@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 328000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.71
+  recoveryRateG: 0.8359
+  recoveryRateG2: 0.8814
+  recoveryRateG3: 0.9237
   influenceE: 10
   influenceP: 0.2
   info: "Die Vereinigten Staaten von Amerika sind eine f\xF6derale Republik, bestehend

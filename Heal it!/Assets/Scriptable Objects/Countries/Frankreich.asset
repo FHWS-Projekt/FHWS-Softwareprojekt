@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 66993000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.666
+  recoveryRateG: 0.7888
+  recoveryRateG2: 0.8524
+  recoveryRateG3: 0.8956
   influenceE: 10
   influenceP: 0.2
   info: "Frankreich ist fl\xE4chenm\xE4\xDFig das gr\xF6\xDFte Land der Europ\xE4ischen

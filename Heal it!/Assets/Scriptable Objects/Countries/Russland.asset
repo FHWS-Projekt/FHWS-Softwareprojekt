@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 145000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.708
+  recoveryRateG: 0.8243
+  recoveryRateG2: 0.867
+  recoveryRateG3: 0.9108
   influenceE: 10
   influenceP: 0.2
   info: "Russland ist fl\xE4chenm\xE4\xDFig der gr\xF6\xDFte Staat der Welt und umfasst

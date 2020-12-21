@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 210000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.7195
+  recoveryRateG: 0.82
+  recoveryRateG2: 0.8737
+  recoveryRateG3: 0.9172
   influenceE: 10
   influenceP: 0.2
   info: "Brasilien ist fl\xE4chenm\xE4\xDFig der f\xFCnftgr\xF6\xDFte Staat der Erde

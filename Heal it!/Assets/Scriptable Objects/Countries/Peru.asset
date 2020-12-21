@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 25324713
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.646
+  recoveryRateG: 0.7702
+  recoveryRateG2: 0.8352
+  recoveryRateG3: 0.8809
   influenceE: 10
   influenceP: 0.2
   info: 

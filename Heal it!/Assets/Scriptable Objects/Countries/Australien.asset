@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countryName: Australien
   startResidents: 25324713
-  residents: 25324526.46345834
-  infected: 89.35424698265179
-  deathCount: 186.53654166278488
-  recoveryRateG: 0.633
-  recoveryRateG2: 0
-  recoveryRateG3: 0
+  residents: 25324713
+  infected: 1
+  deathCount: 0
+  recoveryRateG: 0.7647
+  recoveryRateG2: 0.8298
+  recoveryRateG3: 0.8769
   influenceE: 10
   influenceP: 0.2
   info: 

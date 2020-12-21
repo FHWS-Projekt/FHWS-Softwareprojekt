@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 96000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.696
+  recoveryRateG: 0.7976
+  recoveryRateG2: 0.8589
+  recoveryRateG3: 0.9161
   influenceE: 10
   influenceP: 0.2
   info: Die Hauptstadt von Vietnam ist Hanoi.

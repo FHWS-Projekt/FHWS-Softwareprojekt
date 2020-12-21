@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 81800269
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.67
+  recoveryRateG: 0.7928
+  recoveryRateG2: 0.8561
+  recoveryRateG3: 0.8995
   influenceE: 10
   influenceP: 0.2
   info: "Der Iran geh\xF6rt noch zu den Top 20 der gr\xF6\xDFten Staaten der Erde.

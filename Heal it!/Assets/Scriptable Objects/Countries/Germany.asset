@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 8300000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.67
+  recoveryRateG: 0.7932
+  recoveryRateG2: 0.8564
+  recoveryRateG3: 0.8999
   influenceE: 10
   influenceP: 0.2
   info: "Deutschland ist ein f\xF6deraler Bundesstaat und setzt sich aus 16 Bundesl\xE4ndern

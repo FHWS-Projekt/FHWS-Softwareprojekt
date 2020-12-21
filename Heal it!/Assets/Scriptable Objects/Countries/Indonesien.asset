@@ -17,7 +17,9 @@ MonoBehaviour:
   residents: 270000000
   infected: 0
   deathCount: 0
-  recoveryRateG: 0.727
+  recoveryRateG: 0.8279
+  recoveryRateG2: 0.8779
+  recoveryRateG3: 0.9198
   influenceE: 10
   influenceP: 0.2
   info: "Indonesien ist weltweit der gr\xF6\xDFte Inselstaat und der viertbev\xF6lkerungsreichste

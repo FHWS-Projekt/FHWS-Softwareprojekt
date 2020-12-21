@@ -158,15 +158,28 @@ public class CountryDisplay : MonoBehaviour
         //Calls game over when infected is over 25%/48.5%/75% of the start population;
         if (playerSettings.difficulty == 0 && country.infected >= country.startResidents)
         {
+            playerSettings.endingDay = (int)eventManager.main.MyDateTime.Day;
             eventManager.lose = true;
+            playerSettings.endingCount = (int)country.infected;
+            playerSettings.endingCountry = country.countryName;
+            playerSettings.endingFlag = country.flag;
+
         }
-        else if (playerSettings.difficulty == 1 && country.infected >= (country.startResidents / 0.75))
+        else if (playerSettings.difficulty == 1 && country.infected >= (country.startResidents * 0.75))
         {
+            playerSettings.endingDay = (int)eventManager.main.MyDateTime.Day;
             eventManager.lose = true;
+            playerSettings.endingCount = (int)country.infected;
+            playerSettings.endingCountry = country.countryName;
+            playerSettings.endingFlag = country.flag;
         }
-        else if (playerSettings.difficulty == 2 && country.infected >= (country.startResidents / 0.485))
+        else if (playerSettings.difficulty == 2 && country.infected >= (country.startResidents * 0.485))
         {
+            playerSettings.endingDay = (int)eventManager.main.MyDateTime.Day;
             eventManager.lose = true;
+            playerSettings.endingCount = (int)country.infected;
+            playerSettings.endingCountry = country.countryName;
+            playerSettings.endingFlag = country.flag;
         }
     }
 
