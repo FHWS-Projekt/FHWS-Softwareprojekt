@@ -24,7 +24,10 @@ public class ForceLandscape : MonoBehaviour
         Screen.orientation = ScreenOrientation.LandscapeLeft;
 
         introTextData = new JsonParser().ReadFromJson<IntroTextData>(myDatabase);
-        //introTextTMP.text = introTextData.introText;
+        if(introTextTMP != null)
+        {
+            introTextTMP.text = introTextData.introText;
+        }
     }
 
 

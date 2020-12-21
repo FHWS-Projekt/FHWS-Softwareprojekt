@@ -676,6 +676,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &55533700
 GameObject:
@@ -828,6 +829,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &77235737
 GameObject:
@@ -1487,7 +1489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 389.12646, y: 0.00005340576}
+  m_AnchoredPosition: {x: 437.93164, y: 0.00005340576}
   m_SizeDelta: {x: -56.835373, y: -0.009506226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &94695984
@@ -1573,7 +1575,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.3663295, y: -0.67733246, z: 0.26918536, w: -0.5757918}
+  m_margin: {x: -84.99179, y: -0.67733246, z: 0.26918536, w: -0.5757918}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1967,6 +1969,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  myBarChart: {fileID: 1557239337}
 --- !u!114 &99060500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3423,6 +3426,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &198446395
 GameObject:
@@ -4898,6 +4902,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!114 &297078083
 MonoBehaviour:
@@ -4916,6 +4921,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &300247809
 GameObject:
@@ -9668,7 +9674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 389.1606, y: -0.034118652}
+  m_AnchoredPosition: {x: 437.96582, y: -0.034118652}
   m_SizeDelta: {x: -56.835373, y: -0.009506226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &606104968
@@ -9754,7 +9760,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.3663295, y: -0.67733246, z: 0.26918536, w: -0.5757918}
+  m_margin: {x: -82.349236, y: -0.67733246, z: 0.26918536, w: -0.5757918}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10052,6 +10058,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &662778521
 GameObject:
@@ -10165,6 +10172,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &694504695
 GameObject:
@@ -10348,6 +10356,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &708107534
 GameObject:
@@ -10497,6 +10506,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &719015242
 GameObject:
@@ -10795,6 +10805,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &745864311
 GameObject:
@@ -11710,6 +11721,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &838018733
 GameObject:
@@ -12186,7 +12198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 389.1948, y: -0.010253906}
+  m_AnchoredPosition: {x: 438, y: -0.010253906}
   m_SizeDelta: {x: -56.835373, y: -0.009506226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871971813
@@ -12272,7 +12284,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.3663295, y: -0.67733246, z: 0.26918536, w: -0.5757918}
+  m_margin: {x: -83.99865, y: -0.67733246, z: 0.26918536, w: -0.5757918}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -13848,6 +13860,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &916416318
 GameObject:
@@ -14000,6 +14013,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &932349139
 GameObject:
@@ -14574,6 +14588,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &959994450
 GameObject:
@@ -14858,6 +14873,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &982432211
 GameObject:
@@ -15062,6 +15078,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &999308238
 GameObject:
@@ -15695,7 +15712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 389.1948, y: 0.00491333}
+  m_AnchoredPosition: {x: 438, y: 0.00491333}
   m_SizeDelta: {x: -56.835373, y: -0.009506226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004939154
@@ -15781,7 +15798,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.3663295, y: -0.67733246, z: 0.26918536, w: -0.5757918}
+  m_margin: {x: -80.39723, y: -0.67733246, z: 0.26918536, w: -0.5757918}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -16909,6 +16926,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1126376705
 GameObject:
@@ -17115,7 +17133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 389.12646, y: -0.000045776367}
+  m_AnchoredPosition: {x: 437.93164, y: -0.000045776367}
   m_SizeDelta: {x: -56.835373, y: -0.009506226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150982863
@@ -17201,7 +17219,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.3663295, y: -0.67733246, z: 0.26918536, w: -0.5757918}
+  m_margin: {x: -83.9986, y: -0.67733246, z: 0.26918536, w: -0.5757918}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -17232,6 +17250,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1167007552
 GameObject:
@@ -17516,6 +17535,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1179443727
 GameObject:
@@ -18788,6 +18808,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!114 &1220787772
 MonoBehaviour:
@@ -18806,6 +18827,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1224917987
 GameObject:
@@ -21011,7 +21033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 389.1948, y: -0.02280426}
+  m_AnchoredPosition: {x: 438, y: -0.02280426}
   m_SizeDelta: {x: -56.835373, y: -0.009506226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373339725
@@ -21097,7 +21119,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.3663295, y: -0.67733246, z: 0.26918536, w: -0.5757918}
+  m_margin: {x: -78.44527, y: -0.67733246, z: 0.26918536, w: -0.5757918}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -21436,6 +21458,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1381709096
 GameObject:
@@ -22677,6 +22700,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1453491583
 GameObject:
@@ -23536,6 +23560,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 99060499}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: GraphCheck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1577321306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23871,6 +23907,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1591068342
 GameObject:
@@ -25124,6 +25161,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 99060499}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: GraphCheck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1700062879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25391,6 +25440,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 99060499}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: GraphCheck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1711070795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25446,6 +25507,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1716469201
 GameObject:
@@ -26865,6 +26927,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1805037690
 GameObject:
@@ -28063,6 +28126,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &1891422902
 GameObject:
@@ -29794,6 +29858,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &2025587121
 GameObject:
@@ -30080,6 +30145,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &2050592611
 GameObject:
@@ -30490,6 +30556,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!114 &2065977694
 MonoBehaviour:
@@ -30508,6 +30575,7 @@ MonoBehaviour:
   temp: 0
   eventManager: {fileID: 99060498}
   anim: {fileID: 0}
+  playerSettings: {fileID: 0}
   fadeColor: 0
 --- !u!1 &2072611503
 GameObject:

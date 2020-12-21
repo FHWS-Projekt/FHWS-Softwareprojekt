@@ -35,25 +35,29 @@ public class MenuManager : MonoBehaviour
     public TextMeshProUGUI[] measursCosts;
     public TextMeshProUGUI[] infectedCount;
     public Country[] countriesSort;
-    
+
+    public GameObject myBarChart;
+
     #endregion Attributes
 
     #region Unity Methods
-
+    //Deactivat all game menus at the start of the game
     private void Start()
     {
         measuresMenuActiv.SetActive(false);
 
         measures2MenuActiv.SetActive(false);
 
-        for(int i = 0; i < countriesSort.Length; i++)
+        //Generates a placeholder list of sortet countries for the ranking list
+        for (int i = 0; i < countriesSort.Length; i++)
         {
             countriesSort[i] = eventScript.countries[i];
         }
     }
     private void Update()
     {
-        if(country != null)
+        //Updates the data of a country shown on screen in real time
+        if (country != null)
         {
             countryName.text = country.countryName;
             residents.text = country.startResidents + "";
@@ -67,6 +71,8 @@ public class MenuManager : MonoBehaviour
 
     #region Methods
 
+    //Activates the first menu on click (on the earth): Continent nenu; if the menu is allready this method deactivats it
+    //Path: No ingame menu open -> open the continent menu; Continent menu open -> close the continent menu
     public void OnClickMenuActiv()
     {
         if (measures2MenuActiv.activeSelf)
@@ -76,6 +82,7 @@ public class MenuManager : MonoBehaviour
         else if(measuresMenuActiv.activeSelf)
         {
             measuresMenuActiv.SetActive(false);
+            //Pause the game if necessary and change the time icon to paus. 
             if (mainScript.pause)
             {
                 mainScript.SetTimeButtonPlayPauseOnClickTask();
@@ -92,6 +99,8 @@ public class MenuManager : MonoBehaviour
             }
         }  
     }
+    //Activates the second menu on click (on the menu): Country menu; if the menu is allready this method deactivats it
+    //Patg: Continent menu is open -> open the country menu; country menu is open -> close the country menu
     public void OnClickMenu2Activ()
     {
         if (measures2MenuActiv.activeSelf)
@@ -103,6 +112,8 @@ public class MenuManager : MonoBehaviour
             measures2MenuActiv.SetActive(true);
         }
     }
+    //Activates the thrid menu on click (on the menu or erath): Continent menu; if the menu is allready activated this method deactivats it
+    //Path: No ingame menu open -> open the continent menu; Continent menu open -> close the continent menu
     public void OnClickMenu3Activ(ContinentDisplay continentDisplay)
     {
         if (measures2MenuActiv.activeSelf)
@@ -121,14 +132,8 @@ public class MenuManager : MonoBehaviour
             ShowContinent(continentDisplay);
         }
     }
-    /*public CountryDisplay OnClickCountryButton(Button button)
-    {
-
-        CountryDisplay countryDisplay = null;
-
-        return countryDisplay;
-
-    }*/
+    //This method gets the data from the scriptableObject of the corresponding class
+    //Deactivats all menu objects and starts showing the data by activating it 
     public void ShowContinent(ContinentDisplay continentDisplay)
     {
         Continent continent = continentDisplay.continent;
@@ -141,7 +146,8 @@ public class MenuManager : MonoBehaviour
 
         for(int i = 0; i < continent.countries.Length; i++)
         {
-            if(continent.countries[i] != null)
+            //This method gets the data from the countryButton pressed and activates the measursButton of the country
+            if (continent.countries[i] != null)
             {
                 countryButtons[i].gameObject.SetActive(true);
                 TextMeshProUGUI buttonText = countryButtons[i].GetComponentInChildren<TextMeshProUGUI>();
@@ -153,6 +159,7 @@ public class MenuManager : MonoBehaviour
             }
         }
     }
+    //This method gets the data from the countryButton pressed and activates the measursButton of the country
     public void ShowCountry(Buttons button)
     {
         country = button.GetComponent<Buttons>().country;
@@ -173,6 +180,8 @@ public class MenuManager : MonoBehaviour
             }
         }   
     }
+    //This method checks if a measure is allready in charge or not 
+    //After checking the measure gets activated or deactivated 
     public void MeasuresCheck()
     {
         GameObject pressed = EventSystem.current.currentSelectedGameObject;
@@ -201,6 +210,7 @@ public class MenuManager : MonoBehaviour
             }
         }
     }
+    //This method pens a generic menu (not continentMenu or countryMenu)
     public void OpenMenu(GameObject menu)
     {
         if (menu.activeSelf)
@@ -214,6 +224,7 @@ public class MenuManager : MonoBehaviour
         }
         else if (!menu.activeSelf)
         {
+
             menu.SetActive(true);
             if(Time.timeScale == 1)
             {
@@ -222,6 +233,8 @@ public class MenuManager : MonoBehaviour
             }
         }
     }
+    //Opens specificly the rankingMenu
+    //Sorts the countries by infected count
     public void OpenRankingMenu()
     {
         Country temp = null;
@@ -238,6 +251,7 @@ public class MenuManager : MonoBehaviour
                 }
             }
         }
+
         for (int i = 0; i < rankingButtons.Length; i++)
         {
             TextMeshProUGUI rankingButtonText = rankingButtons[i].GetComponentInChildren<TextMeshProUGUI>();
@@ -249,8 +263,14 @@ public class MenuManager : MonoBehaviour
             rankingButtonCount.text = "" + Math.Round(countriesSort[i].infected);
             button.country = countriesSort[i];
         }
-
-
+    }
+    //This Method checks if the graph container is allready open, while the player opens a another menu 
+    public void GraphCheck()
+    {
+        if (myBarChart.activeSelf)
+        {
+            myBarChart.SetActive(false);
+        }
     }
 
     #endregion Methods

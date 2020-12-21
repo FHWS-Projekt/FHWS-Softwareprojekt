@@ -11,7 +11,7 @@ public class CountryDisplay : MonoBehaviour
     public double temp;
     public EventManager eventManager;
     public Animator anim;
-    
+    public PlayerSettings playerSettings;
 
     public float fadeColor = 0f;
     Color color;
@@ -105,6 +105,9 @@ public class CountryDisplay : MonoBehaviour
         anim = GetComponent<Animator>();
         if(anim != null)
         anim.enabled = false;
+
+        //Refencing the playerSettings
+        playerSettings = eventManager.playerSettings;
     }
 
     // Update is called once per frame
@@ -122,7 +125,18 @@ public class CountryDisplay : MonoBehaviour
         //x(n) = (1+ep) * ((n+1)*g)
         if(country.infected >= 0)
         {
-            temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
+            if(playerSettings.difficulty == 0)
+            {
+                temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG);
+            }
+            else if(playerSettings.difficulty == 1)
+            {
+                temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG2);
+            }
+            else if(playerSettings.difficulty == 2)
+            {
+                temp = (1 + country.influenceE * country.influenceP) * (country.infected * country.recoveryRateG3);
+            }
             country.deathCount = country.deathCount + temp;
             country.residents = country.residents - temp;
             if(temp >= 0)
@@ -141,11 +155,19 @@ public class CountryDisplay : MonoBehaviour
             myMaterial.color = color;
         }
 
-        //Calls game over when infected is over 50% of the start population;
-        if (country.residents <= (country.startResidents / 2))
+        //Calls game over when infected is over 25%/48.5%/75% of the start population;
+        if (playerSettings.difficulty == 0 && country.infected >= country.startResidents)
         {
             eventManager.lose = true;
-        }    
+        }
+        else if (playerSettings.difficulty == 1 && country.infected >= (country.startResidents / 0.75))
+        {
+            eventManager.lose = true;
+        }
+        else if (playerSettings.difficulty == 2 && country.infected >= (country.startResidents / 0.485))
+        {
+            eventManager.lose = true;
+        }
     }
 
     //Method to check the activ measures;

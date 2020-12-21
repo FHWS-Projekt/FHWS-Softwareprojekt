@@ -12,6 +12,8 @@ public class Country : ScriptableObject
     public double deathCount;
 
     public double recoveryRateG;
+    public double recoveryRateG2;
+    public double recoveryRateG3;
     public double influenceE;
     public double influenceP;
 
