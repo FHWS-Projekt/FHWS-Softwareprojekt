@@ -11153,7 +11153,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 88e9a31ee79a0c149b731b786a7b202c, type: 2}
     - target: {fileID: 919132149155446097, guid: f820305eff41e60458b382c992bc2145, type: 3}
       propertyPath: m_Name
-      value: Corona Virus (1)
+      value: Corona Virus
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f820305eff41e60458b382c992bc2145, type: 3}
       propertyPath: m_IsActive
