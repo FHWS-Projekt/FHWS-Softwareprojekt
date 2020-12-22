@@ -33,6 +33,9 @@ public class EventManager : MonoBehaviour
     public MyCamera myCamera;
 
     public PlayerSettings playerSettings;
+    public Image bar;
+    public float currentBar;
+    public float maxBar = 100f;
 
     public bool win;
     public bool lose;
@@ -66,6 +69,7 @@ public class EventManager : MonoBehaviour
     {
         EndingController();
         ObjectClicker();
+        HealthBarController();
     }
 
     #endregion Unity Methods
@@ -135,19 +139,6 @@ public class EventManager : MonoBehaviour
 
             counter++;
         }
-        //After every Country gets infected, the methode can fully randomly distribute infected ppl (idea got stiched)
-        else
-        {
-            /*int rdm = Random.Range(0, infectedCountries.Count);
-            int rdm2 = Random.Range(0, infectedContinent.Count);
-
-            Debug.Log("Angesteckt: " + infectedCountries[rdm].countryName);
-
-            //infectedCountries[rdm].infected -= 1;
-            infectedCountries[rdm2].infected += 1;*/
-
-        }
-
     }
     //Allows that GameObjects in the Scene are clickebale 
     public void ObjectClicker()
@@ -164,7 +155,14 @@ public class EventManager : MonoBehaviour
                 if (hit.transform)
                 {
                     GameObject continent = hit.transform.gameObject;
-  
+    
+                    //Checks if the hit object is a virus;
+                    if(hit.transform.gameObject.name == "Corona Virus")
+                    {
+                        hit.transform.gameObject.SetActive(false);
+                        main.Money = main.Money + 1;
+                    }
+
                     ContinentDisplay continentDisplay = (ContinentDisplay)continent.GetComponent(typeof(ContinentDisplay));
                     if (continentDisplay != null){
                         if (measures2.activeSelf)
@@ -241,6 +239,11 @@ public class EventManager : MonoBehaviour
                 SceneManager.LoadScene("Outro");
             }
         }
+    }
+    public void HealthBarController()
+    {
+        currentBar = (float)main.MyDateTime.Day;
+        bar.fillAmount = currentBar / maxBar;
     }
 
     #endregion Methods

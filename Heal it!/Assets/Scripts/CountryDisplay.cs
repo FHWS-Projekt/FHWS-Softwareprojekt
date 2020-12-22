@@ -13,6 +13,9 @@ public class CountryDisplay : MonoBehaviour
     public Animator anim;
     public PlayerSettings playerSettings;
 
+    public GameObject virus;
+    public bool virusSwitch;
+
     public float fadeColor = 0f;
     Color color;
 
@@ -43,6 +46,8 @@ public class CountryDisplay : MonoBehaviour
         color.r = 0.07058825f;
 
         myMaterial.color = color;
+
+        virusSwitch = true;
 
         //Adds the measure values into the ScriptableObject;
         country.measures = new bool[10];
@@ -114,6 +119,11 @@ public class CountryDisplay : MonoBehaviour
     void Update()
     {
         CheckMeasures();
+        if(virusSwitch && country.infected >= 1)
+        {
+            virusSwitch = false;
+            virus.SetActive(true);
+        }
     }
 
     #endregion Unity Methods
