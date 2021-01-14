@@ -22,7 +22,11 @@ MonoBehaviour:
   recoveryRateG3: 0.8847
   influenceE: 10
   influenceP: 0.2
-  info: 
+  info: "Kanada befindet sich in Nordamerika und ist nach Russland der zweitgr\xF6\xDFte
+    Staat der Erde, ist mit etwa 38 Millionen Einwohnern allerdings nur d\xFCnn besiedelt.
+    Die einzige Landgrenze ist die s\xFCdliche Grenze zu den USA. Die Amtssprachen
+    sind Englisch und Franz\xF6sisch. Letzteres wird vor allem in der fl\xE4chenm\xE4\xDFig
+    gr\xF6\xDFten Provinz des Landes Qu\xE9bec gesprochen."
   measures: 00000000000000000000
   measuresV:
   - 0

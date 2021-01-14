@@ -9390,8 +9390,7 @@ MonoBehaviour:
     wenn Du die Zeit zur\xFCckdrehen k\xF6nntest und noch ein Mal vor dem Start einer
     Pandemie stehen w\xFCrdest? Starte dein Spielerlebnis und probiere es aus! Du
     hast die Verantwortung \xFCber die Eind\xE4mmung eines neuartigen Virus!\nIn
-    einem Land der Welt ist der Virus bereits ausgebrochen und hat einen Gro\xDFteil
-    der Bev\xF6lkerung infiziert.\r\n\r"
+    einem Land der Welt wurde der Virus bereits aufgefunden und hat eine Person infiziert.\n\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25abab0634dd543ea9ff3d8e9740f1dc, type: 2}
   m_sharedMaterial: {fileID: -6431297682110932201, guid: 25abab0634dd543ea9ff3d8e9740f1dc, type: 2}

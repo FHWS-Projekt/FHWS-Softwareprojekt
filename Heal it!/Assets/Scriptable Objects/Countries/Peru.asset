@@ -22,7 +22,11 @@ MonoBehaviour:
   recoveryRateG3: 0.8809
   influenceE: 10
   influenceP: 0.2
-  info: 
+  info: "Peru ist eine Republik im westen S\xFCdamerikas. Unter anderem grenzt das
+    Land im Norden an Kolumbien, im S\xFCden an Chile, im Osten an Brasilien und
+    im Westen an den Pazifik. Die Hauptstadt Lima liegt an der K\xFCste des Landes.
+    Innerhalb Perus gibt es zahlreiche Nationalparks und Schutzgebiete. Insgesamt
+    werden 17,3 \\% der Landesfl\xE4che durch die Regierung gesch\xFCtzt."
   measures: 00000000000000000000
   measuresV:
   - 0
