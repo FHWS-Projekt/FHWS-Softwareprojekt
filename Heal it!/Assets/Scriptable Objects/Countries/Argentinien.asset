@@ -22,7 +22,15 @@ MonoBehaviour:
   recoveryRateG3: 0.8877
   influenceE: 10
   influenceP: 0.2
-  info: 
+  info: "Argentinien ist eine Republik in S\xFCdamerika. Bis 1950 galt Argentinien
+    als eines der reichsten L\xE4nder der Welt. Dazu beigetragen hat unter anderem
+    auch der Rohstoffabbau, mit dem auch der Name des Landes in Verbindung gebracht
+    werden kann. Dieser leitet sich n\xE4mlich vom lateinischen Begriff f\xFCr Silber
+    \"argentum\" ab, da man zur spanischen Kolonialzeit hoffte dieses hier finden
+    und abbauen zu k\xF6nnen. Unabh\xE4ngig wurde die heutige Bundesrepublik im Jahr
+    1816. Viele verbinden das Land nat\xFCrlich auch mit dem Fu\xDFball. Hier konnte
+    Argentinien bereits zwei Mal die Weltmeisterschaft gewinnen und brachten den
+    wom\xF6glich besten Fu\xDFballer aller Zeiten, Lionel Messi hervor."
   measures: 00000000000000000000
   measuresV:
   - 0

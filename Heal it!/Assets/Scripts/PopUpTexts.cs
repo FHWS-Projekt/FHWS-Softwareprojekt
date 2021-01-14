@@ -14,6 +14,7 @@ public class PopUpTexts : MonoBehaviour
     private string highMoneyText = "Hey, du hast ganz schön viel Gold angespart. Vielleicht solltest du etwas davon in weitere Maßnahmen investieren!";
     private int day;
     private bool notAgain = false;
+    public GameObject TutorialPanel;
     #endregion Attributes
     #region Unity Methods
 
@@ -27,7 +28,9 @@ public class PopUpTexts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        popUp(startGameText);
+        mainScript.SetTimeButtonPlayPauseOnClickTask();
+        PausePanel.SetActive(false);
+        TutorialPanel.SetActive(true);
     }
 
     // Update is called once per frame
@@ -58,6 +61,11 @@ public class PopUpTexts : MonoBehaviour
         mainScript.SetTimeButtonPlayPauseOnClickTask();
         PausePanel.SetActive(true);
         popUpText.text = startGameText;
+    }
+    public void endTutorial() {
+        mainScript.SetTimeButtonPlayPauseOnClickTask();
+        TutorialPanel.SetActive(false);
+        popUp(startGameText);
     }
     #endregion Methods
 

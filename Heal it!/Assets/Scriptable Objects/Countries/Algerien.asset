@@ -22,7 +22,12 @@ MonoBehaviour:
   recoveryRateG3: 0.8868
   influenceE: 10
   influenceP: 0.2
-  info: 
+  info: "Algerien ist eine n\xF6rdlich gelegene Republik in Afrika. Die n\xF6rdliche
+    Grenze des Landes schlie\xDFt dementsprechend an das Mittelmeer an. Bei Algerien
+    handelt es sich um eine ehemalige franz\xF6sische Kolonie, die erst nach dem
+    Algerienkrieg, der von 1954 bis 1962 andauerte, unabh\xE4ngig wurde. Noch heute
+    spielt die franz\xF6sische Sprache eine gro\xDFe Rolle, neben der Amtssprache
+    Arabisch."
   measures: 00000000000000000000
   measuresV:
   - 0

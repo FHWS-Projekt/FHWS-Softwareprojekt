@@ -22,7 +22,11 @@ MonoBehaviour:
   recoveryRateG3: 0.9163
   influenceE: 10
   influenceP: 0.2
-  info: 
+  info: "Nigeria ist ein Staat in Westafrika und hat die Staatsform einer Bundesrepublik.
+    Mit \xFCber 200 Millionen Einwohnern ist Nigeria das siebtbev\xF6lkerungsreichste
+    Land der Welt und hat die deutlich h\xF6chste Bev\xF6lkerungszahl innerhalb Afrikas.
+    Amtssprachen des Bundesstaates umfassen Englisch, Hausa, Igbo und Yoruba, es
+    werden allerdings insgesamt 514 verschiedenen Sprachen und Idiome gesprochen."
   measures: 00000000000000000000
   measuresV:
   - 0

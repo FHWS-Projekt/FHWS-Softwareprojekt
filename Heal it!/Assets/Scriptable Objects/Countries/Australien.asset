@@ -22,7 +22,12 @@ MonoBehaviour:
   recoveryRateG3: 0.8769
   influenceE: 10
   influenceP: 0.2
-  info: 
+  info: "Australien ist ein Staat der die Landmasse des gleichnamigen Kontinents
+    auf der S\xFCdhalbkugel der Erde einnimmt. Fl\xE4chenm\xE4\xDFig ist Australien
+    der sechstgr\xF6\xDFte Staat der Welt und ist mit seinen ca 25,3 Millionen Einwohnern
+    d\xFCnn besiedelt. Die australische Tierwelt umfasst eine gro\xDFe Artenvielfalt.
+    Die meisten dieser Tiere sind sogenannte endemische Arten, was bedeutet, dass
+    diese nur auf dem australischen Kontinent vorkommen."
   measures: 00000000000000000000
   measuresV:
   - 0
