@@ -997,7 +997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.049682617}
+  m_AnchoredPosition: {x: 0, y: -0.049804688}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167643845
@@ -1646,7 +1646,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339067581}
   m_LocalRotation: {x: 0.007024541, y: -0.000091151705, z: 0.012974763, w: 0.99989116}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2201966}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1876380311}
@@ -1655,7 +1655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0.805, y: 0, z: 1.487}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.593054, y: -17.006737}
+  m_AnchoredPosition: {x: 21, y: -46}
   m_SizeDelta: {x: 775.3553, y: 219.24786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339067583
@@ -6235,9 +6235,8 @@ RectTransform:
   - {fileID: 23327515}
   - {fileID: 971568180}
   - {fileID: 2137531677}
-  - {fileID: 2054621021}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7580,7 +7579,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614531782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2201966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1274660782}
@@ -7588,7 +7587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: 40}
+  m_AnchoredPosition: {x: 21.406921, y: 11.006714}
   m_SizeDelta: {x: 719.0486, y: 49.510925}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614531784
@@ -7916,7 +7915,7 @@ RectTransform:
   - {fileID: 634327280}
   - {fileID: 998292809}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9671,8 +9670,8 @@ RectTransform:
   - {fileID: 65810557}
   - {fileID: 764354973}
   - {fileID: 644756279}
-  m_Father: {fileID: 1227071735}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9815,11 +9814,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Es wird bestimmt, dass es so ist und dan ngehen wir auch alle dahin denn
-    es wird so sein! Und dann steht auch noch was wegen dem Zeug dabei.
-
-
-    Hochachtungsvoll,'
+  m_text: "Hiermit \xFCbertrage ich Ihnen die Kompetenzen die Ma\xDFnahmen im Kampf
+    gegen den Virus zu steuern. Ich vertraue in Ihre F\xE4higkeiten und verlasse
+    mich darauf, dass Sie im Sinne des Wohles der Menschen handeln werden.\n\nHochachtungsvoll,"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25abab0634dd543ea9ff3d8e9740f1dc, type: 2}
   m_sharedMaterial: {fileID: -6431297682110932201, guid: 25abab0634dd543ea9ff3d8e9740f1dc, type: 2}
