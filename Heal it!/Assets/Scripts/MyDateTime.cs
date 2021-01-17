@@ -36,12 +36,12 @@ public class MyDateTime {
     public MyDateTime() {
         Hour = 0;
         Day = 1;
-        myDateTimeData = new JsonParser().ReadFromJson<MyDateTimeData>(myDatabase);
+        myDateTimeData = new JsonParser().ReadFromJsonOS<MyDateTimeData>(myDatabase);
     }
     public MyDateTime(double hour, double day) {
         Hour = hour;
         Day = day;
-        myDateTimeData = new JsonParser().ReadFromJson<MyDateTimeData>(myDatabase);
+        myDateTimeData = new JsonParser().ReadFromJsonOS<MyDateTimeData>(myDatabase);
     }
     #endregion Constructors
 
