@@ -69,10 +69,11 @@ public class Main : MonoBehaviour {
             // Initilize MyDateTime
             MyDateTime = new MyDateTime();
         }
-    }
+    } 
 
     // Start is called before the first frame update
     void Start() {
+
         // Adds OnClick Listener to Buttons
         SetTimeButtonsOnClick();
         MyDateTime.DayTasks.Add(() => AddMoney());
