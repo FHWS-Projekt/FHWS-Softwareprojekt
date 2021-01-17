@@ -9937,8 +9937,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Optionen
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
-  m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
+  m_sharedMaterial: {fileID: -7730777859445043354, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12770,8 +12770,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xDCbersicht"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
-  m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
+  m_sharedMaterial: {fileID: -7730777859445043354, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19093,7 +19093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -11, y: -7}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105009197
@@ -19116,10 +19116,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Okay!
+  m_text: Okay
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
-  m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
+  m_sharedMaterial: {fileID: -7730777859445043354, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19444,8 +19444,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Willkommen bei Heal it! \nHier noch ein paar Hinweise zur Bedienung:\n\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
-  m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
+  m_sharedMaterial: {fileID: -7730777859445043354, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22007,7 +22007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 634.6, y: -311}
+  m_AnchoredPosition: {x: 634.6, y: -278}
   m_SizeDelta: {x: 591.94257, y: 171.88116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282897353
@@ -22033,8 +22033,8 @@ MonoBehaviour:
   m_text: "Unten rechts kannst du au\xDFerdem die Uhrzeit des jeweiligen Tages sehen
     und wie viele Tage bereits vergangen sind. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
-  m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
+  m_sharedMaterial: {fileID: -7730777859445043354, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22202,8 +22202,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Auf der linken stehen dir folgende Men\xFCs zur Verf\xFCgung: "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
-  m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
+  m_sharedMaterial: {fileID: -7730777859445043354, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26387,7 +26387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 703, y: -276}
+  m_AnchoredPosition: {x: 14, y: -10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470380939
@@ -28601,7 +28601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 669.42, y: 225.3}
+  m_AnchoredPosition: {x: 639.99, y: 225.3}
   m_SizeDelta: {x: 581.1552, y: 137.45969}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1694711473
@@ -28626,8 +28626,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Oben rechts kannst du das Spiel pausieren oder zum n\xE4chsten Tag springen."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
-  m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
+  m_sharedMaterial: {fileID: -7730777859445043354, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -32192,8 +32192,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pause
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 25abab0634dd543ea9ff3d8e9740f1dc, type: 2}
-  m_sharedMaterial: {fileID: -6431297682110932201, guid: 25abab0634dd543ea9ff3d8e9740f1dc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 69f28a627ec924c38822ac99c7afefb5, type: 2}
+  m_sharedMaterial: {fileID: 121007386595071830, guid: 69f28a627ec924c38822ac99c7afefb5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33570,12 +33570,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngameDebugConsole
       objectReference: {fileID: 0}
+    - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22428984, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
@@ -35102,8 +35110,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Infektionen
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
-  m_sharedMaterial: {fileID: 3945511491221756975, guid: 8e6fd551d74284a2f93435133360f7ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
+  m_sharedMaterial: {fileID: -7730777859445043354, guid: b1f90775460774c13bdf1d17c4367b49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
