@@ -26,7 +26,7 @@ public class ForceLandscape : MonoBehaviour
         introTextData = new JsonParser().ReadFromJsonOS<IntroTextData>(myDatabase);
         if(introTextTMP != null)
         {
-            introTextTMP.text = introTextData.introText;
+           //  introTextTMP.text = introTextData.introText;
         }
     }
 
