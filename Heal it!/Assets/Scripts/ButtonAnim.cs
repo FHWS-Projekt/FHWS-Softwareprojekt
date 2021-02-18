@@ -63,10 +63,12 @@ public class ButtonAnim : MonoBehaviour
         if(musicToggle.isOn == true)
         {
             musicText.text = "An";
+            AudioListener.pause = false;
         }
         else if(musicToggle.isOn == false)
         {
             musicText.text = "Aus";
+            AudioListener.pause = true;
         }
     }
 }
