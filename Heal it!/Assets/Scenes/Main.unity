@@ -21506,7 +21506,6 @@ MonoBehaviour:
   timeButtons:
   - {fileID: 884453319}
   - {fileID: 1453491585}
-  - {fileID: 0}
   pause: 0
   moneyDisplay: {fileID: 1051844324}
   playerSettings: {fileID: 11400000, guid: 80b1920c2a5db814bbc1bdf7bcbf5953, type: 2}
@@ -30869,7 +30868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00024414062, y: -0.21081543}
+  m_AnchoredPosition: {x: 0, y: -0.21069336}
   m_SizeDelta: {x: 0.00024414062, y: -0.42163086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825214171

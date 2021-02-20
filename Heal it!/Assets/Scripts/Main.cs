@@ -5,7 +5,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Main : MonoBehaviour {
+public class Main : MonoBehaviour
+{
 
     #region Singleton
     public static Main Instance { get; private set; }
@@ -31,30 +32,36 @@ public class Main : MonoBehaviour {
 
     #region Getter and Setter
     // Earth
-    public GameObject Earth {
+    public GameObject Earth
+    {
         get { return earth; }
         set { earth = value; }
     }
 
     // Time
-    public MyDateTime MyDateTime {
+    public MyDateTime MyDateTime
+    {
         get { return myDateTime; }
         set { myDateTime = value; }
     }
-    public TextMeshProUGUI TimeDisplay {
+    public TextMeshProUGUI TimeDisplay
+    {
         get { return timeDisplay; }
         set { timeDisplay = value; }
     }
-    public Button[] TimeButtons {
+    public Button[] TimeButtons
+    {
         get { return timeButtons; }
         set { timeButtons = value; }
     }
     // Money
-    public double Money {
+    public double Money
+    {
         get { return money; }
         set { money = value; }
     }
-    public TextMeshProUGUI MoneyDisplay {
+    public TextMeshProUGUI MoneyDisplay
+    {
         get { return moneyDisplay; }
         set { moneyDisplay = value; }
     }
@@ -68,17 +75,20 @@ public class Main : MonoBehaviour {
 
     #region Unity Methods
     // Awake is called when the script instance is being loaded
-    private void Awake() {
-        if (Instance == null) {
+    private void Awake()
+    {
+        if(Instance == null)
+        {
             Instance = this;
 
             // Initilize MyDateTime
             MyDateTime = new MyDateTime();
         }
-    } 
+    }
 
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
 
         // Adds OnClick Listener to Buttons
         SetTimeButtonsOnClick();
@@ -87,11 +97,13 @@ public class Main : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         UpdateTimestamp();
         MoneyDisplay.text = money.ToString() + " Mio.";
 
-        if (MyCamera.Timer <= 0) {
+        if(MyCamera.Timer <= 0)
+        {
             RotateEarth();
         }
     }
@@ -99,270 +111,222 @@ public class Main : MonoBehaviour {
 
     #region Time
     // Methods for managing Time
-    public void UpdateTimestamp() {
+    public void UpdateTimestamp()
+    {
         MyDateTime.Hour += Time.deltaTime;
         TimeDisplay.text = MyDateTime.toString();
     }
-    public void SetTimeButtonsOnClick() {
+    public void SetTimeButtonsOnClick()
+    {
         TimeButtons[0].onClick.AddListener(() => SetTimeButtonPlayPauseOnClickTask());
         TimeButtons[1].onClick.AddListener(() => SetTimeButtonSkipOnClickTask());
     }
-    public void SetTimeButtonPlayPauseOnClickTask() {
-        if (Time.timeScale == 0) {
+    public void SetTimeButtonPlayPauseOnClickTask()
+    {
+        if(Time.timeScale == 0)
+        {
             Time.timeScale = 1;
             pause = false;
-        }else {
+        } else
+        {
             Time.timeScale = 0;
             pause = true;
         }
         MyCamera.Timer = 0;
     }
-    public void SetTimeButtonSkipOnClickTask() {
+    public void SetTimeButtonSkipOnClickTask()
+    {
         MyDateTime.Hour = 24;
         MyCamera.Timer = 0;
     }
     #endregion Time
 
-    public void RotateEarth() {
+    public void RotateEarth()
+    {
         Earth.transform.Rotate(Vector3.up, Time.deltaTime * 15, Space.World);
         //Earth.transform.rotation = Quaternion.AngleAxis((float)(MyDateTime.Hour * 15), Vector3.up);
     }
 
-    public void AddMoney() {
-        
+    public void AddMoney()
+    {
+
         if(PlayerSettings.difficulty == 0)
         {
-            if (MyDateTime.Day < 4)
+            if(MyDateTime.Day < 4)
             {
                 Money += 1;
-            }
-            else if (MyDateTime.Day < 7)
+            } else if(MyDateTime.Day < 7)
             {
                 Money += 3;
-            }
-            else if (MyDateTime.Day < 10)
+            } else if(MyDateTime.Day < 10)
             {
                 Money += 5;
-            }
-            else if (MyDateTime.Day < 12)
+            } else if(MyDateTime.Day < 12)
             {
                 Money += 8;
-            }
-            else if (MyDateTime.Day < 14)
+            } else if(MyDateTime.Day < 14)
             {
                 Money += 9;
-            }
-            else if (MyDateTime.Day < 16)
+            } else if(MyDateTime.Day < 16)
             {
                 Money += 15;
-            }
-            else if (MyDateTime.Day < 19)
+            } else if(MyDateTime.Day < 19)
             {
                 Money += 21;
-            }
-            else if (MyDateTime.Day < 22)
+            } else if(MyDateTime.Day < 22)
             {
                 Money += 22;
-            }
-            else if (MyDateTime.Day < 25)
+            } else if(MyDateTime.Day < 25)
             {
                 Money += 24;
-            }
-            else if (MyDateTime.Day < 27)
+            } else if(MyDateTime.Day < 27)
             {
                 Money += 28;
-            }
-            else if (MyDateTime.Day < 30)
+            } else if(MyDateTime.Day < 30)
             {
                 Money += 27;
-            }
-            else if (MyDateTime.Day < 33)
+            } else if(MyDateTime.Day < 33)
             {
                 Money += 25;
-            }
-            else if (MyDateTime.Day < 36)
+            } else if(MyDateTime.Day < 36)
             {
                 Money += 23;
-            }
-            else if (MyDateTime.Day < 38)
+            } else if(MyDateTime.Day < 38)
             {
                 Money += 20;
-            }
-            else if (MyDateTime.Day < 40)
+            } else if(MyDateTime.Day < 40)
             {
                 Money += 19;
-            }
-            else if (MyDateTime.Day < 42)
+            } else if(MyDateTime.Day < 42)
             {
                 Money += 13;
-            }
-            else if (MyDateTime.Day < 45)
+            } else if(MyDateTime.Day < 45)
             {
                 Money += 7;
-            }
-            else if (MyDateTime.Day < 48)
+            } else if(MyDateTime.Day < 48)
             {
                 Money += 6;
-            }
-            else
+            } else
             {
                 Money += 4;
             }
-        }
-        else if(PlayerSettings.difficulty == 1)
+        } else if(PlayerSettings.difficulty == 1)
         {
-            if (MyDateTime.Day < 4)
+            if(MyDateTime.Day < 4)
             {
                 Money += 1;
-            }
-            else if (MyDateTime.Day < 7)
+            } else if(MyDateTime.Day < 7)
             {
                 Money += 3;
-            }
-            else if (MyDateTime.Day < 10)
+            } else if(MyDateTime.Day < 10)
             {
                 Money += 5;
-            }
-            else if (MyDateTime.Day < 12)
+            } else if(MyDateTime.Day < 12)
             {
                 Money += 8;
-            }
-            else if (MyDateTime.Day < 14)
+            } else if(MyDateTime.Day < 14)
             {
                 Money += 9;
-            }
-            else if (MyDateTime.Day < 16)
+            } else if(MyDateTime.Day < 16)
             {
                 Money += 15;
-            }
-            else if (MyDateTime.Day < 19)
+            } else if(MyDateTime.Day < 19)
             {
                 Money += 21;
-            }
-            else if (MyDateTime.Day < 22)
+            } else if(MyDateTime.Day < 22)
             {
                 Money += 22;
-            }
-            else if (MyDateTime.Day < 25)
+            } else if(MyDateTime.Day < 25)
             {
                 Money += 24;
-            }
-            else if (MyDateTime.Day < 27)
+            } else if(MyDateTime.Day < 27)
             {
                 Money += 28;
-            }
-            else if (MyDateTime.Day < 30)
+            } else if(MyDateTime.Day < 30)
             {
                 Money += 27;
-            }
-            else if (MyDateTime.Day < 33)
+            } else if(MyDateTime.Day < 33)
             {
                 Money += 25;
-            }
-            else if (MyDateTime.Day < 36)
+            } else if(MyDateTime.Day < 36)
             {
                 Money += 23;
-            }
-            else if (MyDateTime.Day < 38)
+            } else if(MyDateTime.Day < 38)
             {
                 Money += 20;
-            }
-            else if (MyDateTime.Day < 40)
+            } else if(MyDateTime.Day < 40)
             {
                 Money += 19;
-            }
-            else if (MyDateTime.Day < 42)
+            } else if(MyDateTime.Day < 42)
             {
                 Money += 13;
-            }
-            else if (MyDateTime.Day < 45)
+            } else if(MyDateTime.Day < 45)
             {
                 Money += 7;
-            }
-            else if (MyDateTime.Day < 48)
+            } else if(MyDateTime.Day < 48)
             {
                 Money += 6;
-            }
-            else
+            } else
             {
                 Money += 4;
             }
-        }
-        else if(PlayerSettings.difficulty == 2)
+        } else if(PlayerSettings.difficulty == 2)
         {
-            if (MyDateTime.Day < 4)
+            if(MyDateTime.Day < 4)
             {
                 Money += 1;
-            }
-            else if (MyDateTime.Day < 7)
+            } else if(MyDateTime.Day < 7)
             {
                 Money += 3;
-            }
-            else if (MyDateTime.Day < 10)
+            } else if(MyDateTime.Day < 10)
             {
                 Money += 5;
-            }
-            else if (MyDateTime.Day < 12)
+            } else if(MyDateTime.Day < 12)
             {
                 Money += 8;
-            }
-            else if (MyDateTime.Day < 14)
+            } else if(MyDateTime.Day < 14)
             {
                 Money += 9;
-            }
-            else if (MyDateTime.Day < 16)
+            } else if(MyDateTime.Day < 16)
             {
                 Money += 15;
-            }
-            else if (MyDateTime.Day < 19)
+            } else if(MyDateTime.Day < 19)
             {
                 Money += 21;
-            }
-            else if (MyDateTime.Day < 22)
+            } else if(MyDateTime.Day < 22)
             {
                 Money += 22;
-            }
-            else if (MyDateTime.Day < 25)
+            } else if(MyDateTime.Day < 25)
             {
                 Money += 24;
-            }
-            else if (MyDateTime.Day < 27)
+            } else if(MyDateTime.Day < 27)
             {
                 Money += 28;
-            }
-            else if (MyDateTime.Day < 30)
+            } else if(MyDateTime.Day < 30)
             {
                 Money += 27;
-            }
-            else if (MyDateTime.Day < 33)
+            } else if(MyDateTime.Day < 33)
             {
                 Money += 25;
-            }
-            else if (MyDateTime.Day < 36)
+            } else if(MyDateTime.Day < 36)
             {
                 Money += 23;
-            }
-            else if (MyDateTime.Day < 38)
+            } else if(MyDateTime.Day < 38)
             {
                 Money += 20;
-            }
-            else if (MyDateTime.Day < 40)
+            } else if(MyDateTime.Day < 40)
             {
                 Money += 19;
-            }
-            else if (MyDateTime.Day < 42)
+            } else if(MyDateTime.Day < 42)
             {
                 Money += 13;
-            }
-            else if (MyDateTime.Day < 45)
+            } else if(MyDateTime.Day < 45)
             {
                 Money += 7;
-            }
-            else if (MyDateTime.Day < 48)
+            } else if(MyDateTime.Day < 48)
             {
                 Money += 6;
-            }
-            else
+            } else
             {
                 Money += 4;
             }
