@@ -5,7 +5,8 @@ using System.IO;
 using System.Diagnostics;
 using UnityEngine;
 
-public class MyDateTime {
+public class MyDateTime
+{
 
     #region Attributes
     public static MyDateTimeData myDateTimeData;
@@ -18,27 +19,32 @@ public class MyDateTime {
     #endregion Attributes
 
     #region Getter and Setter
-    public double Hour {
+    public double Hour
+    {
         get { return hour; }
         set { hour = value; }
     }
-    public double Day {
+    public double Day
+    {
         get { return day; }
         set { day = value; }
     }
-    public List<Action> DayTasks {
+    public List<Action> DayTasks
+    {
         get { return dayTasks; }
         set { dayTasks = value; }
     }
     #endregion Getter and Setter
 
     #region Constructors
-    public MyDateTime() {
+    public MyDateTime()
+    {
         Hour = 0;
         Day = 1;
         myDateTimeData = new JsonParser().ReadFromJsonOS<MyDateTimeData>(myDatabase);
     }
-    public MyDateTime(double hour, double day) {
+    public MyDateTime(double hour, double day)
+    {
         Hour = hour;
         Day = day;
         myDateTimeData = new JsonParser().ReadFromJsonOS<MyDateTimeData>(myDatabase);
@@ -46,29 +52,35 @@ public class MyDateTime {
     #endregion Constructors
 
     #region DateTime
-    public void CalculateDateTime() {
-        if (Hour >= 24) {
+    public void CalculateDateTime()
+    {
+        if(Hour >= 24)
+        {
             Hour = Hour % 24;
             Day++;
             DayTasksManager();
         }
     }
-    public void DayTasksManager() {
-        foreach (Action action in dayTasks) {
+    public void DayTasksManager()
+    {
+        foreach(Action action in dayTasks)
+        {
             action.Invoke();
         }
     }
     #endregion DateTime
 
-    public string toString() {
+    public string toString()
+    {
         CalculateDateTime();
-       // return day + " " + myDateTimeData.day + "\n" + (int)Hour + " " + myDateTimeData.hour;
-       return day + " / 50 Tagen";
-       
+        // return day + " " + myDateTimeData.day + "\n" + (int)Hour + " " + myDateTimeData.hour;
+        return day + " / 50 Tagen";
+
     }
 
-    public class MyDateTimeData {
+    public class MyDateTimeData
+    {
         public string day;
-        public string hour ;
+        public string hour;
     }
 }
