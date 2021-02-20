@@ -26,7 +26,7 @@ public class Main : MonoBehaviour {
     [SerializeField] protected TextMeshProUGUI moneyDisplay;
 
     // Difficulty 
-    public PlayerSettings playerSettings;
+    [SerializeField] protected PlayerSettings playerSettings;
     #endregion Attributes
 
     #region Getter and Setter
@@ -57,6 +57,12 @@ public class Main : MonoBehaviour {
     public TextMeshProUGUI MoneyDisplay {
         get { return moneyDisplay; }
         set { moneyDisplay = value; }
+    }
+    // Difficulty
+    public PlayerSettings PlayerSettings
+    {
+        get { return playerSettings; }
+        set { playerSettings = value; }
     }
     #endregion Getter and Setter
 
@@ -124,7 +130,7 @@ public class Main : MonoBehaviour {
 
     public void AddMoney() {
         
-        if(playerSettings.difficulty == 0)
+        if(PlayerSettings.difficulty == 0)
         {
             if (MyDateTime.Day < 4)
             {
@@ -203,7 +209,7 @@ public class Main : MonoBehaviour {
                 Money += 4;
             }
         }
-        else if(playerSettings.difficulty == 1)
+        else if(PlayerSettings.difficulty == 1)
         {
             if (MyDateTime.Day < 4)
             {
@@ -282,7 +288,7 @@ public class Main : MonoBehaviour {
                 Money += 4;
             }
         }
-        else if(playerSettings.difficulty == 2)
+        else if(PlayerSettings.difficulty == 2)
         {
             if (MyDateTime.Day < 4)
             {
