@@ -73,7 +73,7 @@ public class MyDateTime
     public string toString()
     {
         CalculateDateTime();
-        // return day + " " + myDateTimeData.day + "\n" + (int)Hour + " " + myDateTimeData.hour;
+        //return day + " " + myDateTimeData.day + "\n" + (int)Hour + " " + myDateTimeData.hour;
         return day + " / 50 Tagen";
 
     }

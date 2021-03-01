@@ -61,7 +61,7 @@ public class MyBarChart : MonoBehaviour
         {
             graphContainer.gameObject.SetActive(true);
             BarChartVisual barChartVisual = new BarChartVisual(graphContainer, Color.yellow, .8f);
-            ShowGraph(barChartVisual, (int _i) => "Day " + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
+            ShowGraph(barChartVisual, (int _i) => "" + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
         } else
         {
             graphContainer.gameObject.SetActive(false);
