@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 54534626}
   - component: {fileID: 54534625}
   m_Layer: 5
-  m_Name: GrapButton
+  m_Name: GraphButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
